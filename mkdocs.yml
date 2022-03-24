@@ -1,0 +1,81 @@
+site_name: CERG-C Volcanic hazard classes & material
+
+
+theme:
+  name: material
+  features:
+      - navigation.tabs
+      # - navigation.sections
+      # - navigation.expand
+
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      accent: pink
+      primary: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      accent: pink
+      primary: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Teaching:
+    - QGIS basics: QGIS_Intro.md
+    - Hazard assessment:
+      - Setting up QGIS: QLavha_Getting-Started.md
+      - Lava flow: 
+        - Intro: Hazard_lava_intro.md
+        - Path of steepest descent: Hazard_lava_steepest-descent.md
+  - Resources: resources.md
+
+  # - Demo: MASTER_example.py
+  # - Changelog: changelog.md
+  # - Tips: tips.md
+  # - volcGIS API:
+  #   - Module eruption: volcGIS_eruption.md
+  #   - Module exposureAnalysis: volcGIS_exposureAnalysis.md
+
+plugins:
+    - search
+    - mkdocstrings
+    - mkdocs-jupyter:
+        execute: True
+        include_source: True
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true 
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - footnotes
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/VolcanoRisk
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/vharg
+
+extra_css:
+  - stylesheets/extra.css
