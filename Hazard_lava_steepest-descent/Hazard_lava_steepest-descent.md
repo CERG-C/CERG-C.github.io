@@ -130,7 +130,7 @@ The 2021 eruption of Cumbre Vieja started on September 19 and lasted until Decem
 
 !!! info "Identify feature tool"
     By using the `Identify Feature` tool, you can click on any lava flow outline and see its `date` field.
-    ![Image title](../img/QGIS/identify.png){ align=left }
+    ![Image title](../img/qgis/identify.png){ align=left }
 
 Using the lava flow outlines, we computed the evolution of **flow length** and **flow width** through time as shown in Figure 2.
 
