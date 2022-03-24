@@ -18,3 +18,4 @@ flowchart TD
 $$
 \operatorname{ker} f=\{g\in G:f(g)=e_{H}\}{\mbox{.}}
 $$
+s
