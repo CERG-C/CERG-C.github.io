@@ -37,7 +37,7 @@ As `QGIS` will most likely be in French, let's change it to English:
 3. Close and restart `QGIS`
 
 <figure markdown>
-  ![QGIS_language](../img/QGIS/qgis_language.png)
+  ![QGIS_language](../img/qgis/qgis_language.png)
   <figcaption>Figure 1: Change the QGIS language</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ To activate `Q–LavHA` in `QGIS`:
 4. There should now be a `Q-LavHA` icon in the [Toolbar](QGIS_Intro.md#the-qgis-interface).
 
 <figure markdown>
-  ![QGIS_plugin](../img/QGIS/qgis_plugin.png)
+  ![QGIS_plugin](../img/qgis/qgis_plugin.png)
   <figcaption>Figure 2: Activate the Q–LavHA plugin</figcaption>
 </figure>
  

@@ -8,19 +8,21 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://CERG-C.github.io/Hazard_probabilistic1/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>CERG-C Volcanic hazard classes & material</title>
+        <title>Probabilistic modeling part I - CERG-C Volcanic hazard classes & material</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -35,11 +37,11 @@
       
     
     
-      <link rel="stylesheet" href="/assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#probabilistic-modelling-part-1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="CERG-C Volcanic hazard classes &amp; material" class="md-header__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
+    <a href=".." title="CERG-C Volcanic hazard classes &amp; material" class="md-header__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -95,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Probabilistic modeling part I
             
           </span>
         </div>
@@ -180,7 +187,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href=".." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -189,13 +196,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/QGIS_Intro/" class="md-tabs__link">
+      <a href="../QGIS_Intro/" class="md-tabs__link md-tabs__link--active">
         Teaching
       </a>
     </li>
@@ -208,7 +217,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/resources/" class="md-tabs__link">
+    <a href="../resources/" class="md-tabs__link">
       Resources
     </a>
   </li>
@@ -220,7 +229,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/contribute/" class="md-tabs__link">
+    <a href="../contribute/" class="md-tabs__link">
       Contribute
     </a>
   </li>
@@ -247,7 +256,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="CERG-C Volcanic hazard classes &amp; material" class="md-nav__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
+    <a href=".." title="CERG-C Volcanic hazard classes &amp; material" class="md-nav__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -266,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Home
       </a>
     </li>
@@ -279,12 +288,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -307,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/QGIS_Intro/" class="md-nav__link">
+      <a href="../QGIS_Intro/" class="md-nav__link">
         QGIS basics
       </a>
     </li>
@@ -319,12 +330,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -347,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/QLavha_Getting-Started.md" class="md-nav__link">
+      <a href="../QLavha_Getting-Started.md" class="md-nav__link">
         Setting up QGIS
       </a>
     </li>
@@ -359,12 +372,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
       
       
       
@@ -387,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_lava_intro/" class="md-nav__link">
+      <a href="../Hazard_lava_intro/" class="md-nav__link">
         Intro
       </a>
     </li>
@@ -401,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_lava_config/" class="md-nav__link">
+      <a href="../Hazard_lava_config/" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -415,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_lava_steepest-descent/" class="md-nav__link">
+      <a href="../Hazard_lava_steepest-descent/" class="md-nav__link">
         Path of steepest descent
       </a>
     </li>
@@ -429,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_lava_modeling/" class="md-nav__link">
+      <a href="../Hazard_lava_modeling/" class="md-nav__link">
         How do lavas flow?
       </a>
     </li>
@@ -441,11 +456,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/Hazard_probabilistic1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Probabilistic modeling part I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Probabilistic modeling part I
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probabilistic-modelling" class="md-nav__link">
+    Probabilistic modelling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-vs-probabilistic-modeling" class="md-nav__link">
+    Deterministic vs probabilistic modeling
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -457,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_lava_Q-LavHA/" class="md-nav__link">
+      <a href="../Hazard_lava_Q-LavHA/" class="md-nav__link">
         Q-LavHA
       </a>
     </li>
@@ -504,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Hazard_probabilistic2/" class="md-nav__link">
+      <a href="../Hazard_probabilistic2/" class="md-nav__link">
         Probabilistic modeling part II
       </a>
     </li>
@@ -540,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/resources/" class="md-nav__link">
+      <a href="../resources/" class="md-nav__link">
         Resources
       </a>
     </li>
@@ -555,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contribute/" class="md-nav__link">
+      <a href="../contribute/" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -569,12 +632,108 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probabilistic-modelling" class="md-nav__link">
+    Probabilistic modelling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-vs-probabilistic-modeling" class="md-nav__link">
+    Deterministic vs probabilistic modeling
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
 
+
+<h1 id="probabilistic-modelling-part-1">Probabilistic modelling: Part 1</h1>
+<p>Attempting to predict the behaviour of <em>future</em> hazardous events is associated with <strong>uncertainties</strong>. We will never be able to predict <strong>exactly</strong> what will happen, so we need to use a modeling framework that allows for uncertainty quantifications. This is where <strong>probabilistic modeling</strong> enters the show.</p>
+<h2 id="probabilistic-modelling">Probabilistic modelling</h2>
+<p>Let's go back to the fictional DEM used in the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">previous exercise</a>. As we saw from <a href="../Hazard_lava_steepest-descent/#probability-of-vent-opening">existing literature</a>, monogenetic field such as La Palma imply that each new eruptive event will take place from a new vent. Imagine that all the red pixels in Figure 1 have been identified as possible vent opening locations for future eruptions. How do we account for the <strong>uncertainty associated with vent location</strong> when quantifying the hazard of a future eruption?</p>
+<figure>
+<p><img alt="prob1" src="../img/hydro/prob1.png" width="400" />
+  </p>
+<figcaption>Figure 1: Fictional DEM with locations of possible future vent opening indicated in red.</figcaption>
+</figure>
+<p>The idea here is that we will not model <strong>only one realisation of an event</strong> - here a single lava flow - but <strong>many</strong>, and that we will <strong>average</strong> all their contributions. Unlike what we saw when using the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">path of steepest descent</a>, we will assess the flow trajectory initiating from all pixels in Figure 1.</p>
+<figure>
+<p><img alt="prob2" src="../img/hydro/prob2.png" width="400" />
+  </p>
+<figcaption>Figure 2: Combination of the paths of steepest descent estimated from all pixels of Figure 1.</figcaption>
+</figure>
+<p><strong>What do we see?</strong></p>
+<ul>
+<li>Some pixels in Figure 2 are inundated regardless of the initialisation point (&rarr; darker shades of pink).</li>
+<li>Conversely, other pixels are inundated only for selected inundation points (&rarr; lighter shades of pink).</li>
+</ul>
+<p>Therefore, darker pixels have <strong>higher probabilities of inundation</strong> than others. Using a <em>frequentist</em> approach, we can calculate the <strong>probability</strong> <span class="arithmatex">\(P(x,y)\)</span> of a pixel to be inundated by counting <em>how many times</em> a pixel is hit and normalising this count by the total number of runs, where <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> are the pixel's coordinates:</p>
+<div class="arithmatex">\[
+P(x,y) = \frac{\sum_{i=1}^{N_{r}}n_{i}}{N_{r}}
+\]</div>
+<p>Where <span class="arithmatex">\(N_{r}\)</span> is the total number of runs and <span class="arithmatex">\(n_{i}\)</span> is defined as:</p>
+<div class="arithmatex">\[
+n_{i} = \bigg\{ ^{1,\ if\ inundation} _{0,\ otherwise}
+\]</div>
+<figure>
+<p><img alt="prob3" src="../img/hydro/prob3.png" width="400" />
+  </p>
+<figcaption>Figure 3: Computing the probability of inundation using a frequentist approach.</figcaption>
+</figure>
+<p>So, from Figures 2 and 3:</p>
+<ul>
+<li>A pixel hit <em>once</em> (&rarr; <span class="arithmatex">\(n_{i} = 1\)</span>) over the six simulations (&rarr; <span class="arithmatex">\(N_{r} = 6\)</span>) has a probability <span class="arithmatex">\(P(x,y) = \frac{1}{6} = 0.17\)</span> (or 17%).</li>
+<li>A pixel hit <em>twice</em> (&rarr; <span class="arithmatex">\(n_{i} = 2\)</span>) over the six simulations (&rarr; <span class="arithmatex">\(N_{r} = 6\)</span>) has a probability <span class="arithmatex">\(P(x,y) = \frac{2}{6} = 0.33\)</span> (or 33%).</li>
+</ul>
+<h2 id="deterministic-vs-probabilistic-modeling">Deterministic vs probabilistic modeling</h2>
+<p>This modeling approach contrasts with <strong>deterministic</strong> modeling strategies. In deterministic modeling, the user choses <strong>one</strong> value for each model input, runs <strong>a single instance</strong> of the model that will compute a <strong>single realisation</strong>, in our case the extent of lava flow inundation. With <strong>probabilistic</strong> modeling, the aim is to explore how <strong>variability of input parameters</strong> will impact hazard predictions in order to represent a <em>probability</em> of hazard occurrence. This flowchart contrasts both modelling philosophies:</p>
+<pre class="mermaid"><code>flowchart TD
+
+    subgraph Probabilistic
+    B1[Range of inputs] -- random sampling --&gt; B2[Predictive model] -- many model runs --&gt; B3[Prob. Lava flow inundation] --&gt; B4([Many possible outcomes])
+    end
+
+    subgraph Deterministic 
+    A1[Single input] -- single value --&gt; A2[Predictive model] -- 1 model run --&gt; A3[Lava flow inundation] --&gt; A4([One single outcome])
+    end</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Gambling-driven science</p>
+<p>This type of random sampling is often referred to as <strong>Monte Carlo</strong> simulations, related to the Monte Carlo casino in Monaco, where a lot of probability theories were developed around gamble. <strong>Stochastic sampling</strong> is also a synonym.</p>
+</div>
+
+              
             </article>
           </div>
         </div>
@@ -582,6 +741,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Hazard_lava_modeling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How do lavas flow?" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              How do lavas flow?
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Hazard_lava_Q-LavHA/" class="md-footer__link md-footer__link--next" aria-label="Next: Q-LavHA" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Q-LavHA
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -603,12 +797,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="/assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

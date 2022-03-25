@@ -4,7 +4,40 @@ Lava flows - beside being mesmerising to watch, are highly destructive volcanic 
 
 !!! help "Does this mean that we are helpless in reducing the risk associated with lava flows?"
 
-Well, no, the idea here is to *plan ahead* of an eruption, but we will discuss that throughout the exercises.
+Well, no, not entirely. In this exercise, we will differentiate between various purposes of hazard (and risk!) assessments for different parts of the *risk cycle*, contrasting between actions taken *long before* the event during the **prevention** phase - where the idea here is to *plan ahead* to reduce the risk - and actions taken *short before* or *during* the event in the **preparedness** and **response** - where the aim is to minimise immediate impacts. We will discuss these concepts throughout the exercise and in the field, but refer to the [ADVISE](https://appliedvolc.biomedcentral.com/articles/10.1186/s13617-021-00108-5)[^1] approach for an overview of the risk framework we are applying here.
+
+## How do lavas flow?
+
+- To simplify complex physics to a maximum, **lava flows** are non-newtonian fluids with a **yield strength**. 
+- A **yield strength** means that you need to apply a *load* on the fluid before it starts deforming.
+
+!!! question "Yield strength"
+
+    Think of a slope. If you drop a newtonian fluid (i.e., no yield strength) on it, it will immediately start flowing, whereas non-newtonian fluids with a yield strength will require some help.
+
+    Can you think of any fluids that would behave like these?
+
+    ??? check "Solution"
+
+        - **Water** is a newtonian fluid with no yield strength 
+        - **Toothpaste** is a non-newtonian fluids with a yield strength
+
+- Look at these videos:
+    - [Video 1a](https://www.youtube.com/watch?v=JoGFPabrdUI), [Video 1b](https://www.youtube.com/watch?v=myxTc32foGs)
+    - [Video 2a](https://www.youtube.com/watch?v=Kc6CIwBVo5s), [Video 2b](https://www.youtube.com/watch?v=9yhdBjGtxEM)
+    - [Video 3a](https://www.youtube.com/watch?v=aJ66rTiHA4A), [Video 3b](https://www.youtube.com/watch?v=BgjpSlzU9oU)
+
+
+
+- Advance rate:
+    - Volumetric effusion rate 
+    - Proximity to the vent
+- Flow length
+    - Eruption rate (both magnitude and steadiness)
+    - Slope traversed
+    - Extent of topographic confinement
+    - Initial lava temperature and rheological properties 
+    - Emplacement conditions (open channel or insulating tube)
 
 ## Case-study: La Palma
 
@@ -33,9 +66,10 @@ With this exercise, you will:
 !!! info "Communicating uncertainties during lava flow crises" 
     Since the beginning of the Pu‘u‘ō‘ō eruption in 1983 to [its end in 2018](https://www.usgs.gov/volcanoes/kilauea/puuoo-eruption-lasted-35-years), the Big Island of Hawaii has been periodically affected by lava flow crises. These repeated crises have provided important lessons on how to communicate hazard uncertainties during crises. During the 2014 crisis, the flow field was dangerously heading towards the town of Pāhoa. Under pressure from decision makers, HVO attempted to provide a *forecast* and estimated that the flow *might* reach the town of Pāhoa within *a few* to *tens* of days... only that the media only reported the "a few" days, creating panic amongst the community.
 
-    HVO realised the difficulty in communicating such a large uncertainty in operational activities and decided to cease providing forecasts. Instead, they reverted back to the **steepest descent method** which, although over-simplifying complex flow-emplacement processes, has the benefit of being transparent. In addition, HVO conducted meetings with stakeholders, agencies and the public, where they explained the limitations encountered when modeling lava flows. This combination of the use of a simplistic model with outreach events proved out to be the most efficient communication procedure and contributed to both increasing the trust in HVO and efficiently reducing the risk[^1][^2].
+    HVO realised the difficulty in communicating such a large uncertainty in operational activities and decided to cease providing forecasts. Instead, they reverted back to the **steepest descent method** which, although over-simplifying complex flow-emplacement processes, has the benefit of being transparent. In addition, HVO conducted meetings with stakeholders, agencies and the public, where they explained the limitations encountered when modeling lava flows. This combination of the use of a simplistic model with outreach events proved out to be the most efficient communication procedure and contributed to both increasing the trust in HVO and efficiently reducing the risk[^2][^3].
 
 ## References
 
-[^1]: Poland, M., Orr, T.R., Kauahikaua, J.P., Brantley, S.R., Babb, J.L., Patrick, M.R., Neal, C.A., Anderson, K.R., Antolik, L., Burgess, M., 2016. The 2014–2015 Pāhoa lava flow crisis at Kīlauea Volcano, Hawai ‘i: Disaster avoided and lessons learned. GSA Today 26, 4–10.
-[^2]: Neal, C.A., Brantley, S.R., Antolik, L., Babb, J., Burgess, M., Calles, K., Cappos, M., Chang, J.C., Conway, S., Desmither, L., Dotray, P., Elias, T., Fukunaga, P., Fuke, S., Johanson, I.A., Kamibayashi, K., Kauahikaua, J., Lee, R.L., Pekalib, S., Miklius, A., Million, W., Moniz, C.J., Nadeau, P.A., Okubo, P., Parcheta, C., Patrick, M.P., Shiro, B., Swanson, D.A., Tollett, W., Trusdell, F., Younger, E.F., Zoeller, M.H., Montgomery-Brown, E.K., Anderson, K.R., Poland, M.P., Ball, J., Bard, J., Coombs, M., Dietterich, H.R., Kern, C., Thelen, W.A., Cervelli, P.F., Orr, T., Houghton, B.F., Gansecki, C., Hazlett, R., Lundgren, P., Diefenbach, A.K., Lerner, A.H., Waite, G., Kelly, P., Clor, L., Werner, C., Mulliken, K., Fisher, G., 2018. The 2018 rift eruption and summit collapse of Kīlauea Volcano. Science 7046, eaav7046. https://doi.org/10.1126/science.aav7046
+[^1]: Bonadonna, C., Frischknecht, C., Menoni, S., Romerio, F., Gregg, C.E., Rosi, M., Biass, S., Asgary, A., Pistolesi, M., Guobadia, D., Gattuso, A., Ricciardi, A., Cristiani, C., 2021. Integrating hazard, exposure, vulnerability and resilience for risk and emergency management in a volcanic context: the ADVISE model. J Appl. Volcanol. 10, 7. https://doi.org/10.1186/s13617-021-00108-5
+[^2]: Poland, M., Orr, T.R., Kauahikaua, J.P., Brantley, S.R., Babb, J.L., Patrick, M.R., Neal, C.A., Anderson, K.R., Antolik, L., Burgess, M., 2016. The 2014–2015 Pāhoa lava flow crisis at Kīlauea Volcano, Hawai ‘i: Disaster avoided and lessons learned. GSA Today 26, 4–10.
+[^3]: Neal, C.A., Brantley, S.R., Antolik, L., Babb, J., Burgess, M., Calles, K., Cappos, M., Chang, J.C., Conway, S., Desmither, L., Dotray, P., Elias, T., Fukunaga, P., Fuke, S., Johanson, I.A., Kamibayashi, K., Kauahikaua, J., Lee, R.L., Pekalib, S., Miklius, A., Million, W., Moniz, C.J., Nadeau, P.A., Okubo, P., Parcheta, C., Patrick, M.P., Shiro, B., Swanson, D.A., Tollett, W., Trusdell, F., Younger, E.F., Zoeller, M.H., Montgomery-Brown, E.K., Anderson, K.R., Poland, M.P., Ball, J., Bard, J., Coombs, M., Dietterich, H.R., Kern, C., Thelen, W.A., Cervelli, P.F., Orr, T., Houghton, B.F., Gansecki, C., Hazlett, R., Lundgren, P., Diefenbach, A.K., Lerner, A.H., Waite, G., Kelly, P., Clor, L., Werner, C., Mulliken, K., Fisher, G., 2018. The 2018 rift eruption and summit collapse of Kīlauea Volcano. Science 7046, eaav7046. https://doi.org/10.1126/science.aav7046

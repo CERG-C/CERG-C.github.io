@@ -4,7 +4,7 @@
 
 *Digital elevation models* - or **DEM** are incredibly useful datasets. DEM are [raster](QGIS_Intro.md#Raster-data) data containing an elevation value at each pixel. Global DEM datasets such as [SRTM](https://www2.jpl.nasa.gov/srtm/) or [ASTER](https://earthdata.nasa.gov/learn/articles/new-aster-gdem) are usually produced from the ISS or satellite imagery, but higher-definition datasets can be produced from airborne [LiDAR](https://www.swisstopo.admin.ch/en/knowledge-facts/geoinformation/lidar-data.html) missions or structure-from-motion from [UAVs](https://eos.org/science-updates/drone-peers-into-open-volcanic-vents). Here, we will use a DEM with a resolution of 25 m covering the island of La Palma.
 
-Using *only* a DEM, hydrological analyses can help establishing a surface water system model that we can use to study the hydrological characteristics of surface hydrological processes. Thanks to that, it is possible to estimate such aspects as the most likely flow directions, catchment areas and drainage bassins. It is therefore extensively used in land-use planning to estimate potentially flooding areas or to design proposed drainage systems and facilities. Here, we will use this workflow to get a general idea of the possible lava flow inundation areas in La Palma:
+Using *only* a DEM, hydrological analyses can help establishing a surface water system model that we can use to study the hydrological characteristics of surface hydrological processes. Thanks to that, it is possible to estimate such aspects as the most likely flow directions, catchment areas and drainage bassins. It is therefore extensively used in land-use planning to estimate potentially flooding areas or to design proposed drainage systems and facilities. Since lava flows are confined by topography, flow paths can be broadly predicted from DEM once the vent location is known. Here, we will use this workflow to get a general idea of the possible lava flow inundation areas in La Palma:
 
 ```mermaid
 flowchart LR
@@ -48,7 +48,7 @@ Start by showing only the `Flow Accumulation (log)` layer in `QGIS`. Conceptuall
 
 ### Stream network
 
-Now turn on the `Stream network` layer in `QGIS`. As `Flow Accumulation` raster are slightly overwhelming, the `Stream network` algorithm simply applies a threshold of count values $c$ to delineate a *stream*. If a given pixel has a number of contributing pixels $C$ such as $C \geq c$, then the pixel is assumed to be part of the stream. Think of the `Stream network` information as a higher-level version of the `Flow Accumulation` raster. As a matter of fact, `Stream network` is another word for **path of steepest descent**. 
+Now turn on the `Stream network` layer in `QGIS`. As `Flow Accumulation` raster are slightly overwhelming to visually analyse, the `Stream network` algorithm simply applies a threshold of count values $c$ to delineate a *stream*. If a given pixel has a number of contributing pixels $C$ such as $C \geq c$, then the pixel is assumed to be part of the stream. Think of the `Stream network` information as a higher-level version of the `Flow Accumulation` raster. As a matter of fact, `Stream network` is another word for **path of steepest descent**. 
 
 !!! check "Stream network"
 
@@ -96,9 +96,9 @@ Let's now place this data in the context of a hazard assessment. Start by downlo
 
 ??? info "Monogenetic vs polygenetic volcanism"
 
-    La Palma is a *composite* volcano. As you can see both from the DEM and the geological map, the currently most active southern part contains several *monogenetic* vents. Monogenetic vents are typically active during *a single eruption* and not reactivated afterwards. The opening of a new vent is then controlled by several parameters (e.g., tectonic regime[^1]), and predicting the spatial likelihood of vent opening is an additional complexity for long-term hazard and risk assessments in monogenetic fields. This is especially the case for Auckland, which is built on a monogenetic field[^2]. 
+    La Palma is a *composite* volcano. As you can see both from the DEM and the geological map, the currently most active southern part contains several *monogenetic* vents. Monogenetic vents are typically active during *a single eruptive event* and not reactivated afterwards. The opening of a new vent is then controlled by several parameters (e.g., tectonic regime[^1]), and predicting the spatial likelihood of vent opening is an additional complexity for long-term hazard and risk assessments in monogenetic fields. This is especially the case for Auckland, which is built on a monogenetic field[^2]. 
 
-    Here are some definitions of volcanic landforms from de Silva and Lindsay (2015)[^3]:
+    Here are some definitions of volcanic landforms[^3]:
 
     **Composite volcanoes**
     > All conical or broadly conical polygenetic volcanoes constructed of accumulations of lava and pyroclastic deposits, sometimes alternating, erupted from vent(s) located at the summit (eruptions can also on occasion occur from the flanks) of the volcano.
@@ -121,16 +121,17 @@ As we will discuss throughout the exercices, assessing *where* the next monogene
 !!! question "Questions"
 
     If all vents in Figure 1 have an **equal probability of occurrence**, does that mean that the entire island is uniformly exposed to lava flow inundation? Use the drainage basins and the stream networks to estimate:
-        - What parts of the island are most exposed to lava flow inundation?
-        - Are there any safe/shadow parts?
+
+    - What parts of the island are most exposed to lava flow inundation?
+    - Are there any safe/shadow parts?
 
 ### The 2021 eruption 
 
 The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In `QGIS`, the `2021 Eruption` layer group shows you both the vents and the chronology of lava flows provided by the [Copernicus Emergency Management Service](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) (CMS). 
 
 !!! info "Identify feature tool"
-    By using the `Identify Feature` tool, you can click on any lava flow outline and see its `date` field.
-    ![Image title](../img/qgis/identify.png){ align=left }
+    By using the `Identify Feature` tool in the [Toolbar](QGIS_Intro.md#the-qgis-interface), you can click on any lava flow outline and see its `date` field.
+    ![Image title](../img/qgis/identify.png){width=40, align=left }
 
 Using the lava flow outlines, we computed the evolution of **flow length** and **flow width** through time as shown in Figure 2.
 
@@ -145,11 +146,38 @@ Using the lava flow outlines, we computed the evolution of **flow length** and *
 
 <figure markdown>
   ![width](../img/2021_flow_length.png)
-  <figcaption>Figure 2: Possible location of vent opening for the next eruption according to Marrero et al. (2019).</figcaption>
+  <figcaption>Figure 2: Advance and widening rates of the 2021 lava flow.</figcaption>
 </figure>
 
 ## Limitations 
 
+Comparing the path of steepest descent approach computed on the pre-2021 eruption topography with the actual outlines of the lava flows of the 2021 eruption shows how:
+
+- The path of steepest descent captures the general trend of flow direction **but**
+- The actual flow significantly diverted from this initial prediction.
+
+!!! question "Why?"
+
+    Spend some time thinking about the *reasons* behind this discrepancy, including:
+
+    - The rheological properties of the lava flows.
+    - Their duration, the properties of *single* vs *compound* lava flows and their evolution in time.
+    - Their relation with topography.
+
+From a crisis management perspective and reflecting back on the [Kīlauea crises](Hazard_lava_intro.md#objectives), the **path of steepest descent** is a great communication tool for as long as:
+
+- There is an active monitoring of the crisis as it evolves.
+- There is a clear and trusting communication channel between the monitoring agencies and the stakeholders, thanks to which limitations and uncertainties associated with predictions can be clearly explained and discussed.
+
+However, its **deterministic** nature prevents its ability to systematically account for uncertainties. In a way, it only shows the **most likely** scenario rather than exploring a **range of possible** scenarios. Therefore, the **path of steepest descent** approach is not suited for long-term hazard and risk studies, which are required for such tasks as land-use planning and the pro-active development of other risk-reduction strategies. In the next exercise, we will use a stochastic model to address some of these shortcomings an test it on La Palma.
+
+## Summary
+
+In this exercise, we:
+
+- Used hydrological modeling tools to obtain a first-order estimate of the possible hazard of lava flow inundation. 
+- Compared this approach with historical and recent lava flows at La Palma. 
+- Discussed its limitations and its domain of applicability.
 
 ## References
 
