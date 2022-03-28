@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QLavha_Getting-Started.md" class="md-nav__link">
+      <a href="../QLavha_Getting-Started/" class="md-nav__link">
         Setting up QGIS
       </a>
     </li>
@@ -680,21 +680,21 @@
 
 
 <h1 id="probabilistic-modelling-part-1">Probabilistic modelling: Part 1</h1>
-<p>Attempting to predict the behaviour of <em>future</em> hazardous events is associated with <strong>uncertainties</strong>. We will never be able to predict <strong>exactly</strong> what will happen, so we need to use a modeling framework that allows for uncertainty quantifications. This is where <strong>probabilistic modeling</strong> enters the show.</p>
+<p>Attempting to predict the behaviour of <em>future</em> hazardous events is inherently associated with <strong>uncertainties</strong>. We will never be able to predict <strong>exactly</strong> what will happen in the future, so we need to use a modeling framework that allows for uncertainty quantifications. This is where <strong>probabilistic modeling</strong> enters the show. Probabilistic modeling allows exploring <em>a range</em> of possible future outcomes rather than a a unique realisation.</p>
 <h2 id="probabilistic-modelling">Probabilistic modelling</h2>
-<p>Let's go back to the fictional DEM used in the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">previous exercise</a>. As we saw from <a href="../Hazard_lava_steepest-descent/#probability-of-vent-opening">existing literature</a>, monogenetic field such as La Palma imply that each new eruptive event will take place from a new vent. Imagine that all the red pixels in Figure 1 have been identified as possible vent opening locations for future eruptions. How do we account for the <strong>uncertainty associated with vent location</strong> when quantifying the hazard of a future eruption?</p>
+<p>Let's go back to the fictional DEM used in the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">previous exercise</a>. As we saw from <a href="../Hazard_lava_steepest-descent/#probability-of-vent-opening">existing literature</a>, monogenetic field such as La Palma imply that future eruptive event will take place from a new vent. Imagine that all the red pixels in Figure 1 represent coordinates where the next vent can potentially open. How do we account for the <strong>uncertainty associated with vent location</strong> when quantifying the hazard of a future eruption?</p>
 <figure>
 <p><img alt="prob1" src="../img/hydro/prob1.png" width="400" />
   </p>
 <figcaption>Figure 1: Fictional DEM with locations of possible future vent opening indicated in red.</figcaption>
 </figure>
-<p>The idea here is that we will not model <strong>only one realisation of an event</strong> - here a single lava flow - but <strong>many</strong>, and that we will <strong>average</strong> all their contributions. Unlike what we saw when using the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">path of steepest descent</a>, we will assess the flow trajectory initiating from all pixels in Figure 1.</p>
+<p>The idea here is that we will not model <strong>only one realisation of an event</strong> - here a one lava flow originating from a single location - but <strong>many</strong>, and that we will <strong>average</strong> all their contributions. Unlike what we saw when using the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">path of steepest descent</a>, we will assess the flow trajectory initiating from all pixels in Figure 1.</p>
 <figure>
 <p><img alt="prob2" src="../img/hydro/prob2.png" width="400" />
   </p>
 <figcaption>Figure 2: Combination of the paths of steepest descent estimated from all pixels of Figure 1.</figcaption>
 </figure>
-<p><strong>What do we see?</strong></p>
+<p>Figure 2 shows the overlay of the path of steepest descent computed from each of the 6 pixels identified in Figure 1. <strong>What do we see?</strong></p>
 <ul>
 <li>Some pixels in Figure 2 are inundated regardless of the initialisation point (&rarr; darker shades of pink).</li>
 <li>Conversely, other pixels are inundated only for selected inundation points (&rarr; lighter shades of pink).</li>
@@ -714,8 +714,8 @@ n_{i} = \bigg\{ ^{1,\ if\ inundation} _{0,\ otherwise}
 </figure>
 <p>So, from Figures 2 and 3:</p>
 <ul>
-<li>A pixel hit <em>once</em> (&rarr; <span class="arithmatex">\(n_{i} = 1\)</span>) over the six simulations (&rarr; <span class="arithmatex">\(N_{r} = 6\)</span>) has a probability <span class="arithmatex">\(P(x,y) = \frac{1}{6} = 0.17\)</span> (or 17%).</li>
-<li>A pixel hit <em>twice</em> (&rarr; <span class="arithmatex">\(n_{i} = 2\)</span>) over the six simulations (&rarr; <span class="arithmatex">\(N_{r} = 6\)</span>) has a probability <span class="arithmatex">\(P(x,y) = \frac{2}{6} = 0.33\)</span> (or 33%).</li>
+<li>A pixel hit <em>once</em> (<span class="arithmatex">\(n_{i} = 1\)</span>) over the six simulations (<span class="arithmatex">\(N_{r} = 6\)</span>) has a probability <span class="arithmatex">\(P(x,y) = \frac{1}{6} = 0.17\)</span> (or 17%).</li>
+<li>A pixel hit <em>twice</em> (<span class="arithmatex">\(n_{i} = 2\)</span>) over the six simulations has a probability <span class="arithmatex">\(P(x,y) = \frac{2}{6} = 0.33\)</span> (or 33%).</li>
 </ul>
 <h2 id="deterministic-vs-probabilistic-modeling">Deterministic vs probabilistic modeling</h2>
 <p>This modeling approach contrasts with <strong>deterministic</strong> modeling strategies. In deterministic modeling, the user choses <strong>one</strong> value for each model input, runs <strong>a single instance</strong> of the model that will compute a <strong>single realisation</strong>, in our case the extent of lava flow inundation. With <strong>probabilistic</strong> modeling, the aim is to explore how <strong>variability of input parameters</strong> will impact hazard predictions in order to represent a <em>probability</em> of hazard occurrence. This flowchart contrasts both modelling philosophies:</p>
@@ -730,8 +730,9 @@ n_{i} = \bigg\{ ^{1,\ if\ inundation} _{0,\ otherwise}
     end</code></pre>
 <div class="admonition info">
 <p class="admonition-title">Gambling-driven science</p>
-<p>This type of random sampling is often referred to as <strong>Monte Carlo</strong> simulations, related to the Monte Carlo casino in Monaco, where a lot of probability theories were developed around gamble. <strong>Stochastic sampling</strong> is also a synonym.</p>
+<p>This type of random sampling is often referred to as <strong>Monte Carlo</strong> simulations. This name comes from the Monte Carlo casino in Monaco, where a lot of probability theories were developed around gambling. <strong>Stochastic sampling</strong> is also a synonym of random sampling.</p>
 </div>
+<p>Ultimately, there are 3 main approaches for volcanic hazard assessments.</p>
 
               
             </article>

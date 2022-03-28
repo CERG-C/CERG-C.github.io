@@ -47,7 +47,7 @@ Raster data are stored as a grid of values - or *pixels.* There is no raster dat
 The QGIS interface is shown in Figure 1. Note that the Graphical User Interface (GUI) is highly customisable and might look different at first, but the red numbers indicate the main common components. 
 
 <figure markdown>
-  ![QGIS_interface](../img/qgis/qgis_interface.png)
+  ![QGIS_interface](img/qgis/qgis_interface.png)
   <figcaption>Figure 1: The QGIS interface</figcaption>
 </figure>
 

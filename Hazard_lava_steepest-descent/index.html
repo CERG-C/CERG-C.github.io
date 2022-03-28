@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QLavha_Getting-Started.md" class="md-nav__link">
+      <a href="../QLavha_Getting-Started/" class="md-nav__link">
         Setting up QGIS
       </a>
     </li>
@@ -464,25 +464,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hydrological-modeling" class="md-nav__link">
-    Hydrological modeling
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#objectives" class="md-nav__link">
-    Objectives
+     Objectives
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#surface-drainage" class="md-nav__link">
-    Surface drainage
+  <a href="#theory" class="md-nav__link">
+     Theory
   </a>
   
-    <nav class="md-nav" aria-label="Surface drainage">
+    <nav class="md-nav" aria-label=" Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -512,11 +505,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hazard-assessment" class="md-nav__link">
-    Hazard assessment
+  <a href="#exercise" class="md-nav__link">
+     Exercise
   </a>
   
-    <nav class="md-nav" aria-label="Hazard assessment">
+    <nav class="md-nav" aria-label=" Exercise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -546,22 +539,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
-    Summary
+     Summary
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+     References
   </a>
   
 </li>
@@ -741,25 +734,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hydrological-modeling" class="md-nav__link">
-    Hydrological modeling
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#objectives" class="md-nav__link">
-    Objectives
+     Objectives
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#surface-drainage" class="md-nav__link">
-    Surface drainage
+  <a href="#theory" class="md-nav__link">
+     Theory
   </a>
   
-    <nav class="md-nav" aria-label="Surface drainage">
+    <nav class="md-nav" aria-label=" Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -789,11 +775,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hazard-assessment" class="md-nav__link">
-    Hazard assessment
+  <a href="#exercise" class="md-nav__link">
+     Exercise
   </a>
   
-    <nav class="md-nav" aria-label="Hazard assessment">
+    <nav class="md-nav" aria-label=" Exercise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -823,22 +809,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
-    Summary
+     Summary
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+     References
   </a>
   
 </li>
@@ -858,21 +844,20 @@
 
 
 <h1 id="path-of-steepest-descent">Path of steepest descent</h1>
-<h2 id="hydrological-modeling">Hydrological modeling</h2>
-<p><em>Digital elevation models</em> - or <strong>DEM</strong> are incredibly useful datasets. DEM are <a href="../QGIS_Intro/#Raster-data">raster</a> data containing an elevation value at each pixel. Global DEM datasets such as <a href="https://www2.jpl.nasa.gov/srtm/">SRTM</a> or <a href="https://earthdata.nasa.gov/learn/articles/new-aster-gdem">ASTER</a> are usually produced from the ISS or satellite imagery, but higher-definition datasets can be produced from airborne <a href="https://www.swisstopo.admin.ch/en/knowledge-facts/geoinformation/lidar-data.html">LiDAR</a> missions or structure-from-motion from <a href="https://eos.org/science-updates/drone-peers-into-open-volcanic-vents">UAVs</a>. Here, we will use a DEM with a resolution of 25 m covering the island of La Palma.</p>
-<p>Using <em>only</em> a DEM, hydrological analyses can help establishing a surface water system model that we can use to study the hydrological characteristics of surface hydrological processes. Thanks to that, it is possible to estimate such aspects as the most likely flow directions, catchment areas and drainage bassins. It is therefore extensively used in land-use planning to estimate potentially flooding areas or to design proposed drainage systems and facilities. Since lava flows are confined by topography, flow paths can be broadly predicted from DEM once the vent location is known. Here, we will use this workflow to get a general idea of the possible lava flow inundation areas in La Palma:</p>
+<p><em>Digital elevation models</em> - or <strong>DEM</strong> are incredibly useful. DEM are <a href="../QGIS_Intro/#Raster-data">raster</a> datasets containing an elevation value at each pixel, which capture the morphology of the Earth's surface. Global DEM datasets such as <a href="https://www2.jpl.nasa.gov/srtm/">SRTM</a> or <a href="https://earthdata.nasa.gov/learn/articles/new-aster-gdem">ASTER</a> are usually produced from the ISS or satellite imagery, but higher-definition datasets can be produced from airborne <a href="https://www.swisstopo.admin.ch/en/knowledge-facts/geoinformation/lidar-data.html">LiDAR</a> missions or structure-from-motion from <a href="https://eos.org/science-updates/drone-peers-into-open-volcanic-vents">UAVs</a>. Here, we will use a DEM with a resolution of 25 m covering the island of La Palma.</p>
+<p>Using <em>only</em> a DEM, hydrological analyses can help establishing a surface water system model that we can use to constrain <em>some</em> surface hydrological processes, including <strong>likely flow direction</strong> or <strong>drainage basins</strong>. It is therefore extensively used in land-use planning to estimate potentially flooding areas, or to design proposed drainage systems and facilities. Since lava flows are confined by topography, flow paths can be broadly predicted from DEM once the vent location is known. Here, we will use this workflow to get a general idea of the possible lava flow paths in La Palma:</p>
 <pre class="mermaid"><code>flowchart LR
 
 A[Flow accumulation] --&gt; B[Stream network]
 B --&gt; C[Drainage basins]</code></pre>
 <p>Several softwares propose implementations of hydrological analyses including <a href="https://docs.qgis.org/3.22/en/docs/training_manual/processing/hydro.html?highlight=hydrological">QGIS</a>, <a href="https://topotoolbox.wordpress.com">Matlab</a> and <a href="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/an-overview-of-the-hydrology-tools.htm">ArcGIS</a>. Here, we have pre-computed the important datasets for you, which are contained in the <code>Hydrology</code> group in the <em>Layer Panel</em>. </p>
-<h2 id="objectives">Objectives</h2>
+<h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
 <ul>
 <li>Understand the value of DEM datasets to extract a surface water runoff model.</li>
 <li>Explore the use of hydrological analyses for lava flow hazard assessment.</li>
 <li>Understand the benefits and limitations of this approach.</li>
 </ul>
-<h2 id="surface-drainage">Surface drainage</h2>
+<h2 id="theory"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M286.3 155.1c1.1 6.8 1.7 13.8 1.7 20 0 8-.6 15-1.7 21.8l22.2 19.8c7 6.3 9.9 15.4 6.2 25-2.3 4.4-4.8 10.5-7.6 15.5l-3.1 5.4c-3.9 5-6.3 9.8-9.8 14.5-5.7 7.6-15.7 10.1-24.7 7.1l-28.3-9.3c-10.7 8.9-22.9 16-36.2 21l-6.9 29c-1.1 9.3-8.3 16.7-17.7 17.9-6.7.8-13.5 1.2-20.4 1.2-6.9 0-13.7-.4-20.4-1.2-9.4-1.2-17.5-8.6-18.6-17.9l-6.9-29c-12.4-5-24.6-12.1-35.35-21l-28.22 9.3c-8.99 3-19.01.5-24.71-7.1-3.54-4.7-6.84-9.6-9.88-14.6l-3.02-5.3c-2.79-5-5.328-10.2-7.596-15.5-3.704-9.6-.866-18.7 6.196-25l22.18-19.8c-1.12-6.8-2.6-13.8-2.6-21.8 0-6.2 1.48-13.2 2.6-20l-22.18-19.8c-7.062-7.2-9.9-16.3-6.196-25 2.268-6.2 4.806-10.51 7.586-15.54l3.04-5.25c3.03-5.05 6.33-9.93 9.87-14.62 5.7-7.55 15.72-10.06 24.71-7.1l28.22 9.3c10.75-8.84 22.95-15.96 35.35-20.94l6.9-29.07c1.1-9.28 9.2-16.71 18.6-17.849A169.2 169.2 0 0 1 160 8c6.9 0 13.7.418 20.4 1.23 9.4 1.14 16.6 8.57 17.7 17.85l6.9 29.07c13.3 4.98 25.5 12.1 36.2 20.94l28.3-9.3c9-2.96 19-.45 24.7 7.1 3.5 4.67 5.9 9.53 9.8 14.55l3.1 5.39c2.8 5.01 5.3 10.17 7.6 15.47 3.7 8.7.8 17.8-6.2 25l-22.2 19.8zm-126.3-28c-26.5 0-48 22.4-48 48 0 27.4 21.5 48 48 48s48-20.6 48-48c0-25.6-21.5-48-48-48zm324.9 351.2c-6.8 1.1-13.8 1.7-20.9 1.7-7.1 0-14.1-.6-20.9-1.7l-19.8 22.2c-7.2 7-16.3 9.9-25 6.2-5.3-2.3-10.5-4.8-15.5-7.6l-5.4-3.1c-5-3.9-9.8-6.3-14.5-9.8-7.6-5.7-10.1-15.7-7.1-24.7l9.3-28.3c-8.9-10.7-16-22.9-21-36.2l-29-6.9c-9.3-1.1-16.7-8.3-17.9-17.7-.8-6.7-1.2-13.5-1.2-20.4 0-6.9.4-13.7 1.2-20.4 1.2-9.4 8.6-17.5 17.9-18.6l29-6.9c5-12.4 12.1-24.6 21-35.3l-9.3-28.3c-3-9-.5-19 7.1-24.7 4.7-3.5 9.6-7.7 14.6-9.9l5.3-3c5-2.8 9.3-5.3 15.5-7.6 8.7-3.7 17.8-.8 25 6.2l19.8 22.2c6.8-1.1 13.8-1.7 20.9-1.7 7.1 0 14.1.6 20.9 1.7l19.8-22.2c6.3-7 15.4-9.9 25-6.2 5.3 2.3 10.5 4.8 15.5 7.6l5.3 3c5 2.2 9.9 6.4 14.6 9.9 7.6 5.7 10.1 15.7 7.1 24.7l-9.3 28.3c8.9 10.7 16 22.9 21 35.3l29 6.9c9.3 1.1 16.7 9.2 17.9 18.6.8 6.7 1.2 13.5 1.2 20.4 0 6.9-.4 13.7-1.2 20.4-1.2 9.4-8.6 16.6-17.9 17.7l-29 6.9c-5 13.3-12.1 25.5-21 36.2l9.3 28.3c3 9 .5 19-7.1 24.7-4.7 3.5-9.5 5.9-14.5 9.8l-5.4 3.1c-5 2.8-11.1 5.3-15.5 7.6-9.6 3.7-18.7.8-25-6.2l-19.8-22.2zM512 352c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48z"/></svg></span> Theory</h2>
 <h3 id="flow-accumulation">Flow accumulation</h3>
 <p>Start by showing only the <code>Flow Accumulation (log)</code> layer in <code>QGIS</code>. Conceptually, the <code>Flow Accumulation</code> raster represents the <strong>cumulative number of upstream pixels that contribute to surface water drainage to any given downstream pixel</strong>. Starting from a DEM, the algorithm:</p>
 <ol>
@@ -893,11 +878,11 @@ B --&gt; C[Drainage basins]</code></pre>
 <p><img alt="hydro2" src="../img/hydro/hydro2.png" width="400" /></p>
 </details>
 <ul>
-<li>Look at the <code>Flow Accumulation (log)</code> layer in <code>QGIS</code>. Here, we show the <code>log</code> value to have a better visual rendering, so each pixel shows the <code>log10</code> of the number of contributing pixels. </li>
+<li>Look at the <code>Flow Accumulation (log)</code> layer in <code>QGIS</code>. For a better visual rendering, this layer shows the <code>log10</code> of the number of contributing pixels. </li>
 <li>Analyse the dataset in perspective of the underlying DEM. Does it make sense? (Spoiler alert: it does!)</li>
 </ul>
 <h3 id="stream-network">Stream network</h3>
-<p>Now turn on the <code>Stream network</code> layer in <code>QGIS</code>. As <code>Flow Accumulation</code> raster are slightly overwhelming to visually analyse, the <code>Stream network</code> algorithm simply applies a threshold of count values <span class="arithmatex">\(c\)</span> to delineate a <em>stream</em>. If a given pixel has a number of contributing pixels <span class="arithmatex">\(C\)</span> such as <span class="arithmatex">\(C \geq c\)</span>, then the pixel is assumed to be part of the stream. Think of the <code>Stream network</code> information as a higher-level version of the <code>Flow Accumulation</code> raster. As a matter of fact, <code>Stream network</code> is another word for <strong>path of steepest descent</strong>. </p>
+<p>Now turn on the <code>Stream network</code> layer in <code>QGIS</code>.  <code>Stream network</code> algorithm simply applies a threshold of count values <span class="arithmatex">\(c\)</span> to the <code>Flow Accumulation</code> raster to delineate a <em>stream</em>. If a given pixel has a number of contributing pixels <span class="arithmatex">\(C\)</span> such as <span class="arithmatex">\(C \geq c\)</span>, then the pixel is assumed to be part of the stream. Think of the <code>Stream network</code> information as a higher-level version of the <code>Flow Accumulation</code> raster. As a matter of fact, <code>Stream network</code> is another word for <strong>path of steepest descent</strong>. </p>
 <div class="admonition check">
 <p class="admonition-title">Stream network</p>
 <p>From the same DEM as before, this is how the <strong>path of steepest descent</strong> would look: </p>
@@ -905,7 +890,7 @@ B --&gt; C[Drainage basins]</code></pre>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Threshold value</p>
-<p>Note that there is no universal value for <span class="arithmatex">\(c\)</span>: it depends on such aspects as the <em>characteristics of the drainage system</em>, the <em>scale</em> of the analysis or the <em>resolution</em> of the DEM. It should therefore be explored on a case-per-case basis. </p>
+<p>Note that there is no universal value for <span class="arithmatex">\(c\)</span>: it depends on such aspects as the <em>maturity</em> of the drainage system, the <em>scale</em> of the analysis or the <em>resolution</em> of the DEM. It should therefore be explored on a case-per-case basis. </p>
 </div>
 <h3 id="drainage-basin">Drainage basin</h3>
 <p>Turn on the <code>Drainage basin</code> layer in <code>QGIS</code>: this raster now classifies <strong>which stream each pixel contributes to</strong>. Think of it as a <strong>watershed</strong>, where <em>ridges</em> act as limits between zone contributing to different streams and <em>valleys</em> accumulate most of the surface flow. Validate that by observing the <code>Drainage basin</code> layer in perspective of the underlying topography.</p>
@@ -922,9 +907,7 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>How do they relate to the underlying topography? </li>
 </ul>
 </div>
-<p>Things to observe:
-- Man-made structures can affect the surface runoff &rarr; Airport</p>
-<h2 id="hazard-assessment">Hazard assessment</h2>
+<h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.2 3 6.2 6 6 9.7l-1.9 2.5c-.2.3 0 .8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.7c2.4-1.1 4-3.5 4-6.3 0-3.9-3.1-7-7-7m2 6-3.1 6 .6-4h-2l2-5H15l-1.5 3H15z"/></svg></span> Exercise</h2>
 <h3 id="historical-lava-flows">Historical lava flows</h3>
 <p>Let's now place this data in the context of a hazard assessment. Start by downloading the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a> by <a href="https://www.researchgate.net/publication/233747095_Geological_map_of_La_Palma_Canary_Islands">Carracedo et al., (2001)</a> and spend some time looking at it.</p>
 <div class="admonition question">
@@ -933,7 +916,7 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>Can you spot where historical lava flows occurred?</li>
 <li>Are they originating from <em>a single</em> or <em>multiple</em> vents?</li>
 <li>In historical times, what part of the island has been most affected by lava flows?</li>
-<li>How do the directions of past flow match the conclusions reached from hydrological modeling?</li>
+<li>How do the directions of past flow match predictions from hydrological modeling?</li>
 </ul>
 </div>
 <details class="info"><summary>Monogenetic vs polygenetic volcanism</summary><p>La Palma is a <em>composite</em> volcano. As you can see both from the DEM and the geological map, the currently most active southern part contains several <em>monogenetic</em> vents. Monogenetic vents are typically active during <em>a single eruptive event</em> and not reactivated afterwards. The opening of a new vent is then controlled by several parameters (e.g., tectonic regime<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>), and predicting the spatial likelihood of vent opening is an additional complexity for long-term hazard and risk assessments in monogenetic fields. This is especially the case for Auckland, which is built on a monogenetic field<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. </p>
@@ -952,7 +935,7 @@ B --&gt; C[Drainage basins]</code></pre>
 </blockquote>
 </details>
 <h3 id="probability-of-vent-opening">Probability of vent opening</h3>
-<p>As we will discuss throughout the exercices, assessing <em>where</em> the next monogenetic vent will open is a difficult process. In their 2019 paper, Marrero et al. (2019)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>, used a random model to represent the complexity of the spatial distribution of vent location that the monogenetic volcanic activity can produce. The resulting vents are shown in Figure 1. This is a discussable choice, and you are invited to refer to the original paper for their motivations. In any case, one assumption behind this approach is that all vents shown in Figure 1 have an <strong>equal probability of occurrence</strong>. </p>
+<p>As we will discuss throughout the exercices, assessing <em>where</em> the next monogenetic vent will open is a difficult process. In their paper, Marrero et al. (2019)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>, used a random model to represent the complexity of the spatial distribution of vent location that the monogenetic volcanic activity can produce. The resulting vents are shown in Figure 1. This is a discussable choice, and you are invited to refer to the original paper for their motivations. In any case, one assumption behind this approach is that all vents shown in Figure 1 have an <strong>equal probability of occurrence</strong>. </p>
 <figure>
 <p><img alt="vents" src="../img/hydro/Marrero_vents.png" width="300" />
   </p>
@@ -970,7 +953,7 @@ B --&gt; C[Drainage basins]</code></pre>
 <p>The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In <code>QGIS</code>, the <code>2021 Eruption</code> layer group shows you both the vents and the chronology of lava flows provided by the <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR546">Copernicus Emergency Management Service</a> (CMS). </p>
 <div class="admonition info">
 <p class="admonition-title">Identify feature tool</p>
-<p>By using the <code>Identify Feature</code> tool in the <a href="../QGIS_Intro/#the-qgis-interface">Toolbar</a>, you can click on any lava flow outline and see its <code>date</code> field.
+<p>By using the <code>Identify Feature</code> tool in the <a href="../QGIS_Intro/#the-qgis-interface">Toolbar</a>, you can click on any lava flow outline and see its properties in the <code>Identify results</code> panel. Check the <code>date</code> field.
 <img align="left" alt="Image title" src="../img/qgis/identify.png" width="40," /></p>
 </div>
 <p>Using the lava flow outlines, we computed the evolution of <strong>flow length</strong> and <strong>flow width</strong> through time as shown in Figure 2.</p>
@@ -989,7 +972,7 @@ B --&gt; C[Drainage basins]</code></pre>
   </p>
 <figcaption>Figure 2: Advance and widening rates of the 2021 lava flow.</figcaption>
 </figure>
-<h2 id="limitations">Limitations</h2>
+<h2 id="food-for-thoughts"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07z"/></svg></span> Food for thoughts</h2>
 <p>Comparing the path of steepest descent approach computed on the pre-2021 eruption topography with the actual outlines of the lava flows of the 2021 eruption shows how:</p>
 <ul>
 <li>The path of steepest descent captures the general trend of flow direction <strong>but</strong></li>
@@ -1010,14 +993,14 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>There is a clear and trusting communication channel between the monitoring agencies and the stakeholders, thanks to which limitations and uncertainties associated with predictions can be clearly explained and discussed.</li>
 </ul>
 <p>However, its <strong>deterministic</strong> nature prevents its ability to systematically account for uncertainties. In a way, it only shows the <strong>most likely</strong> scenario rather than exploring a <strong>range of possible</strong> scenarios. Therefore, the <strong>path of steepest descent</strong> approach is not suited for long-term hazard and risk studies, which are required for such tasks as land-use planning and the pro-active development of other risk-reduction strategies. In the next exercise, we will use a stochastic model to address some of these shortcomings an test it on La Palma.</p>
-<h2 id="summary">Summary</h2>
+<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg></span> Summary</h2>
 <p>In this exercise, we:</p>
 <ul>
 <li>Used hydrological modeling tools to obtain a first-order estimate of the possible hazard of lava flow inundation. </li>
 <li>Compared this approach with historical and recent lava flows at La Palma. </li>
 <li>Discussed its limitations and its domain of applicability.</li>
 </ul>
-<h2 id="references">References</h2>
+<h2 id="references"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span> References</h2>
 <div class="footnote">
 <hr />
 <ol>

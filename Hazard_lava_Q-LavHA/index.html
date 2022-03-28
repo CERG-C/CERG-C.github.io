@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QLavha_Getting-Started.md" class="md-nav__link">
+      <a href="../QLavha_Getting-Started/" class="md-nav__link">
         Setting up QGIS
       </a>
     </li>
@@ -506,15 +506,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#theory-behind-q-lavha" class="md-nav__link">
-    Theory behind Q-LavHA
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behind-q-lavha" class="md-nav__link">
+     behind Q-LavHA
+  </a>
+  
+    <nav class="md-nav" aria-label=" behind Q-LavHA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-direction" class="md-nav__link">
+    Flow direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-length" class="md-nav__link">
+    Flow length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probability-of-flow-inundation" class="md-nav__link">
+    Probability of flow inundation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+     Exercise
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+     References
   </a>
   
 </li>
@@ -652,15 +707,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#theory-behind-q-lavha" class="md-nav__link">
-    Theory behind Q-LavHA
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behind-q-lavha" class="md-nav__link">
+     behind Q-LavHA
+  </a>
+  
+    <nav class="md-nav" aria-label=" behind Q-LavHA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-direction" class="md-nav__link">
+    Flow direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-length" class="md-nav__link">
+    Flow length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probability-of-flow-inundation" class="md-nav__link">
+    Probability of flow inundation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+     Exercise
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+     References
   </a>
   
 </li>
@@ -681,25 +791,132 @@
 
 <h1 id="q-lavha">Q-LavHA</h1>
 <p>With the knowledge gained on <a href="../Hazard_lava_steepest-descent/">topographic controls</a> and <a href="../Hazard_lava_modeling/">modeling</a> gained from the previous exercise, we will now look at <code>Q-LavHA</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> as an alternative approach for probabilistic hazard assessments for lava flow inundation. This part of the exercise assumes that you have already <a href="../Hazard_lava_config/">installed</a> both <code>QGIS</code> and <code>Q-LavHA</code>. The <a href="../files/Usersguide_Q-LavHA_V3_2020.pdf">Q-LavHA user manual</a> contains some important information about how to configure the model and the data, so we encourage you to have a look at it at some point. </p>
-<h2 id="theory-behind-q-lavha">Theory behind Q-LavHA</h2>
+<h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
+<ul>
+<li>Review the theory behind <code>Q-LavHA</code> </li>
+<li>Understand the main assumptions behind the use of the model </li>
+<li>Perform probabilistic lava flow modeling for several vents in La Palma</li>
+</ul>
+<h2 id="behind-q-lavha"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M286.3 155.1c1.1 6.8 1.7 13.8 1.7 20 0 8-.6 15-1.7 21.8l22.2 19.8c7 6.3 9.9 15.4 6.2 25-2.3 4.4-4.8 10.5-7.6 15.5l-3.1 5.4c-3.9 5-6.3 9.8-9.8 14.5-5.7 7.6-15.7 10.1-24.7 7.1l-28.3-9.3c-10.7 8.9-22.9 16-36.2 21l-6.9 29c-1.1 9.3-8.3 16.7-17.7 17.9-6.7.8-13.5 1.2-20.4 1.2-6.9 0-13.7-.4-20.4-1.2-9.4-1.2-17.5-8.6-18.6-17.9l-6.9-29c-12.4-5-24.6-12.1-35.35-21l-28.22 9.3c-8.99 3-19.01.5-24.71-7.1-3.54-4.7-6.84-9.6-9.88-14.6l-3.02-5.3c-2.79-5-5.328-10.2-7.596-15.5-3.704-9.6-.866-18.7 6.196-25l22.18-19.8c-1.12-6.8-2.6-13.8-2.6-21.8 0-6.2 1.48-13.2 2.6-20l-22.18-19.8c-7.062-7.2-9.9-16.3-6.196-25 2.268-6.2 4.806-10.51 7.586-15.54l3.04-5.25c3.03-5.05 6.33-9.93 9.87-14.62 5.7-7.55 15.72-10.06 24.71-7.1l28.22 9.3c10.75-8.84 22.95-15.96 35.35-20.94l6.9-29.07c1.1-9.28 9.2-16.71 18.6-17.849A169.2 169.2 0 0 1 160 8c6.9 0 13.7.418 20.4 1.23 9.4 1.14 16.6 8.57 17.7 17.85l6.9 29.07c13.3 4.98 25.5 12.1 36.2 20.94l28.3-9.3c9-2.96 19-.45 24.7 7.1 3.5 4.67 5.9 9.53 9.8 14.55l3.1 5.39c2.8 5.01 5.3 10.17 7.6 15.47 3.7 8.7.8 17.8-6.2 25l-22.2 19.8zm-126.3-28c-26.5 0-48 22.4-48 48 0 27.4 21.5 48 48 48s48-20.6 48-48c0-25.6-21.5-48-48-48zm324.9 351.2c-6.8 1.1-13.8 1.7-20.9 1.7-7.1 0-14.1-.6-20.9-1.7l-19.8 22.2c-7.2 7-16.3 9.9-25 6.2-5.3-2.3-10.5-4.8-15.5-7.6l-5.4-3.1c-5-3.9-9.8-6.3-14.5-9.8-7.6-5.7-10.1-15.7-7.1-24.7l9.3-28.3c-8.9-10.7-16-22.9-21-36.2l-29-6.9c-9.3-1.1-16.7-8.3-17.9-17.7-.8-6.7-1.2-13.5-1.2-20.4 0-6.9.4-13.7 1.2-20.4 1.2-9.4 8.6-17.5 17.9-18.6l29-6.9c5-12.4 12.1-24.6 21-35.3l-9.3-28.3c-3-9-.5-19 7.1-24.7 4.7-3.5 9.6-7.7 14.6-9.9l5.3-3c5-2.8 9.3-5.3 15.5-7.6 8.7-3.7 17.8-.8 25 6.2l19.8 22.2c6.8-1.1 13.8-1.7 20.9-1.7 7.1 0 14.1.6 20.9 1.7l19.8-22.2c6.3-7 15.4-9.9 25-6.2 5.3 2.3 10.5 4.8 15.5 7.6l5.3 3c5 2.2 9.9 6.4 14.6 9.9 7.6 5.7 10.1 15.7 7.1 24.7l-9.3 28.3c8.9 10.7 16 22.9 21 35.3l29 6.9c9.3 1.1 16.7 9.2 17.9 18.6.8 6.7 1.2 13.5 1.2 20.4 0 6.9-.4 13.7-1.2 20.4-1.2 9.4-8.6 16.6-17.9 17.7l-29 6.9c-5 13.3-12.1 25.5-21 36.2l9.3 28.3c3 9 .5 19-7.1 24.7-4.7 3.5-9.5 5.9-14.5 9.8l-5.4 3.1c-5 2.8-11.1 5.3-15.5 7.6-9.6 3.7-18.7.8-25-6.2l-19.8-22.2zM512 352c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48z"/></svg></span> behind Q-LavHA</h2>
+<h3 id="flow-direction">Flow direction</h3>
 <p>The starting philosophy behind <code>Q-LavHA</code> is similar to the analysis performed for the <a href="../Hazard_lava_steepest-descent/#flow-accumulation">path of steepest descent</a> approach: the DEM, the model will try to estimate <em>where</em> the flow will go next based on the maximum <span class="arithmatex">\(\Delta h\)</span> of the surrounding pixels. However, <code>Q-LavHA</code> uses a probabilistic approach to estimate this flow direction. </p>
 <p>Firstly, as we saw, a lava flow is a viscous fluid with yield strength, which means that it can <em>escape</em> the steepest path and propagate laterally, fill depressions and overcome topographical obstacles. To account for that, <code>Q-LavHA</code> introduces 2 corrective factors:</p>
 <ul>
-<li><span class="arithmatex">\(H_c\)</span>, representing the flow thickness.</li>
+<li><span class="arithmatex">\(H_c\)</span>, representing the flow <em>thickness</em>.</li>
 <li><span class="arithmatex">\(H_p\)</span>, representing the ability of a flow to <em>inflate</em>. </li>
 </ul>
-<p>Together, these two parameters will avoid the modelled flow getting stuck in topographic low and will allow it to spread laterally, as we saw the 2021 flow of La Palma was able to do. </p>
-<p>Secondly, the initial estimation of path of steepest descent is performed <em>stochastically</em></p>
+<p>Together, these two parameters help avoiding the modelled flow getting stuck in topographic low and will allow it to spread laterally, as we saw the 2021 flow of La Palma was able to do. </p>
+<p>Secondly, the initial estimation of path of steepest descent is performed <em>stochastically</em> similarly to what we <a href="../Hazard_probabilistic1/">previously looked at</a>. Conceptually, one <code>Q-LavHA</code> output is constituted by the simulation of <strong>thousands</strong> of lava flows (1500 by default). Each lava flow simulation applies a path of steepest descent approach, but the selection of the next pixel is performed slightly differently:</p>
 <ol>
-<li><code>Q-LavHA</code> flow doe</li>
+<li>At each new pixel, the <span class="arithmatex">\(H_c\)</span> and <span class="arithmatex">\(H_p\)</span> corrections are applied to the active pixel according to Figure 1.</li>
+<li>Instead of selecting the pixel with the largest <span class="arithmatex">\(|\Delta h|\)</span> as <a href="../Hazard_lava_steepest-descent/#flow-accumulation">previously seen</a>, <code>Q-LavHA</code> assigns a <em>relative probability</em> of flow inundation to each surrounding pixel (see box below). </li>
+<li>Using a <em>random number</em> generator, <code>Q-LavHA</code> stochastically sample <em>which pixel</em> will be inundated next. With this approach, the pixel with the largest <span class="arithmatex">\(|\Delta h|\)</span> has the highest probability of being inundated next, but other pixel also have a non-null probability of inundation. </li>
 </ol>
-<p>Corrective factors are included enabling the lava to overcome small topographical obstacles or pits (Fig. 2). The factor Hc (m) is always added to the elevation of the central pixel before calculating h ∆ i (Eqs. 2 and 3). This enables to represent the lava thickness (Felpeto et al., 2001). As it is observed that real lava flows are capable of flooding preexisting depressions (Sigurdsson et al., 2015) whereas lava flow lines would be trapped numerically into the topographic depression, we propose the introduction of a higher corrective factor, Hp (m), which can be applied if the source pixel is surrounded by eight pixels at a higher elevation pixels which Hc cannot overcome (Fig. 2).</p>
-<h2 id="references">References</h2>
+<details class="info"><summary>Path of steepest descent in Q-LavHA</summary><p>By default, <code>Q-LavHA</code> computes a relative probability across the 8 surrounding pixels using <span class="arithmatex">\(\Delta h^2\)</span> according to:</p>
+<div class="arithmatex">\[
+P_i^2 = \frac{(\Delta h_i)^2}{\sum_{j=1}^{8} (\Delta h_i)^2}, i=1,2,\ldots,8
+\]</div>
+<p>If potential topographic obstacles are not overcome by the application of <span class="arithmatex">\(H_c\)</span> and <span class="arithmatex">\(H_p\)</span> around the <strong>8</strong> surrounding pixels, <code>Q-LavHA</code> extends its search to the next <strong>16</strong> surrounding pixels. <code>Q-LavHA</code> then transforms these relative probabilities into a cumulative probability function <span class="arithmatex">\(S_i\)</span>:</p>
+<div class="arithmatex">\[
+S_i = \sum_{j=1}^{i} P_j, i=1,2,\ldots,8
+\]</div>
+<p>A random number <span class="arithmatex">\(rnd\)</span> is then drawn in the <span class="arithmatex">\([0, 1[\)</span> interval, and used to select the corresponding pixel in the range <span class="arithmatex">\([S_{i-1}, Si[\)</span>:</p>
+<div class="arithmatex">\[
+S_{i-1} \leq rnd \leq S_i, i=1,2,\ldots,8
+\]</div>
+</details>
+<figure>
+<p><img alt="pixel" src="../img/qlavha/qlavha_pixels.png" />
+  </p>
+<figcaption>Figure 1: Topographic corrections applied in `Q-LavHA`.</figcaption>
+</figure>
+<h3 id="flow-length">Flow length</h3>
+<p>Flow length is a critical metrics of lava flow hazard. However, since it depends on a complex interaction between eruption conditions at the source, flow rheology and topography through time and space, modelling the case-per-case physics of each flow is unrealistic in hazard assessment contexts. For this reason, <code>Q-LavHA</code> proposes three alternatives to compute maximum flow length: </p>
+<ol>
+<li>A maxiumum user defined length, using either <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidean</a> or <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan</a> distances.</li>
+<li>A decreasing probability function based on existing flow databases.</li>
+<li>The cooling-limited flow model FLOWGO<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Lava flow distance</p>
+<p>As you can see from the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a>, most historical flows on the island have reached the sea, so we will consider here that the flow distance is of limited importance. This assumption is however invalid in most cases. The <strong>probability function</strong> option allows you define a probability of flow length based on a <strong>mean</strong> and <strong>standard</strong> deviation of known lava flows length, which is a convenient way to treat this parameter probabilistically. Refer to the original paper<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for more information.</p>
+</div>
+<h3 id="probability-of-flow-inundation">Probability of flow inundation</h3>
+<p>As <a href="../Hazard_probabilistic1/#probabilistic-modelling">previously seen</a>, probability of lava flow inundation <span class="arithmatex">\(P\)</span> at a given pixel <span class="arithmatex">\(i, j\)</span> is generally computed as the number of inundation counts <span class="arithmatex">\(n_i\)</span> normalised by the number of runs <span class="arithmatex">\(N_r\)</span>:</p>
+<div class="arithmatex">\[
+P(x,y) = \frac{\sum_{i=1}^{N_{r}}n_{i}}{N_{r}}
+\]</div>
+<p>Where <span class="arithmatex">\(N_{r}\)</span> is the total number of runs and <span class="arithmatex">\(n_{i}\)</span> is defined as:</p>
+<div class="arithmatex">\[
+n_{i} = \bigg\{ ^{1,\ if\ inundation} _{0,\ otherwise}
+\]</div>
+<p>Depending on the modeling options adopted, <code>Q-LavHA</code> will slightly modify this approach. Refer to the original paper<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for more information.</p>
+<h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.2 3 6.2 6 6 9.7l-1.9 2.5c-.2.3 0 .8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.7c2.4-1.1 4-3.5 4-6.3 0-3.9-3.1-7-7-7m2 6-3.1 6 .6-4h-2l2-5H15l-1.5 3H15z"/></svg></span> Exercise</h2>
+<div class="admonition warning">
+<p class="admonition-title">Install Q-LavHA</p>
+<p><img align="left" alt="Image title" src="../img/qgis/qlavha.png" width="40," />
+Start by making sure that <code>Q-LavHA</code> has been properly installed according to <a href="../Hazard_lava_config/">this guide</a>. You should see this icon in the toolbar.</p>
+</div>
+<p>In the <code>Lava Flow exercise</code> layer group in <code>QGIS</code>, activate the <code>Vents Exercise</code> layer. These vents correspond to those indicated in the Table below. <code>Q-LavHA</code> requires <a href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">projected UTM coordinates</a>, which are shown in the <code>Easting</code> and <code>Northing</code> columns (<code>x</code> and <code>y</code> columns, respectively). The UTM zone for La Palma is <code>28N</code>, or <a href="https://epsg.io/32628">EPSG:3268</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Vent</th>
+<th align="left">Lat</th>
+<th align="left">Lon</th>
+<th align="left">Easting</th>
+<th align="left">Northing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Vent 1</td>
+<td align="left">-17.83989</td>
+<td align="left">28.62507</td>
+<td align="left">222340</td>
+<td align="left">3169746</td>
+</tr>
+<tr>
+<td align="left">Vent 2</td>
+<td align="left">-17.86626</td>
+<td align="left">28.61262</td>
+<td align="left">219728</td>
+<td align="left">3168426</td>
+</tr>
+<tr>
+<td align="left">Vent 3</td>
+<td align="left">-17.84316</td>
+<td align="left">28.58782</td>
+<td align="left">221922</td>
+<td align="left">3165623</td>
+</tr>
+<tr>
+<td align="left">Vent 4</td>
+<td align="left">-17.81585</td>
+<td align="left">28.60777</td>
+<td align="left">224646</td>
+<td align="left">3167772</td>
+</tr>
+<tr>
+<td align="left">Vent 5</td>
+<td align="left">-17.84649</td>
+<td align="left">28.49699</td>
+<td align="left">221357</td>
+<td align="left">3155562</td>
+</tr>
+</tbody>
+</table>
+<h2 id="food-for-thoughts"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07z"/></svg></span> Food for thoughts</h2>
+<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg></span> Summary</h2>
+<h2 id="references"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span> References</h2>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Mossoux, S., Saey, M., Bartolini, S., Poppe, S., Canters, F., Kervyn, M., 2016. Q-LAVHA: A flexible GIS plugin to simulate lava flows. Computers &amp; Geosciences 97, 98–109. https://doi.org/10.1016/j.cageo.2016.09.003&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Mossoux, S., Saey, M., Bartolini, S., Poppe, S., Canters, F., Kervyn, M., 2016. Q-LAVHA: A flexible GIS plugin to simulate lava flows. Computers &amp; Geosciences 97, 98–109. https://doi.org/10.1016/j.cageo.2016.09.003&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Harris, A.J., Rowland, S. FLOWGO: a kinematic thermo-rheological model for lava flowing in a channel. Bull Volcanol 63, 20–44 (2001). https://doi.org/10.1007/s004450000120&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
