@@ -4,11 +4,11 @@ With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent
 
 ## :material-format-list-checks:{ .icn } Objectives 
 
-- Review the theory behind `Q-LavHA` 
-- Understand the main assumptions behind the use of the model 
-- Perform probabilistic lava flow modeling for several vents in La Palma
+- Review the theory behind `Q-LavHA`.
+- Understand the main assumptions behind the use of the model.
+- Perform probabilistic lava flow modeling for several vents in La Palma.
   
-## :fontawesome-solid-gears:{ .icn } behind Q-LavHA 
+## :fontawesome-solid-gears:{ .icn } Theory behind Q-LavHA 
 
 ### Flow direction 
 
@@ -88,20 +88,155 @@ Depending on the modeling options adopted, `Q-LavHA` will slightly modify this a
     ![Image title](img/qgis/qlavha.png){width=40, align=left }
     Start by making sure that `Q-LavHA` has been properly installed according to [this guide](Hazard_lava_config.md). You should see this icon in the toolbar.
 
-In the `Lava Flow exercise` layer group in `QGIS`, activate the `Vents Exercise` layer. These vents correspond to those indicated in the Table below. `Q-LavHA` requires [projected UTM coordinates](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system), which are shown in the `Easting` and `Northing` columns (`x` and `y` columns, respectively). The UTM zone for La Palma is `28N`, or [EPSG:3268](https://epsg.io/32628).
+
+- In the `Lava Flow exercise` layer group in `QGIS`, activate the `Vents Exercise` layer.
+
+### Running Q-LavHA for single vents
+
+These vents correspond to those indicated in the Table below. `Q-LavHA` requires [projected UTM coordinates](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system), which are shown in the `Easting` and `Northing` columns (`x` and `y` columns, respectively). The UTM zone for La Palma is `28N`, or [EPSG:3268](https://epsg.io/32628).
 
 
-| Vent   | Lat       | Lon      | Easting | Northing |
-|:-------|:----------|:---------|:--------|:---------|
-| Vent 1 | -17.83989 | 28.62507 | 222340  | 3169746  |
-| Vent 2 | -17.86626 | 28.61262 | 219728  | 3168426  |
-| Vent 3 | -17.84316 | 28.58782 | 221922  | 3165623  |
-| Vent 4 | -17.81585 | 28.60777 | 224646  | 3167772  |
-| Vent 5 | -17.84649 | 28.49699 | 221357  | 3155562  |
+| Vent   | Latitude  | Longitude | Easting (m) | Northing (m) | EPSG  |
+|:-------|:----------|:----------|:------------|:-------------|:------|
+| Vent 1 | -17.83989 | 28.62507  | 222340      | 3169746      | 32628 |
+| Vent 2 | -17.86626 | 28.61262  | 219728      | 3168426      | 32628 |
+| Vent 3 | -17.84316 | 28.58782  | 221922      | 3165623      | 32628 |
+| Vent 4 | -17.81585 | 28.60777  | 224646      | 3167772      | 32628 |
+| Vent 5 | -17.84649 | 28.49699  | 221357      | 3155562      | 32628 |
 
+!!! warning "Coordinate systems" 
+
+    Here, you are provided with input data that **all have the same coordinate system**. Before modeling lava flows for your own projects, make sure that you first [reproject](https://docs.qgis.org/3.22/en/docs/training_manual/processing/crs.html?highlight=reproject) all your data to a **unique** [CRS](https://epsg.io). 
+
+#### Model setup
+
+
+Let's run `Q-LavHA` for each of the vents defined above. For now, we will assume that we know *exactly* the vent location. Open the `Q-LavHA` window, and let's look at the parameters:
+
+=== "Vent location tab"
+
+    1. In the `DEM Selection` box, select the `Data/Lava/DEM_Qlavah.tif`. In the DEM selection window, make sure you change the type of files from `.asc` to `.tif`.
+    2. As a `Vent Type`, choose `Point` for now.
+    3. Add the relevant `Coordinates`.
+
+=== "Lava flow parameter tab" 
+
+    1. `Lava Flow Propagation`: This section sets up the behaviour of the lava flow, as described in the theory section. 
+       
+         - Leave the default values of `Hc` and `Ht`.
+         - Use the `H16` option: This means that the algorithm will first search for a topographic low within the first 8 adjacent pixels, and will extend the search to the next 16 ones if not found.
+         - Use `Probability to the square`
+
+    2. `Lava Flow Length Constrain`: This section defines *when* a lava flow stops. You can switch between the various options for an illustration of the different behaviours. As discussed above, use a `Manhattan Distance` with a length of `10000 m`. 
+    3. `Simulations`: Use a `Number of iterations` of 1500. This represents the number of simulated lava flows, or $N_r$ in the equations above.
+
+=== "Output files tab" 
+
+    1. Set an `Output path` and a `name` to the output layers. 
+    2. Save the `Parameters`. 
+
+**You are now ready to run the simulation!**
+
+??? info "Vent geometry"
+
+    `Q-LavHA` offers different source geometries, such as a fissure, or a vent opening susceptibility map. The choice of these options depends on the case study, and their use is described in the [Q-LavHA user manual](files/Usersguide_Q-LavHA_V3_2020.pdf).
+
+#### Styling outputs 
+
+Upon completion of the model run, the output file is directly added to the layer panel. Let's change its visualisation:
+
+- Open the `Layer Properties` panel by double-clicking on the output layer in the `Layers` panel.
+- From the `Symbology` tab on the left:
+    - Under `Color Rendering`, uncheck the `Colorize` option.
+    - Under `Render type`, choose `Singleband pseudocolor`. 
+    - Set the `min` and `max` values to 0 and 0.5, respectively. 
+    - Change the `Color ramp` to `Magma`
+- Click ok.
+
+The output file now shows the **spatial distribution** of **inundation probability** varying between $\gt 0$ and $0.5$ (i.e., 50%). 
+
+??? note "Copying layer symbology"
+
+    In `QGIS`, it you can simply copy the display properties of one layer to other layers: 
+    
+    - In the `Layers` panel, right-click on the layer you want to copy the style *from* and select `Styles > Copy style`.
+    - Now right-click on the layer you want to apply to style on and select `Styles > Paste style`.
+
+    ![copy styles](img/qgis/copy_styles.png){width=500}
+
+#### Analysing results 
+
+Following this procedure, run `Q-LavHA` for **all the vents specified in the Table above** and apply the same symbology. Answer the following questions:
+
+!!! question "Question 1: Single-vent simulations"
+
+    1. How do modelled flows compare to <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
+    2. Analyse and discuss the spatial distribution of inundation probability. How do they compare to flow accumulation rasters and the path of steepest descent approach?
+    3. Where do branching occur?
+    4. Chose *one vent* for which you will produce another run with the same parameters as above. Are they **exactly** the same? If not, why?
+    5. Compare simulations from **vent 2** with the flow outlines of the 2021 eruption. **When** and **where** is the model doing a good job? **When** and **where** is it not? Why?
+
+
+### Using several vents
+
+Even in *monogenetic vents*, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the `2021 Vents` layer in `QGIS`, [CEMS](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the **number** or the **location** of each vent; instead, we will model lava flow inundation from **a grid of vents** within a surface area and explore how vent location affects the lava flow simulation hazard. 
+
+!!! warning "(Not) one vent to rule them all"
+
+    You've each been assigned **one** of the vents defined in the table above. Since this step takes more computational time, please run this procedure only for this vent. 
+
+#### Define the area 
+
+We will define a potential vent opening surface as a 500 x 500 m square centered on the reference coordinates of your attributed vent. Note that UTM coordinates are in *meter*: you can therefore simply identify the `x` and `y` coordinates these four points by addition and subtraction:
+
+- Lower left corner 
+- Lower right corner 
+- Upper right corner
+- Upper left corner
+
+#### Model setup
+
+- From `QGIS` open `Q-LavHA`. Most of the parameters should already be filled. Otherwise, you can use the `Load parameters` option.
+- Set a `Distance between vents` of 100 m. Since we definerd a 500 x 500 m area, `Q-LavHA` will therefore model lava flow inundation from 25 vents. 
+- Enter the 4 coordinates previously defined.
+- In the `Lava Flow Parameter` tab, change the `Number of Simulations` to 500. This will help save some computation time.
+- Make sure you change the output name.
+
+**Run the model!**
+
+#### Analysing results
+
+Apply the same methodology to the surface area runs as you did for the point run. 
+
+!!! question "Question 2: Vent location uncertainty"
+
+    1. Compare the run with its single-vent counterpart. How do they differ and why?
+
+
+### Prepare your hazard maps
 
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
+
+
+### Forecasting the flows from the 2021 eruption
+
+Compare the `Q-LavHA` run with the flow outlines from the 2021 eruption below. Note that the `Q-LavHA` run was performed using the same 500 x 500 m source area as used above.
+
+=== "Q-LavHA runs"
+
+    ![Q-LavHA2021](img/qlavha/2021_prediction.png)
+
+=== "Flow outlines"
+
+    ![Q-LavHA2021](img/qlavha/2021_outlines.png)
+
+
+!!! question "Question 3: Interpreting hazard forecasts"
+
+    1. From what you know about both the 2021 eruption and the dynamics of lava flows, compare and discuss the hazard forecast and the actual deposit. What are `Q-LavHA`'s strengths and limitations?
+
+
 
 ## :material-check-bold:{ .icn } Summary
 

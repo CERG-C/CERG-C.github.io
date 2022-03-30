@@ -330,34 +330,6 @@
               
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          Hazard assessment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Hazard assessment" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          Hazard assessment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
       <a href="../QLavha_Getting-Started/" class="md-nav__link">
@@ -379,20 +351,20 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_2_2">
-          Lava flow
+        <label class="md-nav__link" for="__nav_2_3">
+          Lava hazard
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Lava flow" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_2">
+      <nav class="md-nav" aria-label="Lava hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Lava flow
+          Lava hazard
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -610,6 +582,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -626,20 +612,20 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_2_3">
-          Tephra accumulation
+        <label class="md-nav__link" for="__nav_2_4">
+          Tephra hazard
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Tephra accumulation" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_2_3">
+      <nav class="md-nav" aria-label="Tephra hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          Tephra accumulation
+          Tephra hazard
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -652,13 +638,6 @@
       <a href="../Hazard_probabilistic2/" class="md-nav__link">
         Probabilistic modeling part II
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -865,10 +844,10 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>Once flow direction is estimated, the algorithm counts <strong>how many upstream</strong> pixel contribute to any given <strong>downstream</strong> pixel.</li>
 </ol>
 <div class="admonition question">
-<p class="admonition-title">Do it yourself!</p>
-<ul>
+<p class="admonition-title">Question 1: Do it yourself!</p>
+<ol>
 <li>Starting from this DEM, can you estimate the most likely flow direction and the flow accumulation values?</li>
-</ul>
+</ol>
 <p><img alt="hydro1" src="../img/hydro/hydro1.png" width="400" /></p>
 </div>
 <details class="check"><summary>Flow accumulation</summary><ul>
@@ -900,24 +879,24 @@ B --&gt; C[Drainage basins]</code></pre>
 <p><img alt="hydro4" src="../img/hydro/hydro4.png" width="400" /></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Maturity of the drainage system</p>
+<p class="admonition-title">Question 2: Drainage system</p>
 <p>You can observe a large discrepancy in the <strong>area</strong> and the <strong>shape</strong> of the various drainage basins.</p>
-<ul>
+<ol>
 <li>How do they spatially vary over the island?</li>
 <li>How do they relate to the underlying topography? </li>
-</ul>
+</ol>
 </div>
 <h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.2 3 6.2 6 6 9.7l-1.9 2.5c-.2.3 0 .8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.7c2.4-1.1 4-3.5 4-6.3 0-3.9-3.1-7-7-7m2 6-3.1 6 .6-4h-2l2-5H15l-1.5 3H15z"/></svg></span> Exercise</h2>
 <h3 id="historical-lava-flows">Historical lava flows</h3>
 <p>Let's now place this data in the context of a hazard assessment. Start by downloading the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a> by <a href="https://www.researchgate.net/publication/233747095_Geological_map_of_La_Palma_Canary_Islands">Carracedo et al., (2001)</a> and spend some time looking at it.</p>
 <div class="admonition question">
-<p class="admonition-title">Questions</p>
-<ul>
+<p class="admonition-title">Question 3: Historical lava flows</p>
+<ol>
 <li>Can you spot where historical lava flows occurred?</li>
 <li>Are they originating from <em>a single</em> or <em>multiple</em> vents?</li>
 <li>In historical times, what part of the island has been most affected by lava flows?</li>
 <li>How do the directions of past flow match predictions from hydrological modeling?</li>
-</ul>
+</ol>
 </div>
 <details class="info"><summary>Monogenetic vs polygenetic volcanism</summary><p>La Palma is a <em>composite</em> volcano. As you can see both from the DEM and the geological map, the currently most active southern part contains several <em>monogenetic</em> vents. Monogenetic vents are typically active during <em>a single eruptive event</em> and not reactivated afterwards. The opening of a new vent is then controlled by several parameters (e.g., tectonic regime<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>), and predicting the spatial likelihood of vent opening is an additional complexity for long-term hazard and risk assessments in monogenetic fields. This is especially the case for Auckland, which is built on a monogenetic field<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. </p>
 <p>Here are some definitions of volcanic landforms<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>:</p>
@@ -942,15 +921,15 @@ B --&gt; C[Drainage basins]</code></pre>
 <figcaption>Figure 1: Possible location of vent opening for the next eruption according to Marrero et al. (2019).</figcaption>
 </figure>
 <div class="admonition question">
-<p class="admonition-title">Questions</p>
-<p>If all vents in Figure 1 have an <strong>equal probability of occurrence</strong>, does that mean that the entire island is uniformly exposed to lava flow inundation? Use the drainage basins and the stream networks to estimate:</p>
-<ul>
+<p class="admonition-title">Question 4: Vent opening</p>
+<ol>
+<li>If all vents in Figure 1 have an <strong>equal probability of occurrence</strong>, does that mean that the entire island is uniformly exposed to lava flow inundation? </li>
 <li>What parts of the island are most exposed to lava flow inundation?</li>
 <li>Are there any safe/shadow parts?</li>
-</ul>
+</ol>
 </div>
 <h3 id="the-2021-eruption">The 2021 eruption</h3>
-<p>The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In <code>QGIS</code>, the <code>2021 Eruption</code> layer group shows you both the vents and the chronology of lava flows provided by the <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR546">Copernicus Emergency Management Service</a> (CMS). </p>
+<p>The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In <code>QGIS</code>, the <code>2021 Eruption</code> layer group shows you both the vents and the chronology of lava flows provided by the <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR546">Copernicus Emergency Management Service</a> (CEMS). </p>
 <div class="admonition info">
 <p class="admonition-title">Identify feature tool</p>
 <p>By using the <code>Identify Feature</code> tool in the <a href="../QGIS_Intro/#the-qgis-interface">Toolbar</a>, you can click on any lava flow outline and see its properties in the <code>Identify results</code> panel. Check the <code>date</code> field.
@@ -958,14 +937,14 @@ B --&gt; C[Drainage basins]</code></pre>
 </div>
 <p>Using the lava flow outlines, we computed the evolution of <strong>flow length</strong> and <strong>flow width</strong> through time as shown in Figure 2.</p>
 <div class="admonition question">
-<p class="admonition-title">Evolution of the flow field</p>
+<p class="admonition-title">Question 5: Evolution of the flow field</p>
 <p>Using the flow outlines in <code>QGIS</code> and Figure 2, estimate:</p>
-<ul>
+<ol>
 <li>How accurate would have been the <strong>steepest descent</strong> approach to <em>forecast</em> flow inundation of the 2021 eruption? How different is the actual flow compared to the drainage network?</li>
 <li>How dynamic is a months-long lava flow? Is it a <em>single</em> event or a compound <em>pulsatory</em> phenomena?</li>
 <li>What event do you think corresponds to the dashed red line in Figure 2? What happens <em>before</em> and <em>after</em>?</li>
 <li>What are the <em>advance</em> and <em>widening</em> rates of the 2021 lava flow? Can you use it to estimate the advance and widening of possible lava flows from other vents?</li>
-</ul>
+</ol>
 </div>
 <figure>
 <p><img alt="width" src="../img/2021_flow_length.png" />
@@ -979,13 +958,13 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>The actual flow significantly diverted from this initial prediction.</li>
 </ul>
 <div class="admonition question">
-<p class="admonition-title">Why?</p>
+<p class="admonition-title">Question 6: Limitations</p>
 <p>Spend some time thinking about the <em>reasons</em> behind this discrepancy, including:</p>
-<ul>
+<ol>
 <li>The rheological properties of the lava flows.</li>
 <li>Their duration, the properties of <em>single</em> vs <em>compound</em> lava flows and their evolution in time.</li>
 <li>Their relation with topography.</li>
-</ul>
+</ol>
 </div>
 <p>From a crisis management perspective and reflecting back on the <a href="../Hazard_lava_intro/#objectives">Kīlauea crises</a>, the <strong>path of steepest descent</strong> is a great communication tool for as long as:</p>
 <ul>
@@ -1066,6 +1045,10 @@ B --&gt; C[Drainage basins]</code></pre>
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 CERG-C / University of Geneva
+    </div>
   
   
     Made with

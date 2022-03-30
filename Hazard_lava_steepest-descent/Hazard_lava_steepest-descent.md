@@ -1,3 +1,4 @@
+
 # Path of steepest descent 
 
 *Digital elevation models* - or **DEM** are incredibly useful. DEM are [raster](QGIS_Intro.md#Raster-data) datasets containing an elevation value at each pixel, which capture the morphology of the Earth's surface. Global DEM datasets such as [SRTM](https://www2.jpl.nasa.gov/srtm/) or [ASTER](https://earthdata.nasa.gov/learn/articles/new-aster-gdem) are usually produced from the ISS or satellite imagery, but higher-definition datasets can be produced from airborne [LiDAR](https://www.swisstopo.admin.ch/en/knowledge-facts/geoinformation/lidar-data.html) missions or structure-from-motion from [UAVs](https://eos.org/science-updates/drone-peers-into-open-volcanic-vents). Here, we will use a DEM with a resolution of 25 m covering the island of La Palma.
@@ -28,9 +29,9 @@ Start by showing only the `Flow Accumulation (log)` layer in `QGIS`. Conceptuall
 1. Assumes that water at a given pixel will flow towards the adjacent pixel that shows the greatest $-\Delta z$ to estimate the flow directions.
 2. Once flow direction is estimated, the algorithm counts **how many upstream** pixel contribute to any given **downstream** pixel.
 
-!!! question "Do it yourself!"
+!!! question "Question 1: Do it yourself!"
 
-    - Starting from this DEM, can you estimate the most likely flow direction and the flow accumulation values?
+    1. Starting from this DEM, can you estimate the most likely flow direction and the flow accumulation values?
 
     ![hydro1](img/hydro/hydro1.png){ width="400" }
 
@@ -69,12 +70,12 @@ Turn on the `Drainage basin` layer in `QGIS`: this raster now classifies **which
     
     ![hydro4](img/hydro/hydro4.png){ width="400" }
 
-!!! question "Maturity of the drainage system"
+!!! question "Question 2: Drainage system"
 
     You can observe a large discrepancy in the **area** and the **shape** of the various drainage basins.
 
-    - How do they spatially vary over the island?
-    - How do they relate to the underlying topography? 
+    1. How do they spatially vary over the island?
+    2. How do they relate to the underlying topography? 
 
 ## :material-head-flash:{ .icn } Exercise 
 
@@ -82,12 +83,12 @@ Turn on the `Drainage basin` layer in `QGIS`: this raster now classifies **which
 
 Let's now place this data in the context of a hazard assessment. Start by downloading the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a> by [Carracedo et al., (2001)](https://www.researchgate.net/publication/233747095_Geological_map_of_La_Palma_Canary_Islands) and spend some time looking at it.
 
-!!! question "Questions"
+!!! question "Question 3: Historical lava flows"
 
-    - Can you spot where historical lava flows occurred?
-    - Are they originating from *a single* or *multiple* vents?
-    - In historical times, what part of the island has been most affected by lava flows?
-    - How do the directions of past flow match predictions from hydrological modeling?
+    1. Can you spot where historical lava flows occurred?
+    2. Are they originating from *a single* or *multiple* vents?
+    3. In historical times, what part of the island has been most affected by lava flows?
+    4. How do the directions of past flow match predictions from hydrological modeling?
 
 ??? info "Monogenetic vs polygenetic volcanism"
 
@@ -113,16 +114,15 @@ As we will discuss throughout the exercices, assessing *where* the next monogene
   <figcaption>Figure 1: Possible location of vent opening for the next eruption according to Marrero et al. (2019).</figcaption>
 </figure>
 
-!!! question "Questions"
+!!! question "Question 4: Vent opening"
 
-    If all vents in Figure 1 have an **equal probability of occurrence**, does that mean that the entire island is uniformly exposed to lava flow inundation? Use the drainage basins and the stream networks to estimate:
-
-    - What parts of the island are most exposed to lava flow inundation?
-    - Are there any safe/shadow parts?
+    1. If all vents in Figure 1 have an **equal probability of occurrence**, does that mean that the entire island is uniformly exposed to lava flow inundation? 
+    2. What parts of the island are most exposed to lava flow inundation?
+    3. Are there any safe/shadow parts?
 
 ### The 2021 eruption 
 
-The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In `QGIS`, the `2021 Eruption` layer group shows you both the vents and the chronology of lava flows provided by the [Copernicus Emergency Management Service](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) (CMS). 
+The 2021 eruption of Cumbre Vieja started on September 19 and lasted until December 25. During this period, multiple vents opened, some producing tephra whilst other produced compound lava flows that reached the sea. In `QGIS`, the `2021 Eruption` layer group shows you both the vents and the chronology of lava flows provided by the [Copernicus Emergency Management Service](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) (CEMS). 
 
 !!! info "Identify feature tool"
     By using the `Identify Feature` tool in the [Toolbar](QGIS_Intro.md#the-qgis-interface), you can click on any lava flow outline and see its properties in the `Identify results` panel. Check the `date` field.
@@ -130,14 +130,14 @@ The 2021 eruption of Cumbre Vieja started on September 19 and lasted until Decem
 
 Using the lava flow outlines, we computed the evolution of **flow length** and **flow width** through time as shown in Figure 2.
 
-!!! question "Evolution of the flow field"
+!!! question "Question 5: Evolution of the flow field"
 
     Using the flow outlines in `QGIS` and Figure 2, estimate:
 
-    - How accurate would have been the **steepest descent** approach to *forecast* flow inundation of the 2021 eruption? How different is the actual flow compared to the drainage network?
-    - How dynamic is a months-long lava flow? Is it a *single* event or a compound *pulsatory* phenomena?
-    - What event do you think corresponds to the dashed red line in Figure 2? What happens *before* and *after*?
-    - What are the *advance* and *widening* rates of the 2021 lava flow? Can you use it to estimate the advance and widening of possible lava flows from other vents?
+    1. How accurate would have been the **steepest descent** approach to *forecast* flow inundation of the 2021 eruption? How different is the actual flow compared to the drainage network?
+    2. How dynamic is a months-long lava flow? Is it a *single* event or a compound *pulsatory* phenomena?
+    3. What event do you think corresponds to the dashed red line in Figure 2? What happens *before* and *after*?
+    4. What are the *advance* and *widening* rates of the 2021 lava flow? Can you use it to estimate the advance and widening of possible lava flows from other vents?
 
 <figure markdown>
   ![width](img/2021_flow_length.png)
@@ -151,13 +151,13 @@ Comparing the path of steepest descent approach computed on the pre-2021 eruptio
 - The path of steepest descent captures the general trend of flow direction **but**
 - The actual flow significantly diverted from this initial prediction.
 
-!!! question "Why?"
+!!! question "Question 6: Limitations"
 
     Spend some time thinking about the *reasons* behind this discrepancy, including:
 
-    - The rheological properties of the lava flows.
-    - Their duration, the properties of *single* vs *compound* lava flows and their evolution in time.
-    - Their relation with topography.
+    1. The rheological properties of the lava flows.
+    2. Their duration, the properties of *single* vs *compound* lava flows and their evolution in time.
+    3. Their relation with topography.
 
 From a crisis management perspective and reflecting back on the [Kīlauea crises](Hazard_lava_intro.md#objectives), the **path of steepest descent** is a great communication tool for as long as:
 
