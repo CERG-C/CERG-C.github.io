@@ -1,23 +1,24 @@
 # Setting up QGIS
 
-This section sets up `QGIS` for the hazard assessment exercises. We will install [Q–LavHA](https://we.vub.ac.be/en/q-lavha), a model for the probabilistic hazard assessment of lava flows working as a `QGIS` plugin. 
+This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha), a model for the probabilistic hazard assessment of lava flows working as a `QGIS` plugin. 
 
 ## Objectives
 
-This section provides instructions on how to:
-
-- Configure `QGIS`.
 - Install `Q–LavHA`.
-- Load the necessary data in `QGIS`.
 
 ## Installing Q-LavHA 
 
+1. Make sure `QGIS` is closed.
 1. Download `Q–LavHA` from this link.
 2. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
-```
-C:\Users\$USER\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
-```
+=== "Windows"
+
+    ```
+    C:\Users\$USER\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
+    ```
+
+=== "Mac OS"
 
 !!! note
     If the `plugins` folder doesn't exist, then create it.

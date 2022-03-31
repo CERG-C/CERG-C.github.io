@@ -22,11 +22,10 @@ Secondly, we will test the **Q-LavHA** model, which goes one step forward in att
 
 ## Objectives 
 
-With this exercise, you will:
+With this exercise, using two types of approaches to estimate the hazard associated with lava flow inundation, you will:
 
-- Get familiar with two types of approaches to estimate the hazard associated with lava flow inundation.
-- Compare to *deterministic* and *probabilistic* approaches.
-- Understand the value of *uncertainty quantification* and it's role in risk communication.
+- Compare *deterministic* and *probabilistic* approaches.
+- Understand the value of *uncertainty quantification* and its role in risk communication.
 - Appreciate the difference between short-term hazard communication during crises and long-term hazard assessment for risk mitigation.
 
 

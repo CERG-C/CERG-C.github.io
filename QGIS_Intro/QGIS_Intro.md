@@ -23,10 +23,10 @@ The most common GIS most of us use on a daily basis is [OpenStreetMap](https://w
 
 [OSM](https://www.openstreetmap.org) contains only *vector* data, which can be either *points*, *lines* (e.g., roads) or *polygons* (e.g., lakes). For points, a vector GIS data showing some information about some of my favourite Swiss mountains could look like this:
 
-| Latitude | Longitude  | Name | Altitude | Canton | First ascent | 
-|:---|:---|:---|:---|:---|:---|
-| 45.976 | 7.658  | Matterhorn	|4,478 m | Valais	| 1865 | 
-| 46.034 | 7.612 | Dent Blanche | 4,357 m | Valais	| 1862 | 
+| Latitude | Longitude | Name         | Altitude | Canton | First ascent |
+|:---------|:----------|:-------------|:---------|:-------|:-------------|
+| 45.976   | 7.658     | Matterhorn   | 4,478 m  | Valais | 1865         |
+| 46.034   | 7.612     | Dent Blanche | 4,357 m  | Valais | 1862         |
 
 In this case, the `Latitude` and `Longitude` columns hold *geographical* data, whereas the other columns hold *non-geographical* attributes. More information is available on the [Wikipedia](https://en.wikipedia.org/wiki/GIS_file_formats#Raster) and [QGIS](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/raster_data.html) websites.
 

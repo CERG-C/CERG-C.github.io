@@ -15,7 +15,7 @@
     
     
       
-        <title>Getting started - CERG-C Volcanic hazard classes & material</title>
+        <title>Getting started - CERG-C Volcanic Risk Module</title>
       
     
     
@@ -83,10 +83,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="CERG-C Volcanic hazard classes &amp; material" class="md-header__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-header__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../img/volcano.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -96,7 +95,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CERG-C Volcanic hazard classes & material
+            CERG-C Volcanic Risk Module
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -256,13 +255,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CERG-C Volcanic hazard classes &amp; material" class="md-nav__button md-logo" aria-label="CERG-C Volcanic hazard classes & material" data-md-component="logo">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-nav__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../img/volcano.svg" alt="logo">
 
     </a>
-    CERG-C Volcanic hazard classes & material
+    CERG-C Volcanic Risk Module
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -332,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QLavha_Getting-Started/" class="md-nav__link">
+      <a href="../QGIS_Setup/" class="md-nav__link">
         Setting up QGIS
       </a>
     </li>
@@ -506,7 +504,7 @@
   
     <li class="md-nav__item">
       <a href="../Hazard_lava_modeling/" class="md-nav__link">
-        How do lavas flow?
+        Modelling lava flows
       </a>
     </li>
   
@@ -741,21 +739,26 @@
 
 
 <h1 id="setting-up-qgis">Setting up QGIS</h1>
-<p>This section sets up <code>QGIS</code> for the hazard assessment exercises. We will install <a href="https://we.vub.ac.be/en/q-lavha">Q–LavHA</a>, a model for the probabilistic hazard assessment of lava flows working as a <code>QGIS</code> plugin. </p>
+<p>This section explains how to install <a href="https://we.vub.ac.be/en/q-lavha">Q–LavHA</a>, a model for the probabilistic hazard assessment of lava flows working as a <code>QGIS</code> plugin. </p>
 <h2 id="objectives">Objectives</h2>
-<p>This section provides instructions on how to:</p>
 <ul>
-<li>Configure <code>QGIS</code>.</li>
 <li>Install <code>Q–LavHA</code>.</li>
-<li>Load the necessary data in <code>QGIS</code>.</li>
 </ul>
 <h2 id="installing-q-lavha">Installing Q-LavHA</h2>
 <ol>
+<li>Make sure <code>QGIS</code> is closed.</li>
 <li>Download <code>Q–LavHA</code> from this link.</li>
 <li>In Windows, navigate to the following folder, where <code>$USER</code> is your ISIS username:</li>
 </ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac OS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>C:\Users\$USER\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
 </code></pre></div>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the <code>plugins</code> folder doesn't exist, then create it.</p>
@@ -845,7 +848,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 CERG-C / University of Geneva
+      Copyright &copy; 2022 CERG-C / University of Geneva / CC BY-NC-SA
     </div>
   
   

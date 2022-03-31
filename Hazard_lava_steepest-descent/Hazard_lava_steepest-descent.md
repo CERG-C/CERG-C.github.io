@@ -164,13 +164,13 @@ From a crisis management perspective and reflecting back on the [Kīlauea crises
 - There is an active monitoring of the crisis as it evolves.
 - There is a clear and trusting communication channel between the monitoring agencies and the stakeholders, thanks to which limitations and uncertainties associated with predictions can be clearly explained and discussed.
 
-However, its **deterministic** nature prevents its ability to systematically account for uncertainties. In a way, it only shows the **most likely** scenario rather than exploring a **range of possible** scenarios. Therefore, the **path of steepest descent** approach is not suited for long-term hazard and risk studies, which are required for such tasks as land-use planning and the pro-active development of other risk-reduction strategies. In the next exercise, we will use a stochastic model to address some of these shortcomings an test it on La Palma.
+However, its **deterministic** nature prevents its ability to systematically account for uncertainties. In a way, it only shows the **most likely** scenario rather than exploring a **range of possible** scenarios. Therefore, the **path of steepest descent** approach is not suited for long-term hazard and risk studies, which are required for such tasks as land-use planning and the pro-active development of other risk-reduction strategies. In the next exercise, we will use a stochastic model to address some of these shortcomings and test it on La Palma.
 
 ## :material-check-bold:{ .icn } Summary
 
 In this exercise, we:
 
-- Used hydrological modeling tools to obtain a first-order estimate of the possible hazard of lava flow inundation. 
+- Used hydrological modeling tools to obtain a first-order estimate of the possible extent of lava flow inundation. 
 - Compared this approach with historical and recent lava flows at La Palma. 
 - Discussed its limitations and its domain of applicability.
 
