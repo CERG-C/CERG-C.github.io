@@ -37,6 +37,8 @@ This list curates a collection of useful resources in volcanology.
 #### Lahars & PDCs inundation
 
 - [ECMapProb](https://github.com/AlvaroAravena/ECMapProb): Probability maps of PDC inundation using a modified energy cone model approach ([reference](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019JB019271)).
+- [LaharFlow](https://www.laharflow.bristol.ac.uk): Model of lahar dynamics on evolving topography. Only as a web interface.
+- [LaharZ](https://pubs.usgs.gov/of/2014/1073/): Statistical model to estimate lahar inundation. Requires ArcGIS ([reference](https://pubs.usgs.gov/of/2014/1073/pdf/ofr2014-1073.pdf))
 
 ### Eruption history & analogues
 
