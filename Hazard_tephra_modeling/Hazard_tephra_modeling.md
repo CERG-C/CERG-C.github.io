@@ -12,7 +12,7 @@ Until now, we have used a *probabilistic* model to [simulate lava flow inundatio
 
 ### Model parametrisation 
 
-A physical model is a **parametrisation** of natural processes, which means that the physics behind a phenomena is described by a set of equations that we could theoretically solve with the right **input parameters**. For instance, **tephra transport and deposition models** requires to describe:
+A physical model is a **parametrisation** of natural processes, which means that the physics behind a phenomenon is described by a set of equations that we could theoretically solve with the right **input parameters**. For instance, accurately describing **tephra transport and deposition** requires to account for the following aspects:
 
 - The generation of volcanic particles.
 - The ejection of volcanic pyroclasts in the atmosphere (&rarr; the vertical *column*).
@@ -69,10 +69,10 @@ Some models attempt solving all physical processes taking place in time and spac
 - The large number of input parameters required to solve all the physics.
 - The high computational time required to run them.
 
-Alternatively, other models adopt *assumptions* that allows them to simplify some physical processes. Although their (again, theoretical) accuracy is reduced by the fact assumptions replace the actual solving of physical processes, these models:
+Alternatively, other models adopt *assumptions* that allows them to simplify some physical processes. Although their (again, theoretical) accuracy is lower, these models:
 
-- Require a much lower number of input parameters, which facilitates their use.
-- Are much faster to run as they do not need to solve as many equations.
+- Require less input parameters, which facilitates their use.
+- Are faster to run as they do not need to solve as many equations.
 
 !!! info "What model is better for hazard assessment?"
 
