@@ -154,7 +154,7 @@ These videos illustrate the **variety** and the **complexity** of processes cont
     - Initial lava temperature and rheological properties 
     - Emplacement conditions (open channel or insulating tube)
 
-No model is yet able to capture the ensemble of these parameters, and therefore each model relies on different assumptions[^5]. For instance, the *FLOWGO* model[^6] describes the physics behind the down-flow evolution of thermal and rheological properties of lava flows, but assumes a **channel-contained** lava flow. Other models models, such as *Q-LavHA*[^7] or *MrLavaLoba*[^8] bypass the use of physics and describe the emplacement of lava flows as **stochastic** processes. **Understanding both i) the issues behind the studied problem (e.g., process-driven research vs hazard assessment) and the limitations behind numerical models is key to identify and adopt the appropriate modelling approach.**
+No model is yet able to capture the ensemble of these parameters, and therefore each model relies on different assumptions[^5]. For instance, the *FLOWGO* model[^6] describes the physics behind the down-flow evolution of thermal and rheological properties of lava flows, but assumes a **channel-contained** lava flow. Other models models, such as *Q-LavHA*[^7] or *MrLavaLoba*[^8] bypass the use of physics and describe the emplacement of lava flows as **stochastic** processes. **Understanding both i) the issues behind the studied problem (e.g., process-driven research vs hazard assessment) and ii) the limitations behind numerical models is key to identify and adopt the appropriate modelling approach.**
 
 !!! warning "Modeling natural phenomena"
 
