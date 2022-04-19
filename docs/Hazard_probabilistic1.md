@@ -52,19 +52,33 @@ So, from Figures 2 and 3:
 
 ## :material-thought-bubble:{ .icn } Deterministic vs probabilistic modeling 
 
-This modeling approach contrasts with **deterministic** modeling strategies. In deterministic modeling, the user choses **one** value for each model input, runs **a single instance** of the model that will compute a **single realisation**, in our case the extent of lava flow inundation. With **probabilistic** modeling, the aim is to explore how **variability of input parameters** will impact hazard predictions in order to represent a *probability* of hazard occurrence. This flowchart contrasts both modelling philosophies:
+This new **probabilistic** modeling strategy is different than a **deterministic** modeling approach:
 
-```mermaid
-flowchart TD
+- **Deterministic modelling**: **one** user-defined value for each model input &rarr; one **model run** &rarr; one **outcome**.
+- **Probabilistic modelling**: **range** of values for each model input &rarr; **many model run** with input conditions sampled in ranges &rarr; aggregation of **all** outcomes into probabilities.
 
-    subgraph Probabilistic
-    B1[Range of inputs] -- random sampling --> B2[Predictive model] -- many model runs --> B3[Prob. Lava flow inundation] --> B4([Many possible outcomes])
-    end
+In other terms:
 
-    subgraph Deterministic 
-    A1[Single input] -- single value --> A2[Predictive model] -- 1 model run --> A3[Lava flow inundation] --> A4([One single outcome])
-    end
-```
+- **Deterministic modelling**: The output is entirely determined by the input values.
+- **Probabilistic modelling**: They account for a degree of randomness/uncertainty.
+
+Figure 4 illustrates the different hazard outputs obtained from deterministic (left) and probabilistic (right) modelling strategies for lava inundation.
+
+<figure markdown>
+  ![detprob](img/prob/lava_det_vs_prob.png){ width="500" }
+  <figcaption>Figure 4: Difference between deterministic (left &rarr; boolean yes/no inundation information) and probabilistic (likelihood of inundation) hazard outputs.</figcaption>
+</figure>
+
+
+### Probabilistic lava flow hazard modeling for La Palma
+
+For the case of lava flow inundation hazard in La Palma, we will explore how the an uncertainty on the **vent location** will affect possible inundated areas. This flowchart illustrates how we will account for an uncertainty in vent location using a probabilistic hazard modeling approach and how it contrasts with a deterministic strategy.
+
+<figure markdown>
+  ![prob1](img/prob/prob1_wf.jpeg)
+  <figcaption>Figure 5: Deterministic and probabilistic approaches to model the uncertainty associated with vent location.</figcaption>
+</figure>
+
 
 !!! info "Gambling-driven science"
 
@@ -72,3 +86,19 @@ flowchart TD
 
 <!-- ## :material-check-bold:{ .icn } Summary -->
 
+
+## :material-check-bold:{ .icn } Summary
+
+Here, we have revirewed how probabilistic modelling allows to[^1]:
+
+- Account for *uncertainties* in the model's input parameters.
+- Quantify hazard outputs as *probabilities* rather than *occurrences*.
+
+In the next exercise, we will use `Q-LavHA`, a probabilistic model, to quantify the probability of lava flow inundation for various vents in La Palma.
+
+## :fontawesome-solid-book:{ .icn } References
+
+[^1]: Bonadonna, C., 2006. Probabilistic modelling of tephra dispersion, in: Mader, H.M., Coles, S.G., Connor, C.B., Connor, L.J. (Eds.), Statistics in Volcanology. Geological Society of London, London, pp. 243–259.
+
+*[ESP]: Eruption source parameter
+*[DEM]: Digital Elevation Model

@@ -264,7 +264,7 @@ This limited ability to predict the evolution of lava flow crises result in high
 - No unified model for flow emplacement exists, and modelling approaches follow two main directions: **physical** and **stochastic** strategies.
 
 
-## References
+## :fontawesome-solid-book:{ .icn } References
 
 [^1]: Harris, A.J.L., Rowland, S.K., 2015. Lava Flows and Rheology. The Encyclopedia of Volcanoes 321–342. https://doi.org/10.1016/B978-0-12-385938-9.00017-1
 [^2]: Kilburn, C.R.J.J., 2015. Lava Flow Hazards and Modeling. The Encyclopedia of Volcanoes 957–969. https://doi.org/10.1016/B978-0-12-385938-9.00055-9

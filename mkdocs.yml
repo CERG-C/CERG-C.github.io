@@ -42,6 +42,7 @@ nav:
       - Q-LavHA: Hazard_lava_Q-LavHA.md
       - Instructor's notes: Hazard_lava_notes.md
     - Tephra hazard:
+      - Modeling tephra transport: Hazard_tephra_modeling.md
       - Probabilistic modeling part II: Hazard_probabilistic2.md 
   - Resources: resources.md
   - Contribute: contribute.md
@@ -82,6 +83,8 @@ markdown_extensions:
       toc_depth: 4
   - pymdownx.tabbed:
       alternate_style: true 
+  - abbr
+  - pymdownx.snippets
   
 
 extra_javascript:
@@ -96,6 +99,9 @@ extra_javascript:
 #       link: https://twitter.com/VolcanoRisk
 #     - icon: fontawesome/brands/github
 #       link: https://github.com/vharg
+extra:
+  version:
+    provider: mike
 
 extra_css:
   - stylesheets/extra.css

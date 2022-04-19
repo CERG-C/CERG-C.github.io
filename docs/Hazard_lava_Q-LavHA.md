@@ -7,6 +7,7 @@ With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent
 - Review the theory behind `Q-LavHA`.
 - Understand the main assumptions behind the use of the model.
 - Perform probabilistic lava flow modeling for several vents in La Palma.
+- Account for the uncertainty in vent locations in hazard assessments.
   
 ## :fontawesome-solid-gears:{ .icn } Theory behind Q-LavHA 
 
@@ -67,7 +68,7 @@ Flow length is a critical metrics of lava flow hazard. However, since it depends
 
 ### Probability of flow inundation 
 
-As [previously seen](Hazard_probabilistic1.md#probabilistic-modelling), probability of lava flow inundation $P$ at a given pixel $i, j$ is generally computed as the number of inundation counts $n_i$ normalised by the number of runs $N_r$:
+As [previously seen](Hazard_probabilistic1.md#probabilistic-modelling), probability of lava flow inundation $P$ at a given pixel $x, y$ is generally computed as the number of inundation counts $n_i$ normalised by the number of runs $N_r$:
 
 $$
 P(x,y) = \frac{\sum_{i=1}^{N_{r}}n_{i}}{N_{r}}
@@ -236,9 +237,14 @@ Compare the `Q-LavHA` run with the flow outlines from the 2021 eruption below. N
 
     1. From what you know about both the 2021 eruption and the dynamics of lava flows, compare and discuss the hazard forecast and the actual deposit. What are `Q-LavHA`'s strengths and limitations?
 
-
-
 ## :material-check-bold:{ .icn } Summary
+
+In this exercise, you have:
+
+- Understood the philosophy behind a probabilistic model for lava flow inundation, `Q-LavHA`.
+- Assessed the hazard of lava flow inundation using probabilistic modeling.
+- Included the uncertainty on vent location in hazard estimates.
+- Understood the limitations of model predictions when compared to past events.
 
 ## :fontawesome-solid-book:{ .icn } References
 
