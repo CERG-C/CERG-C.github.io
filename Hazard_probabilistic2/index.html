@@ -377,7 +377,7 @@
   
     <li class="md-nav__item">
       <a href="../Hazard_lava_intro/" class="md-nav__link">
-        Intro
+        Introduction
       </a>
     </li>
   
@@ -509,6 +509,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Hazard_tephra_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Hazard_tephra_modeling/" class="md-nav__link">
         Modeling tephra transport
       </a>
@@ -567,33 +581,6 @@
   <a href="#probabilistic-modeling-workflow" class="md-nav__link">
     Probabilistic modeling workflow
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eruption-source-parameters" class="md-nav__link">
-    Eruption source parameters
-  </a>
-  
-    <nav class="md-nav" aria-label="Eruption source parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model-parametrisation" class="md-nav__link">
-    Model parametrisation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modeling-choices" class="md-nav__link">
-    Modeling choices
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -731,33 +718,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#eruption-source-parameters" class="md-nav__link">
-    Eruption source parameters
-  </a>
-  
-    <nav class="md-nav" aria-label="Eruption source parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model-parametrisation" class="md-nav__link">
-    Model parametrisation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modeling-choices" class="md-nav__link">
-    Modeling choices
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#estimate-the-uncertainty-of-esps" class="md-nav__link">
     Estimate the uncertainty of ESPs
   </a>
@@ -813,10 +773,11 @@
 
 
 <h1 id="probabilistic-modelling-part-2">Probabilistic modelling: Part 2</h1>
-<p>We have <a href="../Hazard_probabilistic1/">previously</a> been introduced to probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies have to account for the uncertainty on <strong>more than one</strong> parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.</p>
+<p>We have <a href="../Hazard_probabilistic1/">previously</a> looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on <strong>more than one</strong> parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.</p>
 <h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
 <ul>
-<li>Understand the concepts of <strong>eruption source parameters</strong> and <strong>eruption scenarios</strong>. </li>
+<li>Understand the concepts of <strong>probabilistic eruption scenarios</strong>.</li>
+<li>Review the concepts of <strong>deterministic</strong>, <strong>scenario-based probabilistic</strong> and <strong>probabilistic</strong> volcanic hazard assessments.</li>
 </ul>
 <h2 id="probabilistic-modeling-workflow">Probabilistic modeling workflow</h2>
 <p>From now on, we will refer to model inputs as <strong>Eruption Source Parameters</strong> - or <strong>ESP</strong>. Probabilistic modeling requires one to:</p>
@@ -824,77 +785,6 @@
 <li>Identify relevant ESPs for a problem.</li>
 <li>Estimate the uncertainty on each ESP.</li>
 </ol>
-<h2 id="eruption-source-parameters">Eruption source parameters</h2>
-<h3 id="model-parametrisation">Model parametrisation</h3>
-<p>A physical model is a <strong>parametrisation</strong> of natural processes, which means that the physics behind a phenomena is described by a set of equations that we could theoretically solve with the right <strong>input parameters</strong>. For instance, <strong>tephra transport and deposition models</strong> requires to describe:</p>
-<ul>
-<li>The generation of volcanic particles.</li>
-<li>The ejection of volcanic pyroclasts in the atmosphere (&rarr; the vertical <em>column</em>).</li>
-<li>The dispersal of this material by the wind in the atmosphere (&rarr; the "mushroom" horizontal <em>plume</em>).</li>
-<li>The sedimentation of particles onto the ground (&rarr; the tephra <em>deposit</em>).</li>
-</ul>
-<p>There is no <strong>unique way</strong> of solving this problem. Depending on the <strong>assumptions</strong> behind the physical processes and the <strong>purpose</strong> of the model, the governing equations can be posed in a more or less complex way. </p>
-<p>This slideshow summarises the various steps that tephra transport and deposition models have to solve:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Exolusion</label><label for="__tabbed_1_2">Fragmentation</label><label for="__tabbed_1_3">Convection</label><label for="__tabbed_1_4">Wind advection</label><label for="__tabbed_1_5">Tephra sedimentation</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><img alt="exolusion" src="../img/model/m1.png" /></p>
-<ul>
-<li>Volatiles (&rarr; gases) dissolved in the magma starts to escape</li>
-<li>As a result, the liquid magma starts rising in the conduit</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="fragmentation" src="../img/model/m2.png" /></p>
-<ul>
-<li>The liquid accelerates upwards, the rate of deformation becomes critical and the liquid starts behaving like a solid</li>
-<li>The magma becomes <em>brittle</em> and fragments: it is now a cloud of <em>solid</em> (&rarr; pyroclasts) particles surrounded by gas</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="convection" src="../img/model/m3.png" /></p>
-<ul>
-<li>The material reaches the atmosphere with sufficient momentum to entrain surrounding air</li>
-<li>The plume becomes <em>lighter</em> than the atmosphere and rises from <em>buoyancy</em> forces</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="advection" src="../img/model/m4.png" /></p>
-<ul>
-<li>After entraining sufficient air, the plume reaches the same <em>density</em> as the atmosphere (&rarr; level of neutral buoyancy)</li>
-<li>The <em>umbrella cloud</em> develops and elongates in the direction of the wind </li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="sedimentation" src="../img/model/m5.png" /></p>
-<ul>
-<li>Particles are carried horizontally in the umbrella cloud. As it evolves away from the source, it becomes less "strong" and is not able to transport particles </li>
-<li>Large particles leave the umbrella cloud first and fall close to the vent, while finer particles are carried farther away, creating the <strong>tephra deposit</strong></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Strong plumes</p>
-<p>These cartoons assume a <strong>strong plume</strong> with a typical mushroom-shaped morphology. However, keep in mind that other types of <strong>transitional</strong> or <strong>weak</strong> plumes exist. If the vertical rate of ascent of the plume is not sufficiently high, the plume can <em>collapse</em> and create <strong>pyrocalstic density currents</strong>.</p>
-</div>
-<h3 id="modeling-choices">Modeling choices</h3>
-<p>Some models attempt solving all physical processes taking place in time and space. These models are complex and (theoretically) have a higher accuracy. However, their use is often impeded by:</p>
-<ul>
-<li>The large number of input parameters required to solve all the physics.</li>
-<li>The high computational time required to run them.</li>
-</ul>
-<p>Alternatively, other models adopt <em>assumptions</em> that allows them to simplify some physical processes. Although their (again, theoretical) accuracy is reduced by the fact assumptions replace the actual solving of physical processes, these models:</p>
-<ul>
-<li>Require a much lower number of input parameters, which facilitates their use.</li>
-<li>Are much faster to run as they do not need to solve as many equations.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">What model is better for hazard assessment?</p>
-<p>Is a <strong>complex numerical model</strong> always better than a <strong>simpler model</strong> (e.g., empirical or probabilistic)? Well, not necessarily, it all depends on <strong>context</strong>.</p>
-<p>When a high accuracy is required, complex numerical models are generally better. However, they usually require a large number of ESPs and an important computing power. Therefore, they are not suited for probabilistic analyses as their computational time is too large, and they are therefore mostly used for <a href="../Hazard_probabilistic1/">deterministic</a> modeling. </p>
-<p>Conversely, simpler models might not capture all the subtleties of the underlying processes, but are easier to use and require less computation cost. Therefore, they can be used for <a href="../Hazard_probabilistic1/">probabilistic</a> modeling and are often used for long-term hazard assessments. </p>
-</div>
 <p>The first aspect to identify is <strong>what ESP is critical</strong> for the hazardous phenomenon of interest. For instance, important ESP for tephra accumulation include the plume height, the erupted mass, the mass eruption rate and the grain-size distribution. </p>
 <p>The choice of ESP must be put in context of the <strong>selected model</strong> for hazard assessment. Typically, <strong>complex numerical models</strong> are very <strong>accurate</strong> but require a <strong>large number of ESPs</strong>, which can be difficult to obtain. For instance, <code>FLOWGO</code> is a model that simulates lava flows based on the evolution of thermo-rheological properties that requires the identification of tens of different ESPs. Conversely, <strong>simpler models</strong> rely on simpler assumptions, usually require <strong>less ESPs</strong> but typically have a lower accuracy (e.g., <code>Q-LavHA</code>).</p>
 <h2 id="estimate-the-uncertainty-of-esps">Estimate the uncertainty of ESPs</h2>

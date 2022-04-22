@@ -64,7 +64,7 @@ From Figure 1:
 
 <figure markdown>
   ![rheology](img/lava/tom_rheology.png)
-  <figcaption>Figure 1: Left: Summary of driving forces. Right: Types of fluids. Credit: Tom Shae.</figcaption>
+  <figcaption>Figure 1: Left: Summary of driving forces. Right: Types of fluids. Note that on the right plot, the slope of at each point of the curve represents the flow's viscosity. Credit: Tom Shae.</figcaption>
 </figure>
 
 ### Flow rheology

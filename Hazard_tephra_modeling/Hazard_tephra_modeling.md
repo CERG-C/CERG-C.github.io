@@ -27,36 +27,36 @@ This slideshow summarises the various steps that tephra transport and deposition
 
     ![exsolution](img/model/m1.png)
 
-    - Volatiles (&rarr; gases) dissolved in the magma starts to escape
-    - As a result, the liquid magma starts rising in the conduit
+    - Volatiles (&rarr; gases) dissolved in the magma starts to escape.
+    - As a result, the liquid magma starts rising in the conduit.
 
 === "Fragmentation"
 
     ![fragmentation](img/model/m2.png)
 
-    - The liquid accelerates upwards, the rate of deformation becomes critical and the liquid starts behaving like a solid
-    - The magma becomes *brittle* and fragments: it is now a cloud of *solid* (&rarr; pyroclasts) particles surrounded by gas
+    - The liquid accelerates upwards, the rate of deformation becomes critical and the liquid starts behaving like a solid.
+    - The magma becomes *brittle* and fragments: it is now a cloud of *solid* (&rarr; pyroclasts) particles surrounded by gas.
 
 === "Convection"
 
     ![convection](img/model/m3.png)
 
-    - The material reaches the atmosphere with sufficient momentum to entrain surrounding air
-    - The plume becomes *lighter* than the atmosphere and rises from *buoyancy* forces
+    - The material reaches the atmosphere with sufficient momentum to entrain surrounding air.
+    - The plume becomes *lighter* than the atmosphere and rises from *buoyancy* forces.
 
 === "Wind advection"
 
     ![advection](img/model/m4.png)
 
-    - After entraining sufficient air, the plume reaches the same *density* as the atmosphere (&rarr; level of neutral buoyancy)
-    - The *umbrella cloud* develops and elongates in the direction of the wind 
+    - After entraining sufficient air, the plume reaches the same *density* as the atmosphere (&rarr; level of neutral buoyancy).
+    - The *umbrella cloud* develops and elongates in the direction of the wind.
 
 === "Tephra sedimentation"
 
     ![sedimentation](img/model/m5.png)
 
-    - Particles are carried horizontally in the umbrella cloud. As it evolves away from the source, it becomes less "strong" and is not able to transport particles 
-    - Large particles leave the umbrella cloud first and fall close to the vent, while finer particles are carried farther away, creating the **tephra deposit**
+    - Particles are carried horizontally in the umbrella cloud. As it evolves away from the source, it becomes less "strong" and is not able to transport particles.
+    - Large particles leave the umbrella cloud first and fall close to the vent, while finer particles are carried farther away, creating the **tephra deposit**.
 
 !!! warning "Strong plumes"
 
@@ -86,9 +86,9 @@ Alternatively, other models adopt *assumptions* that allows them to simplify som
 
 In order to assess the hazard associated with tephra accumulation, we will here use the **Tephra2** model[^1]. Tephra2 uses an *analytical solution to the advection-diffusion equation*. In other words:
 
-- Tephra2 simplifies the *atmospheric transport* of particles, thanks to which the *tephra accumulation* can be computed rapidly
-- *Numerous* of input parameters related to atmospheric transport are *parametrised* into *a few* parameters
-- *Computation time* is fast
+- Tephra2 simplifies the *atmospheric transport* of particles, thanks to which the *tephra accumulation* can be computed rapidly.
+- *Numerous* of input parameters related to atmospheric transport are *parametrised* into *a few* parameters.
+- *Computation time* is fast.
 
 These specificities make Tephra2 **highly suited** for [probabilistic hazard assessment](Hazard_probabilistic1.md) purposes.
 

@@ -1,0 +1,1182 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CERG-C.github.io/Hazard_tephra_intro/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Introduction - CERG-C Volcanic Risk Module</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#probabilistic-hazard-assessment-for-tephra-accumulation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-header__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CERG-C Volcanic Risk Module
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../QGIS_Intro/" class="md-tabs__link md-tabs__link--active">
+        Teaching
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../resources/" class="md-tabs__link">
+      Resources
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../contribute/" class="md-tabs__link">
+      Contribute
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-nav__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    CERG-C Volcanic Risk Module
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teaching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teaching" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teaching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Intro/" class="md-nav__link">
+        QGIS basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Setup/" class="md-nav__link">
+        Setting up QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Lava hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lava hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lava hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_config/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_steepest-descent/" class="md-nav__link">
+        Path of steepest descent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_modeling/" class="md-nav__link">
+        Modelling lava flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic1/" class="md-nav__link">
+        Probabilistic modeling part I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_Q-LavHA/" class="md-nav__link">
+        Q-LavHA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Tephra hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tephra hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tephra hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tephra-deposits" class="md-nav__link">
+     Tephra deposits
+  </a>
+  
+    <nav class="md-nav" aria-label=" Tephra deposits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-are-tephra-deposits-important" class="md-nav__link">
+    Why are tephra deposits important?
+  </a>
+  
+    <nav class="md-nav" aria-label="Why are tephra deposits important?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-mapping-toolbox" class="md-nav__link">
+    Field mapping toolbox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-impacts-can-be-caused-by-tephra" class="md-nav__link">
+    What impacts can be caused by tephra?
+  </a>
+  
+    <nav class="md-nav" aria-label="What impacts can be caused by tephra?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-spatially-dependent-hazard-intensity" class="md-nav__link">
+    A spatially-dependent hazard intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-and-risk" class="md-nav__link">
+    Vulnerability and risk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_modeling/" class="md-nav__link">
+        Modeling tephra transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic2/" class="md-nav__link">
+        Probabilistic modeling part II
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tephra-deposits" class="md-nav__link">
+     Tephra deposits
+  </a>
+  
+    <nav class="md-nav" aria-label=" Tephra deposits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-are-tephra-deposits-important" class="md-nav__link">
+    Why are tephra deposits important?
+  </a>
+  
+    <nav class="md-nav" aria-label="Why are tephra deposits important?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-mapping-toolbox" class="md-nav__link">
+    Field mapping toolbox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-impacts-can-be-caused-by-tephra" class="md-nav__link">
+    What impacts can be caused by tephra?
+  </a>
+  
+    <nav class="md-nav" aria-label="What impacts can be caused by tephra?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-spatially-dependent-hazard-intensity" class="md-nav__link">
+    A spatially-dependent hazard intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-and-risk" class="md-nav__link">
+    Vulnerability and risk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thoughts" class="md-nav__link">
+     Food for thoughts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="probabilistic-hazard-assessment-for-tephra-accumulation">Probabilistic hazard assessment for tephra accumulation</h1>
+<p><strong>Tephra</strong> was first defined by Sigurður Þórarinsson<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> following the 1947 eruption of Hekla volcano in Iceland as:</p>
+<div class="admonition quote">
+<p class="admonition-title">Tephra</p>
+<p>The fragmental material produced by a volcanic eruption regardless of composition, fragment size, or emplacement mechanism.</p>
+</div>
+<p><strong>Tephra deposits</strong> are therefore widespread deposits generated by explosive volcanic eruption. Here, we will explore <strong>what</strong> is tephra, <strong>why</strong> are tephra deposits important and how they can <strong>impact</strong> populations and assets around volcanoes. Later in the module, we will learn how to <strong>model</strong> the transportation and deposition of tephra after eruptions, and how to <strong>quantify</strong> their associated hazards. </p>
+<h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
+<p>The objective of this lessons are to understand:</p>
+<ul>
+<li>What are tephra deposits.</li>
+<li>Why they are relevant and what can we learn from them.</li>
+<li>How they can impact communities.</li>
+</ul>
+<h2 id="tephra-deposits"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M286.3 155.1c1.1 6.8 1.7 13.8 1.7 20 0 8-.6 15-1.7 21.8l22.2 19.8c7 6.3 9.9 15.4 6.2 25-2.3 4.4-4.8 10.5-7.6 15.5l-3.1 5.4c-3.9 5-6.3 9.8-9.8 14.5-5.7 7.6-15.7 10.1-24.7 7.1l-28.3-9.3c-10.7 8.9-22.9 16-36.2 21l-6.9 29c-1.1 9.3-8.3 16.7-17.7 17.9-6.7.8-13.5 1.2-20.4 1.2-6.9 0-13.7-.4-20.4-1.2-9.4-1.2-17.5-8.6-18.6-17.9l-6.9-29c-12.4-5-24.6-12.1-35.35-21l-28.22 9.3c-8.99 3-19.01.5-24.71-7.1-3.54-4.7-6.84-9.6-9.88-14.6l-3.02-5.3c-2.79-5-5.328-10.2-7.596-15.5-3.704-9.6-.866-18.7 6.196-25l22.18-19.8c-1.12-6.8-2.6-13.8-2.6-21.8 0-6.2 1.48-13.2 2.6-20l-22.18-19.8c-7.062-7.2-9.9-16.3-6.196-25 2.268-6.2 4.806-10.51 7.586-15.54l3.04-5.25c3.03-5.05 6.33-9.93 9.87-14.62 5.7-7.55 15.72-10.06 24.71-7.1l28.22 9.3c10.75-8.84 22.95-15.96 35.35-20.94l6.9-29.07c1.1-9.28 9.2-16.71 18.6-17.849A169.2 169.2 0 0 1 160 8c6.9 0 13.7.418 20.4 1.23 9.4 1.14 16.6 8.57 17.7 17.85l6.9 29.07c13.3 4.98 25.5 12.1 36.2 20.94l28.3-9.3c9-2.96 19-.45 24.7 7.1 3.5 4.67 5.9 9.53 9.8 14.55l3.1 5.39c2.8 5.01 5.3 10.17 7.6 15.47 3.7 8.7.8 17.8-6.2 25l-22.2 19.8zm-126.3-28c-26.5 0-48 22.4-48 48 0 27.4 21.5 48 48 48s48-20.6 48-48c0-25.6-21.5-48-48-48zm324.9 351.2c-6.8 1.1-13.8 1.7-20.9 1.7-7.1 0-14.1-.6-20.9-1.7l-19.8 22.2c-7.2 7-16.3 9.9-25 6.2-5.3-2.3-10.5-4.8-15.5-7.6l-5.4-3.1c-5-3.9-9.8-6.3-14.5-9.8-7.6-5.7-10.1-15.7-7.1-24.7l9.3-28.3c-8.9-10.7-16-22.9-21-36.2l-29-6.9c-9.3-1.1-16.7-8.3-17.9-17.7-.8-6.7-1.2-13.5-1.2-20.4 0-6.9.4-13.7 1.2-20.4 1.2-9.4 8.6-17.5 17.9-18.6l29-6.9c5-12.4 12.1-24.6 21-35.3l-9.3-28.3c-3-9-.5-19 7.1-24.7 4.7-3.5 9.6-7.7 14.6-9.9l5.3-3c5-2.8 9.3-5.3 15.5-7.6 8.7-3.7 17.8-.8 25 6.2l19.8 22.2c6.8-1.1 13.8-1.7 20.9-1.7 7.1 0 14.1.6 20.9 1.7l19.8-22.2c6.3-7 15.4-9.9 25-6.2 5.3 2.3 10.5 4.8 15.5 7.6l5.3 3c5 2.2 9.9 6.4 14.6 9.9 7.6 5.7 10.1 15.7 7.1 24.7l-9.3 28.3c8.9 10.7 16 22.9 21 35.3l29 6.9c9.3 1.1 16.7 9.2 17.9 18.6.8 6.7 1.2 13.5 1.2 20.4 0 6.9-.4 13.7-1.2 20.4-1.2 9.4-8.6 16.6-17.9 17.7l-29 6.9c-5 13.3-12.1 25.5-21 36.2l9.3 28.3c3 9 .5 19-7.1 24.7-4.7 3.5-9.5 5.9-14.5 9.8l-5.4 3.1c-5 2.8-11.1 5.3-15.5 7.6-9.6 3.7-18.7.8-25-6.2l-19.8-22.2zM512 352c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48z"/></svg></span> Tephra deposits</h2>
+<p>In the field, tephra deposits generally appear as unconsolidated <em>pyroclastic</em> material that are able to blanket the existing topography, and their thicknesses exponentially decrease with distance from the source vent. </p>
+<p>Tephra fragments - or <em>pyroclasts</em> - can be classified in three categories according to their size:</p>
+<ul>
+<li><strong>Ash</strong> – particles smaller than 2 mm in diameter.</li>
+<li><strong>Lapilli</strong> – between 2 and 64 mm in diameter.</li>
+<li><strong>Bombs</strong> or <strong>blocks</strong> – larger than 64 mm in diameter.</li>
+</ul>
+<p>Below are some examples of tephra deposits.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">La Palma</label><label for="__tabbed_1_2">Kīlauea</label><label for="__tabbed_1_3">Vulcano</label><label for="__tabbed_1_4">Changbaishan</label><label for="__tabbed_1_5">Taupō</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="deposit" src="../img/tephra/deposit.jpg" width="400" />
+<figcaption>Figure 1: Tephra deposit associated with the 2021 eruption of La Palma for a section ~1km from the source. The layering reflects the variability of both eruptive and atmospheric conditions throughout the course of the eruption. In this section, the coarsest material is lapilli and the finest is ash (Picture: S. Biass). </figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="gp" src="../img/tephra/gp.jpg" width="400" />
+<figcaption>Figure 2: Proximal outcrop of the Golden Pumice deposit of Kīlauea volcano in Hawaii. This deposit is associated with episodes of intense fountaining (Picture: S. Biass).</figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="vulcano" src="../img/tephra/vulcano.jpg" />
+<figcaption>Figure 3: Deposit associated with the 1888-1890 eruption of La Fossa volcano, Italy. This section represents years of unsustained, pulsatory activity (Picture: S. Biass).</figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="cbs" src="../img/tephra/cbs.jpg" width="400" />
+<figcaption>Figure 4: Deposit associated with the AD 946–947 Plinian Millenium eruption of Changbaishan volcano (China/North Korea). The airborne deposit lies on a lahar deposit (Picture: S. Jenkins).</figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="taupo" src="../img/tephra/taupo.jpg" />
+<figcaption>Figure 5: Complex stratigraphy associated with the Oranui eruption of Taupō volcano, New Zealand. This is the largest eruption of the past 70,000 years, with a <abbr title="Volcanic explosivity index">VEI</abbr> of 8 (Picture: S. Biass).</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="why-are-tephra-deposits-important">Why are tephra deposits important?</h3>
+<p>Tephra deposits are <strong>a direct reflection of the eruptive conditions</strong> occurring in the plume. By <strong>studying</strong>, <strong>mapping</strong> and <strong>characterizing</strong> them, we can therefore infer important <strong>eruption source parameters</strong> (<abbr title="Eruption source parameter">ESP</abbr>) for a given eruption. This is critical for two aspects:</p>
+<ol>
+<li>For a given eruption, this helps us constrain the eruption type (&rarr; magnitude, intensity, duration, style).</li>
+<li>Repeating that a volcanic system, this provides a tool for <strong>revisiting</strong> the stratigraphy and constrain its <strong>eruptive behaviour</strong> which, in turn, helps constraining what type of eruption scenarios could happen in the future.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Field-based methods<p>For recent eruption, direct observation methods can infer <abbr title="Eruption source parameter">ESP</abbr> in near-real time (e.g., satellite imagery for plume height, infrasound for mass eruption rate (<abbr title="Mass eruption rate">MER</abbr>)). However, field-based approaches remain the main approach to extract knowledge from old tephra deposits.</p>
+</p>
+</div>
+<figure>
+<p><img alt="strati" src="../img/tephra/strati.png" /></p>
+<figcaption>Figure 6: Tephra deposits (right) are a direct consequence of the plume dynamics. On the left, the plume associated with the 2015 eruption of Calbuco, Chile (Picture: AFP). On the right, a tephra deposit associated with a Plinian eruption of Cotopaxi volcano, Ecuador (Picture: S. Biass).</figcaption>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Volcanic explosivity index<p><img _="," align="left" alt="vei" src="../img/tephra/vei.png" width="300" /></p>
+<p>The <strong>Volcanic explosivity index</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> - or <strong><abbr title="Volcanic explosivity index">VEI</abbr></strong> - is a <em>"measure"</em> of eruption size based on the <strong>volume</strong> of tephra produced during an eruption. Despites its limitations (i.e., it is a stepwise measure and largely aggregates small but frequent eruptive styles into a <em>non-explosive</em> category), it remains the most commonly used metrics. Bear in mind that its primary purpose was <em>communication</em>, and it does a great job at it. For measures that better account for the dynamics of eruption, the combined use of <strong>magnitude</strong> and <strong>intensity</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> might be more appropriate. More information can be found <a href="https://geology.com/stories/13/volcanic-explosivity-index/">here</a>. </p>
+</p>
+</div>
+<h4 id="field-mapping-toolbox">Field mapping toolbox</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Outcrop</label><label for="__tabbed_2_2">Deposit</label><label for="__tabbed_2_3"><abbr title="Eruption source parameter">ESP</abbr></label><label for="__tabbed_2_4">Workflow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img _="," align="left" alt="1" src="../img/tephra/1.png" width="300" /></p>
+<p>As we start the field characterisation of a deposit, we first look for <strong>outcrops</strong> where a given deposit is complete. At the outcrop level, we will start directly measuring a number of different physical quantities including:</p>
+<ol>
+<li>The deposit <strong>thickness</strong>.</li>
+<li>The diameter of the l<strong>argest clast(s)</strong> observed at this location.</li>
+<li>The <strong>grain-size</strong> distribution. </li>
+<li>The <strong>componentry</strong> (e.g., ratio of <em>juvenile</em> vs <em>lithics</em> components, presence of free crystals or oxydised particles). </li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><img _="," align="left" alt="2" src="../img/tephra/2.png" width="300" /></p>
+<p>As a sufficient number of outcrops is discovered and mapped, we can start plotting them on a map and <strong>contour</strong> the spatial extent of these properties. Two maps greatly interest us:</p>
+<ol>
+<li><strong>Isopach</strong> maps contour the <strong>deposit thickness</strong>, which can be used to compute the deposit <strong>volume</strong> and associated <abbr title="Volcanic explosivity index">VEI</abbr> / magnitude.</li>
+<li><strong>Isopleth</strong> maps contour the <strong>largest clast</strong> that is observed at a given outcrop, which can be used to estimate the <strong>plume height</strong> and associated <abbr title="Mass eruption rate">MER</abbr> and intensity.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><img alt="3" src="../img/tephra/3.png" width="400" /></p>
+<p>This process is the foundation of the field characterization of tephra deposits and help quantifying <abbr title="Eruption source parameter">ESP</abbr><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+</div>
+<div class="tabbed-block">
+<p>This workflow summarises the entire field-based characterisation of ESPs from tephra deposits.</p>
+<pre class="mermaid"><code>flowchart LR
+A3 --&gt; A32[VEI]:::clasf
+A4 --&gt; A42[Magnitude]:::clasf
+
+A1[Thickness]:::field ==&gt; A2[Isopach] ==&gt; A3[Volume]:::esp ==&gt; A4[Mass]:::esp ==&gt; F[Eruption duration]:::esp
+
+B1[Largest clast]:::field ==&gt; B2[Isopleth] ==&gt; B3[Plume height]:::esp ==&gt; B4[Mass eruption rate]:::esp ==&gt; F
+
+A2 --&gt; A22["Thinning" rate]:::clasf
+B2 --&gt; B22["Fining" rate]:::clasf
+
+C[Bulk deposit density]:::field -.-&gt; A4
+D[Wind speed] -.-&gt; B4
+
+B4 --&gt; B42[Intensity]:::clasf
+
+classDef field fill:#cbdc3850, stroke:#cbdc38;
+classDef esp fill:#1f78b450, stroke:#1f78b4;
+classDef clasf fill:#984ea350, stroke:#984ea3;</code></pre>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Legend [" "]
+    l1[Field/outcrop measurement]:::field
+    l2[Eruption source parameter]:::esp
+    l3[Classification parameter]:::clasf
+    end
+classDef field fill:#cbdc3850, stroke:#cbdc38;
+classDef esp fill:#1f78b450, stroke:#1f78b4;
+classDef clasf fill:#984ea350, stroke:#984ea3;
+</code></pre>
+</div>
+</div>
+</div>
+<h3 id="what-impacts-can-be-caused-by-tephra">What impacts can be caused by tephra?</h3>
+<div class="admonition note">
+<p class="admonition-title">Tephra hazard</p>
+<p>We will focus here on <strong>airborne tephra</strong>, considering the fraction that is entrained in the convective plume and advected by the wind and ignoring the hazard associated with pyroclastic density currents (PDC).</p>
+</div>
+<p>The impact of tephra can be classified in two broad categories:</p>
+<ol>
+<li>The <strong>atmospheric dispersal</strong> can impact the air traffic as demonstrated by the 2010 and 2011 eruptions of Eyjafjallajökull (Iceland) and Cordón Caulle (Chile), respectively. In this case, the main <strong>hazard impact metrics</strong> (<abbr title="Hazard impact metrics">HIM</abbr>) is the <strong>atmospheric concentration</strong> of fine ash in the atmosphere (usually expressed in <span class="arithmatex">\(mg/m^3\)</span>). Since modeling the atmospheric dispersal requires 3D models with high computing costs, we won't consider this aspect here.</li>
+<li>The <strong>ground sedimentation</strong> impacts populations and assets at the surface of the Earth, and the main <strong>hazard impact metrics</strong> are a combination of the <strong>mass load</strong> of tephra (usually expressed in <span class="arithmatex">\(kg/m^2\)</span>) and the <strong>grain-size distribution</strong> of the deposit. This will be the focus of this exercise.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Deposit load vs thickness</p>
+<p>Measuring the mass load in the field is time consuming, and we are therefore often limited to measuring the outcrop's thickness. For simplicity throughout this exercise, we will consider that <em>mass load</em> and <em>thickness</em> can be interchanged using a bulk density of 1000 <span class="arithmatex">\(kg/m^3\)</span>. So, for instance:</p>
+<ul>
+<li>1 <span class="arithmatex">\(mm\)</span> = 1 <span class="arithmatex">\(kg/m^3\)</span>.</li>
+<li>1 <span class="arithmatex">\(cm\)</span> = 10 <span class="arithmatex">\(kg/m^3\)</span>.</li>
+<li>10 <span class="arithmatex">\(cm\)</span> = 100 <span class="arithmatex">\(kg/m^3\)</span>.</li>
+<li>1 <span class="arithmatex">\(m\)</span> = 1000 <span class="arithmatex">\(kg/m^3\)</span>.</li>
+</ul>
+</div>
+<h4 id="a-spatially-dependent-hazard-intensity">A spatially-dependent hazard intensity</h4>
+<p>Tephra deposits can extend 10's, 100's to 1000's of km away from the source. With distance from the vent, their <strong>thickness</strong> decrease <strong>exponentially</strong> and they gradually get finer. The <strong>widespread</strong> nature of tephra deposits and the <strong>spatial evolution</strong> of their associated hazard metrics make the associated impacts and risk <strong>difficult to predict</strong><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">9</a></sup>. </p>
+<p>Impacts can be broadly characterised into 3 zones as a function of the distance from the vent <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">7</a></sup>:</p>
+<ul>
+<li><strong>Zone 1</strong>: Destructive and immediately life-threatening.</li>
+<li><strong>Zone 2</strong>: Damaging and/or disruptive.</li>
+<li><strong>Zone 3</strong>: Disruptive and/or a nuisance.</li>
+</ul>
+<figure>
+<p><img alt="impact" src="../img/tephra/impact.png" /></p>
+<figcaption>Figure 7: Schematic of some ash fall impacts with distance from a volcano. This assumes a large explosive eruption with significant ash fall thicknesses in the proximal zone and is intended to be illustrative rather than prescriptive. Adapted from Jenkins et al. (2015). </figcaption>
+</figure>
+<h4 id="vulnerability-and-risk">Vulnerability and risk</h4>
+<p>Since the 70's/80's, a change of paradigm the concept of <em>vulnerability</em> as a cornerstone of volcanic risk<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">5</a></sup>. For the purpose of this exercise, let's consider that the risk <span class="arithmatex">\(R\)</span> can be defined as a function of at least 3 components that are:</p>
+<ul>
+<li><span class="arithmatex">\(H\)</span> - <strong>hazard</strong> - expressing the spatial (and temporal) distribution of the intensity of a hazardous phenomenon.</li>
+<li><span class="arithmatex">\(E\)</span> - <strong>exposure</strong> - expressing the presence of exposed populations, assets, goods, natural features, ecosystem services etc. to the hazardous phenomenon. </li>
+<li><span class="arithmatex">\(V\)</span> - <strong>vulnerability</strong> - expressing how the exposed element will be negatively impacted as a function of the hazard intensity. </li>
+</ul>
+<p>The most fundamental definition of risk is defined as <span class="arithmatex">\(R = f(H,E,V)\)</span>. Although this exercise focuses on <strong>hazard</strong>, a meaningful discussion of hazard outputs usually borrows some concept of <strong>vulnerability</strong> to illustrate results. In volcanology, several approaches are used to express vulnerability, varying in complexity as a function of the knowledge of the problem<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">6</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Threshold</strong></td>
+<td align="left">Hazard intensity thresholds for onset of a given impact. Weak buildings are typically assume to start collapsing at tephra thicknesses of 100-300 <span class="arithmatex">\(kg/m^2\)</span>, although this is highly dependent on the building morphology, quality and on the properties of the deposit.</td>
+</tr>
+<tr>
+<td align="left"><strong>Damage/disruption states (DDS)</strong></td>
+<td align="left">Stepwise categorisation of impact as a function of hazard intensity. On example is to assume that pastoral agriculture can suffer production losses &lt;50%, &gt;50%, and total for accumulations of 25, 60 and 100 mm of tephra<sup id="fnref3:8"><a class="footnote-ref" href="#fn:8">6</a></sup>.</td>
+</tr>
+<tr>
+<td align="left"><strong>Fragility function</strong></td>
+<td align="left">Mathematical function expressing the probability of a level of impact being equalled or exceeded for a given hazard intensity<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">6</a></sup>. See Figure 8 for an example of fragility functions defined for composite European roofs<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">8</a></sup>.</td>
+</tr>
+<tr>
+<td align="left"><strong>Vulnerability function</strong></td>
+<td align="left">Same as the fragility function, but expressing a relative loss or economic cost to hazard intensity.</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="fragility" src="../img/tephra/fragility.png" /></p>
+<figcaption>Figure 8: Example of fragility functions describing the probability of collapse for weak (WE), medium weak (MW), medium strong (MS) and strong (ST) roofs as a function of the tephra load.</figcaption>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Other variables considered in risk estimates</p>
+<p>Throughout the course, we are likely to discuss other actors of risk. Amongst them are:</p>
+<ul>
+<li><strong>Resilience</strong>, which is the opposite of vulnerability and describes the condition that will <em>reduce the negative</em> consequences of a natural hazard. </li>
+<li><strong>Cost</strong>, which is required to express the risk as a monetary value.</li>
+</ul>
+</div>
+<h2 id="food-for-thoughts"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07z"/></svg></span> Food for thoughts</h2>
+<p>The <a href="https://www.undrr.org/publication/global-assessment-report-disaster-risk-reduction-2015">2015 edition of the Global assessment report</a> (<abbr title="Global assessment report">GAR</abbr>) on disaster risk reduction report by the United Nations Office for Disaster Risk Reduction was the first one to consider the volcanic risk. This testifies of the growing awareness of the potential large-scale to global impact of future large eruptions on modern societies. Similarly, re-insurance companies are <a href="https://www.preventionweb.net/publication/destructive-power-volcanic-ash-fall-quantifying-volcanic-risks-will-improve">beginning to include volcanic risk</a> in their portfolios and developing new dedicated products through, for instance, parametric risk transfer solutions<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> and <a href="https://catbond.org/about/">CAT bonds</a>. </p>
+<p>However, the complexity of the hazard associated with tephra fallout and the <strong>full range of potential</strong> impacts is often under-appreciated. The <em>Global Volcanic Hazards and Risk</em> book, <a href="https://www.cambridge.org/core/books/global-volcanic-hazards-and-risk/7653B9CA75E2F32A81CE5B7110BEF8AB">published in 2015</a> in the context of the <abbr title="Global assessment report">GAR</abbr> report, contains a chapter entitled <strong>Volcanic ash fall hazard and risk</strong> by Jenkins et al.<sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">7</a></sup>. This chapter is <a href="https://www.cambridge.org/core/books/global-volcanic-hazards-and-risk/volcanic-ash-fall-hazard-and-risk/21EAC484CBDF5E5CB6F8E36D640BD2C3">freely accessible</a> online and offers a review of the impacts and proposes tentative damage/disruption states for key vulnerability aspects. Specifically:</p>
+<ul>
+<li><strong>Tables 3.2 &rarr; 3.5</strong> illustrate the range of impacts as a function of the zones defined above.</li>
+<li><strong>Tables 3.6 &rarr; 3.8</strong> propose damage/disruption states based on a comprehensive review of the literature.</li>
+</ul>
+<p>We encourage you to get familiar with these values for the hazard and impact exercises in the lab and in the field!</p>
+<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg></span> Summary</h2>
+<p>This introduction has introduced <em>what</em> are tephra deposits and <em>why</em> they matter, both from a perspective of <strong>reconstructing</strong> the <strong>eruptive history</strong> of volcanic systems and of their <strong>associated impacts</strong>. In the next sections, we will introduce how we can <a href="../Hazard_tephra_modeling/">model</a> tephra deposit and assess their associated <a href="../Hazard_probabilistic2/">hazards</a>.</p>
+<h2 id="references"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span> References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Thorarinsson, S., 1954. The eruption of Hekla, 1947-48, 3, The tephra-fall from Hekla, March 29th, 1947. Visindafélag ĺslendinga 1:3.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Newhall, C.G., Self, S., 1982. The volcanic explosivity index (<abbr title="Volcanic explosivity index">VEI</abbr>)- An estimate of explosive magnitude for historical volcanism. Journal of Geophysical Research 87, 1231–1238.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Pyle, D.M., 2015. Sizes of Volcanic Eruptions, in: Sigurdsson, H., Houghton, B., McNutt, S., Rymer, H., Stix, J. (Eds.), The Encyclopedia of Volcanoes. Academic Press, San Diego, pp. 257–264.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Biass, S., Bonadonna, C., Houghton, B.F., 2019. A step-by-step evaluation of empirical methods to quantify eruption source parameters from tephra-fall deposits. Journal of Applied Volcanology 8, 1–16.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Fournier d’Albe, E.M., 1979. Objectives of volcanic monitoring and prediction. J Geol Soc Lond 136, 321–326.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Wilson, G., Wilson, T.M., Deligne, N.I., Blake, D.M., Cole, J.W., 2017. Framework for developing volcanic fragility and vulnerability functions for critical infrastructure. Journal of Applied Volcanology 6.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:8" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Spence, R.J.S., Kelman, I., Baxter, P.J., Zuccaro, G., Petrazzuoli, S., 2005. Residential building and occupant vulnerability to tephra fall. Natural Hazards and Earth System Sciences 5, 477–494.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Bonadonna, C., Biass, S., Menoni, S., Gregg, C.E., 2021. Assessment of risk associated with tephra-related hazards, in: Papale, P. (Ed.), Forecasting and Planning for Volcanic Hazards, Risks, and Disasters. Elsevier, pp. 329–378.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Oramas-Dorta, D., Tirabassi, G., Franco, G., Magill, C., 2021. Design of parametric risk transfer solutions for volcanic eruptions: An application to Japanese volcanoes. Natural Hazards and Earth System Sciences 21, 99–113.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Hazard_lava_notes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: [Protected] Instructor&#39;s notes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              [Protected] Instructor's notes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Hazard_tephra_modeling/" class="md-footer__link md-footer__link--next" aria-label="Next: Modeling tephra transport" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Modeling tephra transport
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 CERG-C / University of Geneva / CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

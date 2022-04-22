@@ -1,10 +1,11 @@
 # Probabilistic modelling: Part 2
 
-We have [previously](Hazard_probabilistic1.md) been introduced to probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
+We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
 
 ## :material-format-list-checks:{ .icn } Objectives
 
-- Understand the concepts of **eruption source parameters** and **eruption scenarios**. 
+- Understand the concepts of **probabilistic eruption scenarios**.
+- Review the concepts of **deterministic**, **scenario-based probabilistic** and **probabilistic** volcanic hazard assessments.
   
 ## Probabilistic modeling workflow 
 
@@ -12,81 +13,6 @@ From now on, we will refer to model inputs as **Eruption Source Parameters** - o
 
 1. Identify relevant ESPs for a problem.
 2. Estimate the uncertainty on each ESP.
-
-## Eruption source parameters 
-
-### Model parametrisation 
-
-A physical model is a **parametrisation** of natural processes, which means that the physics behind a phenomena is described by a set of equations that we could theoretically solve with the right **input parameters**. For instance, **tephra transport and deposition models** requires to describe:
-
-- The generation of volcanic particles.
-- The ejection of volcanic pyroclasts in the atmosphere (&rarr; the vertical *column*).
-- The dispersal of this material by the wind in the atmosphere (&rarr; the "mushroom" horizontal *plume*).
-- The sedimentation of particles onto the ground (&rarr; the tephra *deposit*).
-
-There is no **unique way** of solving this problem. Depending on the **assumptions** behind the physical processes and the **purpose** of the model, the governing equations can be posed in a more or less complex way. 
-
-This slideshow summarises the various steps that tephra transport and deposition models have to solve:
-
-=== "Exolusion" 
-
-    ![exolusion](img/model/m1.png)
-
-    - Volatiles (&rarr; gases) dissolved in the magma starts to escape
-    - As a result, the liquid magma starts rising in the conduit
-
-=== "Fragmentation"
-
-    ![fragmentation](img/model/m2.png)
-
-    - The liquid accelerates upwards, the rate of deformation becomes critical and the liquid starts behaving like a solid
-    - The magma becomes *brittle* and fragments: it is now a cloud of *solid* (&rarr; pyroclasts) particles surrounded by gas
-
-=== "Convection"
-
-    ![convection](img/model/m3.png)
-
-    - The material reaches the atmosphere with sufficient momentum to entrain surrounding air
-    - The plume becomes *lighter* than the atmosphere and rises from *buoyancy* forces
-
-=== "Wind advection"
-
-    ![advection](img/model/m4.png)
-
-    - After entraining sufficient air, the plume reaches the same *density* as the atmosphere (&rarr; level of neutral buoyancy)
-    - The *umbrella cloud* develops and elongates in the direction of the wind 
-
-=== "Tephra sedimentation"
-
-    ![sedimentation](img/model/m5.png)
-
-    - Particles are carried horizontally in the umbrella cloud. As it evolves away from the source, it becomes less "strong" and is not able to transport particles 
-    - Large particles leave the umbrella cloud first and fall close to the vent, while finer particles are carried farther away, creating the **tephra deposit**
-
-!!! warning "Strong plumes"
-
-    These cartoons assume a **strong plume** with a typical mushroom-shaped morphology. However, keep in mind that other types of **transitional** or **weak** plumes exist. If the vertical rate of ascent of the plume is not sufficiently high, the plume can *collapse* and create **pyrocalstic density currents**.
-
-### Modeling choices
-
-Some models attempt solving all physical processes taking place in time and space. These models are complex and (theoretically) have a higher accuracy. However, their use is often impeded by:
-
-- The large number of input parameters required to solve all the physics.
-- The high computational time required to run them.
-
-Alternatively, other models adopt *assumptions* that allows them to simplify some physical processes. Although their (again, theoretical) accuracy is reduced by the fact assumptions replace the actual solving of physical processes, these models:
-
-- Require a much lower number of input parameters, which facilitates their use.
-- Are much faster to run as they do not need to solve as many equations.
-
-!!! info "What model is better for hazard assessment?"
-
-    Is a **complex numerical model** always better than a **simpler model** (e.g., empirical or probabilistic)? Well, not necessarily, it all depends on **context**.
-
-    When a high accuracy is required, complex numerical models are generally better. However, they usually require a large number of ESPs and an important computing power. Therefore, they are not suited for probabilistic analyses as their computational time is too large, and they are therefore mostly used for [deterministic](Hazard_probabilistic1.md) modeling. 
-
-    Conversely, simpler models might not capture all the subtleties of the underlying processes, but are easier to use and require less computation cost. Therefore, they can be used for [probabilistic](Hazard_probabilistic1.md) modeling and are often used for long-term hazard assessments. 
-
 
 
 
@@ -139,3 +65,8 @@ These two components reflects the **knowledge** that we, as "experts", have of t
 ### Probabilistic volcanic hazard assessments
 
 Probabilistic volcanic hazard assessments - or **PVHA**
+
+
+
+
+
