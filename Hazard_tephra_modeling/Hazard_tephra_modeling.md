@@ -10,6 +10,22 @@ Until now, we have used a *probabilistic* model to [simulate lava flow inundatio
 
 ## :fontawesome-solid-gears:{ .icn } Modeling tephra dispersal 
 
+**Models** are approximation of reality. In the case of natural hazards, a useful model must be able to estimate the spatial and temporal distribution of **hazard intensity metrics** as a function of **initial contitions**:
+
+```mermaid
+flowchart LR
+A[Initial conditions] --> B[[MODEL]] --> C[Hazard intensity metrics]
+```
+
+For instance, a simple **flood** model might attempt to estimate the **inundated area** (&rarr;HIM) as a function of **rainfall** and the **watershed** properties (&rarr;initial conditions). 
+
+**Models** can be classified in two main categories:
+
+- **Physical** models rely on a simplified formulation of physical laws.
+- **Mathematical** models are data-driven and namely include statistical or machine learning-powered models. `Q-LavHA` falls in this category.
+
+This part of the module focuses on the use of a **physical** model.
+
 ### Model parametrisation 
 
 A physical model is a **parametrisation** of natural processes, which means that the physics behind a phenomenon is described by a set of equations that we could theoretically solve with the right **input parameters**. For instance, accurately describing **tephra transport and deposition** requires to account for the following aspects:
@@ -84,23 +100,30 @@ Alternatively, other models adopt *assumptions* that allows them to simplify som
 
 ### The Tephra2 model
 
-In order to assess the hazard associated with tephra accumulation, we will here use the **Tephra2** model[^1]. Tephra2 uses an *analytical solution to the advection-diffusion equation*. In other words:
+In order to assess the hazard associated with tephra accumulation, we will here use the `Tephra2` model[^1]. `Tephra2` uses an *analytical solution to the advection-diffusion equation*. In other words:
 
-- Tephra2 simplifies the *atmospheric transport* of particles, thanks to which the *tephra accumulation* can be computed rapidly.
+- `Tephra2` simplifies the *atmospheric transport* of particles, thanks to which the *tephra accumulation* can be computed rapidly.
 - *Numerous* of input parameters related to atmospheric transport are *parametrised* into *a few* parameters.
 - *Computation time* is fast.
 
-These specificities make Tephra2 **highly suited** for [probabilistic hazard assessment](Hazard_probabilistic1.md) purposes.
+These specificities make `Tephra2` **highly suited** for [probabilistic hazard assessment](Hazard_probabilistic1.md) purposes.
+
+!!! info "Other models"
+
+    The design of `Tephra2` prevents it to compute **atmospheric concentration**, for which 3D models are usually required. Such models include **Ash3D**, which can be used as an [online tool](https://vsc-ash.wr.usgs.gov/ash3d-gui/#!/) after registration, or **Fall3D**, available [here](https://gitlab.com/fall3d-distribution).
 
 ### Eruption source parameters
 
-Let's introduce an important concept that we will use throughout the exercise: **Eruption source parameter** or **ESP**.
+Let's introduce an important concept that we will use throughout the exercise: **Eruption source parameter** or **ESP**:
 
-!!! tip "Eruption source parameters"
+!!! important "Eruption source parameters"
 
-    **Eruption source parameters** are the input parameters required by a given model to describe a specific physical process.
+    ESP are the initial conditions required by a given model to describe specific physical processes.
 
-This table summarises the main ESP required in `Tephra2`:
+*ESP* are therefore synonyms of *initial conditions*. **Why a different name then?**
+
+<!-- This table summarises the main ESP required in `Tephra2`: -->
+Let's look at the main ESP required by `Tephra2`:
 
 | ESP | Description |
 |:---|:---|
@@ -110,13 +133,14 @@ This table summarises the main ESP required in `Tephra2`:
 | `wind` | Wind conditions during the eruption, specifically wind *direction* ($^{\circ}$) and *speed* ($m/s$). |
 | `MER` | Indirectly used in `Tephra2`, the mass eruption rate (MER; $kg/m^2$) is estimated from `height` and `wind speed`. |
 
-!!! note "ESPs for Tephra2"
+!!! question "Do you notice anything?"
+    &rarr; All these EPS are quantities that can be directly measured in the field!
 
-    A major **benefit** of `Tephra2` is that its most critical ESP are **quantities measurable from tephra deposits**. Therefore, field observations can be relatively easily translated into model runs.
+Therefore, we, as Physical volcanologists/Geologists/Earth Scientists, can directly translate **geological information** into **model inputs** in the perspective of our knowledge of the underlying processes. Thanks to that, we prevent **over-fitting** our model (i.e., tuning initial conditions to fit a desired output) or using a **black-box** approach.
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
 
-There exist **many** different models for tephra dispersal and deposition, some of which can be found [here](resources.md), or in the report of the 2021 Ash and Aviation Workshop [report](https://www.unige.ch/sciences/terre/CERG-C/international-conferences/workshop/results/). It is again important to chose the appropriate model for a **given context**.
+Many different models for tephra dispersal and deposition exist, some of which can be found [here](resources.md), or in the report of the 2021 Ash and Aviation Workshop [report](https://www.unige.ch/sciences/terre/CERG-C/international-conferences/workshop/results/). It is again important to chose the appropriate model for a **given context**.
 
 For instance, `Tephra2` is suited for probabilistic hazard analyses, but being time-independent, it cannot capture the **spatio-temporal evolution** of the ash cloud. It is therefore more suited for *preparedness* rather than *crisis management*.
 
@@ -124,14 +148,16 @@ Conversely, `Fall3D`[^2] is a 3D, time-dependent model that is able to describe 
 
 As a result, the same remarks as those made for lava flow models hold for tephra hazard assessment: It is important to understand the benefit and limitations of each model in order to choose the most appropriate one.
 
+Similarly, various models will require different **types of ESP**, some of which can be directly estimated from field studies, others that require additional laboratory analyses or plain guessing. Here, we use the `Tephra2` model as its main ESPs can be estimated in the field. In the next section, we will look at how to turn **ESP** into **eruption scenarios**.
+
 
 ## :material-check-bold:{ .icn } Summary
 
-This section was an introduction to the modeling of tephra dispersal and deposition. We reviewed:
+This section provided an introduction to the modeling of tephra dispersal and deposition. We reviewed:
 
-- The main physical volcanology aspects involved in the problem.
-- Various modeling approaches available to solve it.
-- Introduced `Tephra2` and its critical ESP.
+- [x] The main physical volcanology aspects involved in the problem.
+- [x] Various modeling approaches available to solve it.
+- [x] Introduced `Tephra2` and its critical ESP.
 
 In the next section, we will look at the philosophy behind using `Tephra2` for probabilistic hazard modelling.
 
@@ -141,6 +167,7 @@ In the next section, we will look at the philosophy behind using `Tephra2` for p
 [^2]: Folch, A., Mingari, L., Gutierrez, N., Hanzich, M., Macedonio, G., Costa, A., Prata, A., Mingari, L., Folch, A., Macedonio, G., Costa, A., 2021. FALL3D-8.0: A computational model for atmospheric transport and deposition of particles, aerosols and radionuclides - Part 2: Model validation. Geoscientific Model Development 14, 409–436. https://doi.org/10.5194/gmd-13-1431-2020
 
 
-*[ESP]: Eruption source parameter
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution
 *[MER]: Mass eruption rate
+*[HIM]: Hazard intensity metrics
