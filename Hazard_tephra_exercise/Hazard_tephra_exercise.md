@@ -310,8 +310,16 @@ Let's plot probability maps:
     1. Describe the geometry (i.e., extent, orientation) of selected probability maps.
     2. With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts?
 
+#### Probabilistic isomass maps
 
-## :material-thought-bubble:{ .icn } Hazard output example
+Probabilistic isomass maps fix a probability threshold to represent a typical tephra accumulation given a probability of occurrence of the hazardous phenomenon. The choice of the probability threshold, which can be regarded as an acceptable level of hazard, is a critical aspect that is the resort of decision-makers. Scientists should therefore communicate results from probabilistic isomass maps with care.
+
+To plot probabilistic isomass maps:
+
+1. From the main `TephraProb` window, click `Display > Isomass Maps`. 
+2. A new window opens, from which you can select pre-defined probability thresholds. Choose them all.
+3. Click `Ok` - `Google Earth should now open`. 
+
 
 ## :material-check-bold:{ .icn } Summary
 
