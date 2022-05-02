@@ -648,6 +648,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_exercise/" class="md-nav__link">
+        Exercise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -801,7 +829,8 @@
 
 
 <h1 id="modeling-tephra-dispersal">Modeling tephra dispersal</h1>
-<p>Until now, we have used a <em>probabilistic</em> model to <a href="../Hazard_lava_Q-LavHA/">simulate lava flow inundation</a>, which considers limited to no physics. Similar models do not exist for <strong>tephra dispersal and deposition</strong>, and we require <em>physics-based</em> models to assess the related hazard.</p>
+<p>Until now, we have used a <em>probabilistic</em> model to <a href="../Hazard_lava_Q-LavHA/">simulate lava flow inundation</a>, which considers limited to no physics. Similar models do not exist for <strong>tephra dispersal and deposition</strong>, and we require <em>physics-based</em> models to assess the related hazard. </p>
+<p>This module introduces the modelling strategy that will be used in the following exercises using <code>Tephra2</code> and <code>TephraProb</code>.</p>
 <h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
 <ul>
 <li>Understand the large-scale physical processes controlling tephra dispersal modeling. </li>
@@ -897,6 +926,16 @@ A[Initial conditions] --&gt; B[[MODEL]] --&gt; C[Hazard intensity metrics]</code
 <li><em>Computation time</em> is fast.</li>
 </ul>
 <p>These specificities make <code>Tephra2</code> <strong>highly suited</strong> for <a href="../Hazard_probabilistic1/">probabilistic hazard assessment</a> purposes.</p>
+<p><code>Tephra2</code> requires three different inputs (Figure 1):</p>
+<ul>
+<li>A <code>computation grid</code> &rarr; the <strong>spatial resolution</strong> of <code>Tephra2</code> outputs is set by the grid resolution. A <em>coarse</em> grid will result in longer computation time than a <em>fine</em> one.</li>
+<li><code>Wind</code> conditions during the eruption &rarr; specifically wind <em>direction</em> (<span class="arithmatex">\(^{\circ}\)</span>) and <em>speed</em> (<span class="arithmatex">\(m/s\)</span>).</li>
+<li><code>Eruption source parameters</code> &rarr; initial eruption conditions to the model.</li>
+</ul>
+<figure>
+<p><img alt="tephra2" src="../img/tephra2/tephra2.png" width="450px" /></p>
+<figcaption>Figure 1: Input parameters required by Tephra2 </figcaption>
+</figure>
 <div class="admonition info">
 <p class="admonition-title">Other models</p>
 <p>The design of <code>Tephra2</code> prevents it to compute <strong>atmospheric concentration</strong>, for which 3D models are usually required. Such models include <strong>Ash3D</strong>, which can be used as an <a href="https://vsc-ash.wr.usgs.gov/ash3d-gui/#!/">online tool</a> after registration, or <strong>Fall3D</strong>, available <a href="https://gitlab.com/fall3d-distribution">here</a>.</p>
@@ -929,10 +968,6 @@ A[Initial conditions] --&gt; B[[MODEL]] --&gt; C[Hazard intensity metrics]</code
 <tr>
 <td align="left"><code>TGSD</code></td>
 <td align="left">Total grain-size distribution (<abbr title="Total grain-size distribution">TGSD</abbr>) &rarr; controls the content in <em>coarse</em> vs <em>fine</em> particles, in <span class="arithmatex">\(\phi\)</span> units &rarr;<span class="arithmatex">\(=-log_2(diam.\ [mm])\)</span>.</td>
-</tr>
-<tr>
-<td align="left"><code>wind</code></td>
-<td align="left">Wind conditions during the eruption, specifically wind <em>direction</em> (<span class="arithmatex">\(^{\circ}\)</span>) and <em>speed</em> (<span class="arithmatex">\(m/s\)</span>).</td>
 </tr>
 <tr>
 <td align="left"><code>MER</code></td>

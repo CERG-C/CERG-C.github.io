@@ -124,8 +124,8 @@ Let's try and put these physical concepts in the perspective of *actual* lava fl
 Flow type        | Video 1                                                 | Video 2
 -----------------|---------------------------------------------------------|--------------------------------------------------------
 **Lava channel** | [Video 1a](https://youtu.be/aJ66rTiHA4A?t=49;mute=1)    | [Video 1b](https://www.youtube.com/watch?v=BgjpSlzU9oU)
-**'A'ā**         | [Video 1a](https://www.youtube.com/watch?v=JoGFPabrdUI) | [Video 1b](https://www.youtube.com/watch?v=myxTc32foGs)
-**Pāhoehoe**     | [Video 3a](https://www.youtube.com/watch?v=Kc6CIwBVo5s) | [Video 3b](https://www.youtube.com/watch?v=9yhdBjGtxEM)
+**Pāhoehoe**     | [Video 2a](https://www.youtube.com/watch?v=JoGFPabrdUI) | [Video 2b](https://www.youtube.com/watch?v=myxTc32foGs)
+**'A'ā**         | [Video 3a](https://www.youtube.com/watch?v=Kc6CIwBVo5s) | [Video 3b](https://www.youtube.com/watch?v=9yhdBjGtxEM)
 
 
 

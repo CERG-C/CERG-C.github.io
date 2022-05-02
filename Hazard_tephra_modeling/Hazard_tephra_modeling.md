@@ -1,6 +1,8 @@
 # Modeling tephra dispersal
 
-Until now, we have used a *probabilistic* model to [simulate lava flow inundation](Hazard_lava_Q-LavHA.md), which considers limited to no physics. Similar models do not exist for **tephra dispersal and deposition**, and we require *physics-based* models to assess the related hazard.
+Until now, we have used a *probabilistic* model to [simulate lava flow inundation](Hazard_lava_Q-LavHA.md), which considers limited to no physics. Similar models do not exist for **tephra dispersal and deposition**, and we require *physics-based* models to assess the related hazard. 
+
+This module introduces the modelling strategy that will be used in the following exercises using `Tephra2` and `TephraProb`.
 
 ## :material-format-list-checks:{ .icn } Objectives
 
@@ -108,6 +110,17 @@ In order to assess the hazard associated with tephra accumulation, we will here 
 
 These specificities make `Tephra2` **highly suited** for [probabilistic hazard assessment](Hazard_probabilistic1.md) purposes.
 
+`Tephra2` requires three different inputs (Figure 1):
+
+- A `computation grid` &rarr; the **spatial resolution** of `Tephra2` outputs is set by the grid resolution. A *coarse* grid will result in longer computation time than a *fine* one.
+- `Wind` conditions during the eruption &rarr; specifically wind *direction* ($^{\circ}$) and *speed* ($m/s$).
+- `Eruption source parameters` &rarr; initial eruption conditions to the model.
+
+<figure markdown>
+![tephra2](img/tephra2/tephra2.png){width='450px'}
+<figcaption>Figure 1: Input parameters required by Tephra2 </figcaption>
+</figure>
+
 !!! info "Other models"
 
     The design of `Tephra2` prevents it to compute **atmospheric concentration**, for which 3D models are usually required. Such models include **Ash3D**, which can be used as an [online tool](https://vsc-ash.wr.usgs.gov/ash3d-gui/#!/) after registration, or **Fall3D**, available [here](https://gitlab.com/fall3d-distribution).
@@ -130,7 +143,6 @@ Let's look at the main ESP required by `Tephra2`:
 | `mass` | Total tephra mass erupted during the eruption, in $kg$. |
 | `height`  | Plume height, in $km$. |
 | `TGSD`   | Total grain-size distribution (TGSD) &rarr; controls the content in *coarse* vs *fine* particles, in $\phi$ units &rarr;$=-log_2(diam.\ [mm])$. |
-| `wind` | Wind conditions during the eruption, specifically wind *direction* ($^{\circ}$) and *speed* ($m/s$). |
 | `MER` | Indirectly used in `Tephra2`, the mass eruption rate (MER; $kg/m^2$) is estimated from `height` and `wind speed`. |
 
 !!! question "Do you notice anything?"

@@ -1,0 +1,1470 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CERG-C.github.io/Hazard_tephra_exercise/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Exercise - CERG-C Volcanic Risk Module</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#probabilistic-tephra-hazard-assessment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-header__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CERG-C Volcanic Risk Module
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../QGIS_Intro/" class="md-tabs__link md-tabs__link--active">
+        Teaching
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../resources/" class="md-tabs__link">
+      Resources
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../contribute/" class="md-tabs__link">
+      Contribute
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CERG-C Volcanic Risk Module" class="md-nav__button md-logo" aria-label="CERG-C Volcanic Risk Module" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    CERG-C Volcanic Risk Module
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teaching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teaching" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teaching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Intro/" class="md-nav__link">
+        QGIS basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Setup/" class="md-nav__link">
+        Setting up QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Lava hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lava hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lava hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_config/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_steepest-descent/" class="md-nav__link">
+        Path of steepest descent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_modeling/" class="md-nav__link">
+        Modelling lava flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic1/" class="md-nav__link">
+        Probabilistic modeling part I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_Q-LavHA/" class="md-nav__link">
+        Q-LavHA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Tephra hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tephra hazard" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tephra hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_modeling/" class="md-nav__link">
+        Modeling tephra transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic2/" class="md-nav__link">
+        Probabilistic modeling part II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Exercise
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Exercise
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-tephraprob" class="md-nav__link">
+    Setup TephraProb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-wind-data" class="md-nav__link">
+    Get the wind data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-eruption-data" class="md-nav__link">
+    Get the eruption data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hazard-assessment" class="md-nav__link">
+     Hazard assessment
+  </a>
+  
+    <nav class="md-nav" aria-label=" Hazard assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eruption-history" class="md-nav__link">
+    Eruption history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wind-data-analysis" class="md-nav__link">
+    Wind data analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Wind data analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysing-wind-patterns" class="md-nav__link">
+    Analysing wind patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eruption-scenario" class="md-nav__link">
+    Eruption scenario
+  </a>
+  
+    <nav class="md-nav" aria-label="Eruption scenario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp-sampling" class="md-nav__link">
+    ESP sampling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hazard-data" class="md-nav__link">
+    Hazard data
+  </a>
+  
+    <nav class="md-nav" aria-label="Hazard data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probability-maps" class="md-nav__link">
+    Probability maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hazard-output-example" class="md-nav__link">
+     Hazard output example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-tephraprob" class="md-nav__link">
+    Setup TephraProb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-wind-data" class="md-nav__link">
+    Get the wind data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-eruption-data" class="md-nav__link">
+    Get the eruption data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hazard-assessment" class="md-nav__link">
+     Hazard assessment
+  </a>
+  
+    <nav class="md-nav" aria-label=" Hazard assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eruption-history" class="md-nav__link">
+    Eruption history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wind-data-analysis" class="md-nav__link">
+    Wind data analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Wind data analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysing-wind-patterns" class="md-nav__link">
+    Analysing wind patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eruption-scenario" class="md-nav__link">
+    Eruption scenario
+  </a>
+  
+    <nav class="md-nav" aria-label="Eruption scenario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp-sampling" class="md-nav__link">
+    ESP sampling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hazard-data" class="md-nav__link">
+    Hazard data
+  </a>
+  
+    <nav class="md-nav" aria-label="Hazard data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probability-maps" class="md-nav__link">
+    Probability maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hazard-output-example" class="md-nav__link">
+     Hazard output example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+     Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="probabilistic-tephra-hazard-assessment">Probabilistic tephra hazard assessment</h1>
+<p>Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the <a href="../Hazard_tephra_intro/">previous lesson</a> for more information on how to quantify physical vulnerability to tephra fallout.</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Threshold (<span class="arithmatex">\(kg/m^{2}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Airport closure</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Perturbation of the road network</td>
+<td>1-100</td>
+</tr>
+<tr>
+<td>Impact on crops</td>
+<td>5-150</td>
+</tr>
+<tr>
+<td>Impact on vegetation</td>
+<td>5-1500</td>
+</tr>
+<tr>
+<td>Roof collapse</td>
+<td>100-300</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
+<p>The aim of this exercise is to compile a probabilistic hazard assessment for tephra accumulation for a future eruption at La Palma. Probabilistic modeling will be performed using the model <a href="https://github.com/geoscience-community-codes/tephra2">Tephra2</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and the Matlab toolbox <a href="https://github.com/e5k/TephraProb">TephraProb</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. </p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="setup-tephraprob">Setup TephraProb</h3>
+<p>Download <code>TephraProb</code> and open <code>Matlab</code>:</p>
+<ol>
+<li>Start a MacOS session.</li>
+<li>Download <code>TephraProb</code> from GitHub.com and save it somewhere on your hard--drive.</li>
+<li>❗ Open <code>Matlab</code>.</li>
+<li>Left of the address bar at the top of the main Matlab window, click on the icon <code>Browse for Folder</code> and navigate to the location of <code>TephraProb</code> (i.e. the location of the file<code>tephraProb.m</code>).</li>
+<li>In the Matlab command line, type <code>TephraProb</code> and press enter to start <code>TephraProb</code>.</li>
+</ol>
+<h3 id="get-the-wind-data">Get the wind data</h3>
+<p>Now, retrieve the wind data:</p>
+<ol>
+<li>In the window explorer, navigate to the root of <code>TephraProb</code>. If a folder named <code>WIND</code> is not present, create it</li>
+<li>❗ Download the wind data from the link provided in Teams</li>
+<li>Copy the file <code>\_Reanalysis2\_Rawdata.zip</code> to the newly created <code>WIND</code> folder and extract it there</li>
+</ol>
+<h3 id="get-the-eruption-data">Get the eruption data</h3>
+<h2 id="hazard-assessment"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M286.3 155.1c1.1 6.8 1.7 13.8 1.7 20 0 8-.6 15-1.7 21.8l22.2 19.8c7 6.3 9.9 15.4 6.2 25-2.3 4.4-4.8 10.5-7.6 15.5l-3.1 5.4c-3.9 5-6.3 9.8-9.8 14.5-5.7 7.6-15.7 10.1-24.7 7.1l-28.3-9.3c-10.7 8.9-22.9 16-36.2 21l-6.9 29c-1.1 9.3-8.3 16.7-17.7 17.9-6.7.8-13.5 1.2-20.4 1.2-6.9 0-13.7-.4-20.4-1.2-9.4-1.2-17.5-8.6-18.6-17.9l-6.9-29c-12.4-5-24.6-12.1-35.35-21l-28.22 9.3c-8.99 3-19.01.5-24.71-7.1-3.54-4.7-6.84-9.6-9.88-14.6l-3.02-5.3c-2.79-5-5.328-10.2-7.596-15.5-3.704-9.6-.866-18.7 6.196-25l22.18-19.8c-1.12-6.8-2.6-13.8-2.6-21.8 0-6.2 1.48-13.2 2.6-20l-22.18-19.8c-7.062-7.2-9.9-16.3-6.196-25 2.268-6.2 4.806-10.51 7.586-15.54l3.04-5.25c3.03-5.05 6.33-9.93 9.87-14.62 5.7-7.55 15.72-10.06 24.71-7.1l28.22 9.3c10.75-8.84 22.95-15.96 35.35-20.94l6.9-29.07c1.1-9.28 9.2-16.71 18.6-17.849A169.2 169.2 0 0 1 160 8c6.9 0 13.7.418 20.4 1.23 9.4 1.14 16.6 8.57 17.7 17.85l6.9 29.07c13.3 4.98 25.5 12.1 36.2 20.94l28.3-9.3c9-2.96 19-.45 24.7 7.1 3.5 4.67 5.9 9.53 9.8 14.55l3.1 5.39c2.8 5.01 5.3 10.17 7.6 15.47 3.7 8.7.8 17.8-6.2 25l-22.2 19.8zm-126.3-28c-26.5 0-48 22.4-48 48 0 27.4 21.5 48 48 48s48-20.6 48-48c0-25.6-21.5-48-48-48zm324.9 351.2c-6.8 1.1-13.8 1.7-20.9 1.7-7.1 0-14.1-.6-20.9-1.7l-19.8 22.2c-7.2 7-16.3 9.9-25 6.2-5.3-2.3-10.5-4.8-15.5-7.6l-5.4-3.1c-5-3.9-9.8-6.3-14.5-9.8-7.6-5.7-10.1-15.7-7.1-24.7l9.3-28.3c-8.9-10.7-16-22.9-21-36.2l-29-6.9c-9.3-1.1-16.7-8.3-17.9-17.7-.8-6.7-1.2-13.5-1.2-20.4 0-6.9.4-13.7 1.2-20.4 1.2-9.4 8.6-17.5 17.9-18.6l29-6.9c5-12.4 12.1-24.6 21-35.3l-9.3-28.3c-3-9-.5-19 7.1-24.7 4.7-3.5 9.6-7.7 14.6-9.9l5.3-3c5-2.8 9.3-5.3 15.5-7.6 8.7-3.7 17.8-.8 25 6.2l19.8 22.2c6.8-1.1 13.8-1.7 20.9-1.7 7.1 0 14.1.6 20.9 1.7l19.8-22.2c6.3-7 15.4-9.9 25-6.2 5.3 2.3 10.5 4.8 15.5 7.6l5.3 3c5 2.2 9.9 6.4 14.6 9.9 7.6 5.7 10.1 15.7 7.1 24.7l-9.3 28.3c8.9 10.7 16 22.9 21 35.3l29 6.9c9.3 1.1 16.7 9.2 17.9 18.6.8 6.7 1.2 13.5 1.2 20.4 0 6.9-.4 13.7-1.2 20.4-1.2 9.4-8.6 16.6-17.9 17.7l-29 6.9c-5 13.3-12.1 25.5-21 36.2l9.3 28.3c3 9 .5 19-7.1 24.7-4.7 3.5-9.5 5.9-14.5 9.8l-5.4 3.1c-5 2.8-11.1 5.3-15.5 7.6-9.6 3.7-18.7.8-25-6.2l-19.8-22.2zM512 352c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48z"/></svg></span> Hazard assessment</h2>
+<p>In this exercise, you will use the user-friendly Matlab toolbox called <code>TephraProb</code> to:</p>
+<ul>
+<li>Analyse the eruptive record and perform some basic frequency analyses.</li>
+<li>Analyse the wind patterns in a region and put this in the perspective of the hazard assessment. </li>
+</ul>
+<p>However, running the full workflow for probabilistic hazard assessment is complicated by technical issues (e.g., computation time, compilation of source libraries). Therefore, we have already ran the scenario for you. You will nevertheless:</p>
+<ul>
+<li>Learn how to interpret the sampling of <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>.</li>
+<li>Analyse the hazard outputs.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TepraProb</p>
+<p>For more information about <code>TephraProb</code>, you can refer to the:</p>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCP8gCjSeMoPVwgzMwKUnW3w">Video tutorial</a>.</li>
+<li>Updates on the code's <a href="https://e5k.github.io">website</a>.</li>
+</ul>
+</div>
+<h3 id="eruption-history">Eruption history</h3>
+<p>As already introduced, the <a href="https://volcano.si.edu"><abbr title="Global volcanism program">GVP</abbr></a> database compiles the eruptive history of Holocene volcanoes based on their <abbr title="Volcanic explosivity index">VEI</abbr>. Each volcano is identified by an <code>id</code>, which is <code>383010</code> for La Palma. Let's have a look at the eruptive history of La Palma based on the <abbr title="Global volcanism program">GVP</abbr> database. </p>
+<ol>
+<li>On the main <code>TephraProb</code> window, click <code>Input&gt;GVP</code>.</li>
+<li>Enter the <code>id</code>, click <code>Access</code> and wait a few seconds.</li>
+<li>This first plot is a histogram showing the frequency of occurrence of each <abbr title="Volcanic explosivity index">VEI</abbr>. This is not super informative for La Palma, so change the <code>Plot type</code> to <code>Cumulative</code> and click the <code>Plot</code> button.</li>
+<li>This new plot shows the cumulative number of eruption through time, colour-coded by the <abbr title="Volcanic explosivity index">VEI</abbr>. </li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Reading between the lines...</p>
+<p>The <abbr title="Global volcanism program">GVP</abbr> database is incredibly useful but, since based on the <abbr title="Volcanic explosivity index">VEI</abbr>, shares <a href="../Hazard_tephra_intro/">similar strengths and weaknesses</a> previously discussed. Namely, the <abbr title="Volcanic explosivity index">VEI</abbr> works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the <abbr title="Global volcanism program">GVP</abbr> data, bear in mind:</p>
+<ol>
+<li>The 2021 eruption is reported as <code>Undefined</code> <abbr title="Volcanic explosivity index">VEI</abbr> because no article reporting it has yet been published. However, we know it was a <strong><abbr title="Volcanic explosivity index">VEI</abbr> 3</strong> eruption. </li>
+<li>In the <abbr title="Global volcanism program">GVP</abbr>, eruptions that have been identified as <strong>having an explosive component</strong> but for which <strong>no tephra volume</strong> are reported are assigned a default <abbr title="Volcanic explosivity index">VEI</abbr> of 2<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. This is probably why most eruptions for la Palma are reported as <abbr title="Volcanic explosivity index">VEI</abbr> 2.</li>
+<li>Conversely, eruptions for which no explosive component was identified in the field are reported with an <code>undefined</code> <abbr title="Volcanic explosivity index">VEI</abbr>. This might indicate that no tephra was produced or, more likely, that it was eroded.</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 1: Eruptive history</p>
+<ol>
+<li>On the cumulative <abbr title="Global volcanism program">GVP</abbr> plot, what does the slope of the plot (i.e., the ratio of <code>y</code> to <code>x</code>) represent?</li>
+<li>How does it vary in time, and how do you explain it?</li>
+<li>What is the <strong>annual frequency of eruption</strong> for the recent history?</li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><abbr title="Volcanic explosivity index">VEI</abbr> and plume height</p>
+<p>The <abbr title="Volcanic explosivity index">VEI</abbr> scale suggests <em>very approximative</em> indications of plume height for each <abbr title="Volcanic explosivity index">VEI</abbr> class. For instance, it suggests heights of 1-5 km for <abbr title="Volcanic explosivity index">VEI</abbr> 2 and 3-15 km for <abbr title="Volcanic explosivity index">VEI</abbr> 3 eruptions. However, the <abbr title="Volcanic explosivity index">VEI</abbr> scale does not include any information about <strong>intensity</strong> of the eruption (&rarr; <strong>duration</strong> over which the <abbr title="Volcanic explosivity index">VEI</abbr> volume was erupted). </p>
+<p>The volume associated with the 2021 <abbr title="Volcanic explosivity index">VEI</abbr> 3 eruption was erupted over the course of <strong>a few months</strong>, but plume heights were in the 1-5 km range rather than the 3-15 km range. Therefore, let's consider here the following plume heights:</p>
+<ul>
+<li><strong><abbr title="Volcanic explosivity index">VEI</abbr> 2</strong>: 1-5 km.</li>
+<li><strong><abbr title="Volcanic explosivity index">VEI</abbr> 3 - low intensity</strong>: 1-5 km.</li>
+<li><strong><abbr title="Volcanic explosivity index">VEI</abbr> 3 - hight intensity</strong>: 3-15 km (&rarr; intense eruption lasting for hours).</li>
+</ul>
+</div>
+<h3 id="wind-data-analysis">Wind data analysis</h3>
+<p>In order to take into account the aleatoric variability of atmospheric conditions in the hazard assessment, a large population of wind profiles is required from which a different wind profile is randomly sampled at each model run. The atmospheric database used here is the <a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">EMCWF ERA-5</a> database.</p>
+<p>Downloading atmospheric data takes time - we have therefore already prepared the dataset for you. The dataset contains 5 years of wind for the period 2017-2021, providing 4 wind profiles per day at a resolution of 0.25 degrees above La Palma.</p>
+<div class="admonition info">
+<p class="admonition-title">Wind population</p>
+<p>For the purpose of the exercise, we are using 5 years of wind data, which facilitates transfer and speed up analyses. Keep in mind that we usually use larger populations for real applications (typically more than 10 years depending on the variability in a given region).</p>
+</div>
+<h4 id="analysing-wind-patterns">Analysing wind patterns</h4>
+<p>You can now display wind profiles. Keep your eyes opened for <em>seasonal trends</em> in both wind direction and speed.</p>
+<ol>
+<li>On the main <code>TephraProb</code> window, click <code>Input&gt;Wind&gt;Analyze wind</code></li>
+<li>Select the <code>wind.mat</code> file located in <code>WIND/CumbreVieja_1721/</code></li>
+<li>A new pannel opens, on which you can explore wind profiles either using <code>wind profiles</code> or <code>wind roses</code>. </li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Wind profiles</p>
+<p>Wind profiles show <code>wind velocity</code> and <code>wind direction</code> as a function of altitude. Wind profiles can be plotted either <em>separately</em> (e.g., one wind profile per year or per month) or <em>averaged</em> (e.g., mean ± standard deviation). </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Wind rose</p>
+<p>Wind roses show the probability (concentric circles) of the wind blowing in each direction [0 - 360 degrees]. Colours indicate wind velocity. Wind roses are plotted for <strong>a given elevation</strong>, so explore a few. </p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 2: Wind conditions</p>
+<ol>
+<li>Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction? How will that affect tephra dispersal?</li>
+<li>How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about <em><abbr title="Volcanic explosivity index">VEI</abbr> and plume heights</em> above).</li>
+<li>Do you notice any seasonality? If yes, identify during what months it happens.</li>
+</ol>
+</div>
+<h3 id="eruption-scenario">Eruption scenario</h3>
+<p>Let's try and forget what we know about the 2021 eruption and put ourselves in this reasoning framework:</p>
+<ol>
+<li>We need to assess the hazard associated with tephra accumulation for a future eruption at La Palma. </li>
+<li>Looking at the <strong><abbr title="Global volcanism program">GVP</abbr></strong> catalogue, we see that most eruptions are <strong><abbr title="Volcanic explosivity index">VEI</abbr> 2</strong>. Knowing i) the limitations of the <abbr title="Global volcanism program">GVP</abbr> catalogue and ii) that we observed in the field deposits seemingly larger than <abbr title="Volcanic explosivity index">VEI</abbr> 2 eruptions, we decide to focus on a <strong><abbr title="Volcanic explosivity index">VEI</abbr> 3</strong> eruption. </li>
+<li>However, the deposits we observed don't look like <strong>short-lasting, subplinian <abbr title="Volcanic explosivity index">VEI</abbr> 3</strong> eruptions. We suspect that these eruptions were less intense, and we therefore model an eruption lasting between <strong>3 days to one week</strong> with plume heights varying between <strong>1-5</strong> km.</li>
+<li>We have <strong>no information</strong> regarding the <strong>grain-size</strong> distribution of the observed deposits, and therefore decide to use an <strong>analogue eruption</strong> to inform us. We chose the 2002 eruption of Etna volcano.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Grain size distribution</p>
+<p>For clarity, we haven't touched yet on the concept of <strong>grain-size distribution</strong> or <abbr title="Grain size distribution">GSD</abbr>. This is an important <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> for tephra dispersal as it controls <em>how fine</em> (or <em>coarse</em>) the tephra generated at <a href="../Hazard_tephra_modeling/#model-parametrisation">fragmentation level</a> will be, and therefore will control <em>how far particles will go</em>. </p>
+<p>Grain size is expressed in <span class="arithmatex">\(\Phi\)</span> units, which is calculated as <span class="arithmatex">\(-log_2(d)\)</span>, where <span class="arithmatex">\(d\)</span> is the particle diameter in <span class="arithmatex">\(mm\)</span>. In <span class="arithmatex">\(\Phi\)</span> units:</p>
+<ul>
+<li>A 1 mm-particle has <span class="arithmatex">\(\Phi=0\)</span>. </li>
+<li>Particles <strong>coarser</strong> than 1 mm have <strong>negative</strong> <span class="arithmatex">\(\Phi\)</span> values. </li>
+<li>Particles <strong>finer</strong> than 1 mm have <strong>positive</strong> <span class="arithmatex">\(\Phi\)</span> values. </li>
+</ul>
+<p>In <code>Tephra2</code> the <abbr title="Grain size distribution">GSD</abbr> of the model deposit is considered to be a <strong>Gaussian</strong> distribution centered on <span class="arithmatex">\(Md_\Phi\)</span> (i.e., mean) and varying by <span class="arithmatex">\(\sigma_\Phi\)</span> (i.e., standard deviation). </p>
+</div>
+<p>See what we just did? We just defined an <strong>eruption scenario</strong>! The table below summarises the <strong><abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr></strong> for our <strong>low-intensity <abbr title="Volcanic explosivity index">VEI</abbr> 3</strong> eruption.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr></th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><abbr title="Volcanic explosivity index">VEI</abbr></td>
+<td align="left">3</td>
+<td align="left">Similar to the 2021 eruption</td>
+</tr>
+<tr>
+<td align="left">Mass</td>
+<td align="left">10<span class="arithmatex">\(^{10}\)</span>–10<span class="arithmatex">\(^{11}\)</span> kg</td>
+<td align="left">Using the volume ranges of a <abbr title="Volcanic explosivity index">VEI</abbr> 3 eruption and conversion to mass using a bulk deposit density of 1000 <span class="arithmatex">\(kg/m^{3}\)</span></td>
+</tr>
+<tr>
+<td align="left">Height</td>
+<td align="left">1-5 km</td>
+<td align="left">Low intensity <abbr title="Volcanic explosivity index">VEI</abbr> 3 eruption occurring over a few days</td>
+</tr>
+<tr>
+<td align="left">Duration</td>
+<td align="left">3-7 days</td>
+<td align="left">Paroxysmal phase of a longer eruptive sequence</td>
+</tr>
+<tr>
+<td align="left">Md<span class="arithmatex">\(_\Phi\)</span></td>
+<td align="left">0-1 <span class="arithmatex">\(\Phi\)</span></td>
+<td align="left">Center of the grain-size distribution, based on Etna 2002</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sigma_\Phi\)</span></td>
+<td align="left">1-2 <span class="arithmatex">\(\Phi\)</span></td>
+<td align="left">Spread of the grain-size distribution, based on Etna 2002</td>
+</tr>
+</tbody>
+</table>
+<h4 id="esp-sampling"><abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> sampling</h4>
+<p>Now that we have defined the ranges of <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>, <code>TephraProb</code> applies the algorithm below to sample <span class="arithmatex">\(n\)</span> sets of <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>. For the sake of the exercise, <span class="arithmatex">\(n\)</span> is here set to <strong>250 runs</strong>. The figures below summarise the sampling of the <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Plume height</label><label for="__tabbed_1_2">Mass</label><label for="__tabbed_1_3">Date</label><label for="__tabbed_1_4">Duration</label><label for="__tabbed_1_5"><abbr title="Grain size distribution">GSD</abbr></label><label for="__tabbed_1_6">Sampling algorithm</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="height" src="../img/tephraprob/plume_height.png" width="450px" />
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="mass" src="../img/tephraprob/mass.png" width="450px" />
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="date" src="../img/tephraprob/date.png" width="450px" />
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="duration" src="../img/tephraprob/duration.png" width="450px" />
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="mass" src="../img/tephraprob/gsd.png" width="450px" />
+</figure></p>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>
+flowchart TD 
+
+subgraph sg0 ["Eruption scenario"]
+
+A1["HEIGHT [min, max]"]
+C1["DATE [min, max]"]
+B1["DURATION [min, max]"]
+D1["MASS [min, max]"] 
+
+end
+
+subgraph sg1 ["For each run"]
+
+    subgraph sg2 [" "]
+        A2["Sample Height"]
+        C2["Sample Date"]
+        B2["Sample Duration"]
+    end
+
+
+
+C2 --&gt; C3["Get wind velocity"]
+C3 --&gt; E["Calculate MER"]
+A2 --&gt; E
+E --&gt; F["Calculate simulation Mass"]
+B2 --&gt; F
+
+F --&gt; G["Is Mass within MASS [min, max]"]
+D1 --&gt; G
+
+end
+
+A1 --&gt; A2 
+C1 --&gt; C2 
+B1 --&gt; B2
+
+G --&gt; H1[Yes]
+G --&gt; H2[No]
+
+H1 --&gt; I1["Run is valid, move to next one"]
+H2 --&gt; I2["Run is not valid, restart"]
+</code></pre>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question 3: <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr></p>
+<p>Analyse the distributions of sampled <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>. For each <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>, discuss:</p>
+<ol>
+<li>From what distribution have each <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> been sampled from?</li>
+<li>What <em>prior knowledge</em> do these distribution reflect?</li>
+</ol>
+</div>
+<h3 id="hazard-data">Hazard data</h3>
+<div class="admonition question">
+<p class="admonition-title">Question 4: Probability calculation</p>
+<ol>
+<li>
+<p>The <a href="../Hazard_probabilistic2/">previous module</a> has introduced how to compute <em>exceedence probability</em> for tephra accumulation. Based on the 10 simulations below for pixel <span class="arithmatex">\(x,y\)</span>, what are the probabilities of this pixel to suffer tephra accumulations exceeding:</p>
+<ul>
+<li>50 <span class="arithmatex">\(kg/m^2\)</span>?</li>
+<li>100 <span class="arithmatex">\(kg/m^2\)</span>?</li>
+<li>150 <span class="arithmatex">\(kg/m^2\)</span>?</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Simulation</th>
+<th>Tephra accumulation (<span class="arithmatex">\(kg/m^2\)</span>)</th>
+<th>Simulation</th>
+<th>Tephra accumulation (<span class="arithmatex">\(kg/m^2\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>115</td>
+<td>6</td>
+<td>156</td>
+</tr>
+<tr>
+<td>2</td>
+<td>80</td>
+<td>7</td>
+<td>102</td>
+</tr>
+<tr>
+<td>3</td>
+<td>151</td>
+<td>8</td>
+<td>104</td>
+</tr>
+<tr>
+<td>4</td>
+<td>65</td>
+<td>9</td>
+<td>85</td>
+</tr>
+<tr>
+<td>5</td>
+<td>112</td>
+<td>10</td>
+<td>123</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Similarly, we also learned how to estimate a <strong>typical accumulation</strong> associated with a given probability of occurrence. The figure below shows the <a href="../Hazard_probabilistic2/#hazard-outputs">survivor function</a> for the data in the table above. Estimate the approximative load associated with probability values of:</p>
+<ul>
+<li>25%</li>
+<li>75%</li>
+</ul>
+</li>
+</ol>
+<p><figure markdown>
+<img alt="survivor" src="../img/survivor.png" width="450px" />
+</figure></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Load runs</p>
+<p><strong>One single vent</strong> was assigned to each of you. For the rest of the exercise, <strong>make sure you refer only this one</strong>.</p>
+<p>Let's now load your assigned scenario, where <code>runName</code> goes from <code>vent1</code> to <code>vent5</code>:</p>
+<ul>
+<li>On the main <code>TephraProb</code> window, click <code>File&gt;Open</code></li>
+<li>Select the <code>.mat</code> file located in <code>RUNS/runName/1/</code></li>
+</ul>
+</div>
+<h4 id="probability-maps">Probability maps</h4>
+<p>Probability maps fix a critical value of tephra accumulation (<span class="arithmatex">\(kg/m^2\)</span>) to allow the contouring of the spatial probability of exceeding this critical threshold. These maps are useful to see the dispersion of probabilities across an area, but only for <strong>one given tephra accumulation threshold at the time</strong>. </p>
+<p>Let's plot probability maps: </p>
+<ol>
+<li>Make sure the scenario for the vent that was attributed to you is loaded (<code>File &gt; Load</code>). </li>
+<li>From the main <code>TephraProb</code> window, click <code>Display &gt; Probability Maps</code>. </li>
+<li>A new window opens, from which you can select pre-defined accumulation threshold (you can select multiple using the <span class="keys"><kbd class="key-command">Cmd</kbd></span> (Mac) or the <span class="keys"><kbd class="key-control">Ctrl</kbd></span> (Windows) keyboard buttons). </li>
+<li>Click <code>Ok</code> - <code>Google Earth should now open</code>. </li>
+</ol>
+<details class="warning"><summary>Troubleshooting Google Earth</summary><p><strong>If Google Earth is in French</strong>: </p>
+<ul>
+<li><code>Google Earth</code> is in French by default. To change the language, go to <code>Outils/Options/General/Parametres de langue</code> and choose your language.</li>
+</ul>
+<p><strong>If Google Earth does not open:</strong></p>
+<ul>
+<li>From the main <code>TephraProb</code> window, select <code>File &gt; Preferences</code> and make sure the <code>Show Google Earth</code> option is selected.</li>
+</ul>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Question 5: Probability maps</p>
+<ol>
+<li>Describe the geometry (i.e., extent, orientation) of selected probability maps.</li>
+<li>With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts?</li>
+</ol>
+</div>
+<h2 id="hazard-output-example"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07z"/></svg></span> Hazard output example</h2>
+<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42z"/></svg></span> Summary</h2>
+<p>That was a long module, where we reviewed: </p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> obtained from tephra deposits help framing future <strong>eruption scenarios</strong>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to develop <strong>distributions of <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr></strong> to define <strong>probabilistic eruption scenarios</strong>. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to complement <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> with global database and analogues and how to reflect <strong>uncertainties</strong>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to <strong>run</strong> probabilistic hazard modeling and <strong>compute probabilities</strong>. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to <strong>display</strong> hazard outputs.</li>
+</ul>
+<p>In the next module, you will produce a <strong>scenario-based probabilistic hazard assessment for tephra accumulation</strong> for a future eruption at La Palma using <code>TephraProb</code>.</p>
+<h2 id="references"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span> References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Bonadonna, C., Connor, C.B., Houghton, B.F., Connor, L., Byrne, M., Laing, A., Hincks, T.K., 2005. Probabilistic modeling of tephra dispersal: Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand. J. Geophys. Res 110, 2156–2202.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Biass, S., Bonadonna, C., Connor, L., Connor, C., 2016. TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout. Journal of Applied Volcanology 5, 1–16.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Hazard_probabilistic2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Probabilistic modeling part II" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Probabilistic modeling part II
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Hazard_tephra_notes/" class="md-footer__link md-footer__link--next" aria-label="Next: [Protected] Instructor&#39;s notes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              [Protected] Instructor's notes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 CERG-C / University of Geneva / CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

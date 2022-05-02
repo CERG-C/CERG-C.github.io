@@ -4,8 +4,10 @@ We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling 
 
 ## :material-format-list-checks:{ .icn } Objectives
 
-- Understand the concepts of **probabilistic eruption scenarios**.
-- Review the concepts of **deterministic**, **scenario-based probabilistic** and **probabilistic** volcanic hazard assessments.
+- Understand how ESP can be translated into **probabilistic eruption scenarios**.
+- Learn the mechanics of **probabilistic hazard modelling** for tephra accumulation.
+- Review how to **compute** and **display** hazard outputs.
+<!-- - Review the concepts of **deterministic**, **scenario-based probabilistic** and **probabilistic** volcanic hazard assessments. -->
   
 ## :fontawesome-solid-gears:{ .icn } Probabilistic hazard modelling 
 
@@ -36,6 +38,8 @@ For a long time, reference eruptions have been used as representative of the mos
 !!! question "What do you think is missing??"
 
     Do you think that this approach represents a comprehensive representation of the possible hazard from future eruptions? Why, or why not? What do you think is missing?
+
+    Spend some time thinking about these aspects in an intuitive way.
 
 ??? warning "Missing component #1"
 
@@ -305,13 +309,13 @@ Is the difference between **probability** and **isomass** maps are? Lets look at
     Probabilistic hazard modelling estimates the tephra accumulations at a given pixel $x,y$ for all of the $n$ runs (here, $n=5$). 
 
     - To produce **probabilistic hazard maps**, we adopt the frequentist approach previously described and calculate the probability to exceed a given mass accumulation &rarr; e.g., this pixel has a 3/5 = 60% probability of exceeding a tephra accumulation of 10 $kg/m^2$.
-    - To produce **probabilistic isomass maps**, we estimate the **inverse** of an **empirical cumulative density function** using all modelled accumulations &rarr; e.g., the accumulation associated with a 25% exceedence probability is 36 $kg/m^2$.
+    - To produce **probabilistic isomass maps**, we estimate the **inverse** of an **empirical cumulative density function** (i.e., the survivor function) using all modelled accumulations &rarr; e.g., the accumulation associated with a 25% exceedence probability is 36 $kg/m^2$.
 
 !!! info "Rule of thumb"
 
     Bear in mind: **large** tephra accumulations usually have **lower** probabilities of occurrence than **smaller** accumulations.
 
-#### Example
+## :material-thought-bubble:{ .icn } Hazard output example
 
 Let's change volcanoes and continents: The examples below illustrate a hazard assessment for a VEI 4 Plinian eruption at [Sakurajima](https://en.wikipedia.org/wiki/Sakurajima) volcano[^7] in Japan, developed around the 1914 Taisho eruption[^8]. Note that the hazard modeling procedure was exactly the same as for Cotopaxi.
 
@@ -359,7 +363,15 @@ Probabilistic volcanic hazard assessments - or **PVHA** -->
 
 ## :material-check-bold:{ .icn } Summary
 
+That was a long module, where we reviewed: 
 
+- [x] How ESP obtained from tephra deposits help framing future **eruption scenarios**.
+- [x] How to develop **distributions of ESP** to define **probabilistic eruption scenarios**. 
+- [x] How to complement ESP with global database and analogues and how to reflect **uncertainties**.
+- [x] How to **run** probabilistic hazard modeling and **compute probabilities**. 
+- [x] How to **display** hazard outputs.
+
+In the next module, you will produce a **scenario-based probabilistic hazard assessment for tephra accumulation** for a future eruption at La Palma using `TephraProb`.
 
 ## :fontawesome-solid-book:{ .icn } References
 
