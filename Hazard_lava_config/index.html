@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://CERG-C.github.io/Hazard_lava_config/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.5">
     
     
       
@@ -448,28 +448,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#change-the-language" class="md-nav__link">
-    Change the language
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activate-the-coordinate-capture-tool" class="md-nav__link">
-    Activate the Coordinate Capture Tool
+  <a href="#activate-q-lavha" class="md-nav__link">
+    Activate Q-LavHA
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#activate-q-lavha" class="md-nav__link">
-    Activate Q-LavHA
-  </a>
   
 </li>
       
@@ -754,28 +740,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#change-the-language" class="md-nav__link">
-    Change the language
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activate-the-coordinate-capture-tool" class="md-nav__link">
-    Activate the Coordinate Capture Tool
+  <a href="#activate-q-lavha" class="md-nav__link">
+    Activate Q-LavHA
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#activate-q-lavha" class="md-nav__link">
-    Activate Q-LavHA
-  </a>
   
 </li>
       
@@ -809,7 +781,7 @@
 <h2 id="installing-q-lavha">Installing Q-LavHA</h2>
 <ol>
 <li>Make sure <code>QGIS</code> is closed.</li>
-<li>Download <code>Q–LavHA</code> from this link.</li>
+<li>Download <code>Q–LavHA</code> from the <code>Moodle</code> page of the class.</li>
 <li>In Windows, navigate to the following folder, where <code>$USER</code> is your ISIS username:</li>
 </ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac OS</label></div>
@@ -823,7 +795,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the <code>plugins</code> folder doesn't exist, then create it.</p>
+<p>If the <code>plugins</code> folder doesn't exist, please create it.</p>
 </div>
 <ol>
 <li>Copy the <code>Qlavha_v3</code> to the <code>plugins</code> folder.</li>
@@ -832,21 +804,7 @@
 <ul>
 <li>Search for <code>QGIS 3.2x</code> and start it. Depending on the computer, the version might vary between <code>3.20</code> and <code>3.23</code>. Please take the most advanced one. </li>
 </ul>
-<h3 id="change-the-language">Change the language</h3>
-<p>As <code>QGIS</code> will most likely be in French, let's change it to English:</p>
-<ol>
-<li>From the <a href="../QGIS_Intro/#the-qgis-interface">Menu Bar</a>, choose <code>Préférences</code> &gt; <code>Options</code> &gt; <code>Général</code></li>
-<li>Change the <em>Langue de l'interface graphique</em> to English (Fig. 1)</li>
-<li>Close and restart <code>QGIS</code></li>
-</ol>
-<figure>
-<p><img alt="QGIS_language" src="../img/qgis/qgis_language.png" />
-  </p>
-<figcaption>Figure 1: Change the QGIS language</figcaption>
-</figure>
-<h3 id="activate-the-coordinate-capture-tool">Activate the Coordinate Capture Tool</h3>
-<p>The <em>Coordinate Capture</em> allows to capture the coordinates when clicking on the map canvas, which will bu useful throughout the exercices. To activate it, right-click anywhere on the in the <a href="../QGIS_Intro/#the-qgis-interface">Toolbar</a> and activate the <code>Coordinate Capture Panel</code>.</p>
-<h2 id="activate-q-lavha">Activate Q-LavHA</h2>
+<h3 id="activate-q-lavha">Activate Q-LavHA</h3>
 <p>To activate <code>Q–LavHA</code> in <code>QGIS</code>:</p>
 <ol>
 <li>Re-open <code>QGIS</code> as previously.</li>
@@ -860,6 +818,33 @@
 <figcaption>Figure 2: Activate the Q–LavHA plugin</figcaption>
 </figure>
 <h2 id="loading-data">Loading data</h2>
+<p>A <code>QGIS</code> template is available on <code>Moodle</code>. It consists of these files:</p>
+<ul>
+<li><code>LaPalma_exercise_2022.qgz</code>: Main <code>QGIS</code> file. </li>
+<li><code>Data/</code><ul>
+<li><code>exercise.gpkg</code>: Geopackage containing some vector files for the exercise. </li>
+<li><code>lapalma.gpkg</code>: Geopackage containing some vector files on previous eruptions at La Palma. </li>
+<li><code>osm.gpkg</code>: Geopackage containing <a href="http://openstreetmap.org">openstreetmap</a> files. </li>
+<li><code>DEM/</code>: Folder containing some pre-processed DEM files. </li>
+<li><code>Hydro</code>: Folder containing hydrological analyses.</li>
+</ul>
+</li>
+</ul>
+<p>Open the <code>LaPalma_exercise_2022.qgz</code> file. </p>
+<div class="admonition warning">
+<p class="admonition-title">Centering the map</p>
+<p>If you don't see any data on the map, click the <code>Background</code> layer group in the <a href="../QGIS_Intro/#the-qgis-interface">Layer panel</a> and click <code>Zoom to group</code>. </p>
+<p><figure markdown>
+<img alt="zoom" src="../img/qgis/zoom.png" width="450px" />
+<figcaption>Figure 3: Zoom on data</figcaption>
+</figure></p>
+</div>
+<p>You should now see something similar to this:</p>
+<p><img alt="data" src="../img/qgis/qgis_data.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Save regularly!</p>
+<p><code>QGIS</code> is amazing, but it can be unstable at time. <strong>Make sure you regularly save your project throughout the exercise!</strong></p>
+</div>
 
               
             </article>
@@ -929,7 +914,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.467223ff.min.js"></script>

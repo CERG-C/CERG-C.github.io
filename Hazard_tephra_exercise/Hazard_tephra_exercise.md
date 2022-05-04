@@ -16,6 +16,24 @@ Tephra describes all fragments of rocks of any size or composition that are inje
 
 The aim of this exercise is to compile a probabilistic hazard assessment for tephra accumulation for a future eruption at La Palma. Probabilistic modeling will be performed using the model [Tephra2](https://github.com/geoscience-community-codes/tephra2)[^1] and the Matlab toolbox [TephraProb](https://github.com/e5k/TephraProb)[^2]. 
 
+In this exercise, you will use the user-friendly Matlab toolbox called `TephraProb` to:
+
+- Analyse the eruptive record and perform some basic frequency analyses.
+- Analyse the wind patterns in a region and put this in the perspective of the hazard assessment. 
+
+Running the full workflow for probabilistic hazard assessment in the computer lab is complicated by technical issues (e.g., computation time, compilation of source libraries). Therefore, we have already ran the scenario for you. You will nevertheless:
+
+- Learn how to interpret the sampling of ESP.
+- Analyse the hazard outputs.
+
+!!! info "TephraProb"
+
+    For more information about `TephraProb`, you can refer to the:
+
+    - [Video tutorial](https://www.youtube.com/channel/UCP8gCjSeMoPVwgzMwKUnW3w).
+    - Updates on the code's [website](https://e5k.github.io).
+
+
 ## Getting started
 
 ### Setup TephraProb
@@ -23,41 +41,29 @@ The aim of this exercise is to compile a probabilistic hazard assessment for tep
 Download `TephraProb` and open `Matlab`:
 
 1. Start a MacOS session.
-2. Download `TephraProb` from GitHub.com and save it somewhere on your hard--drive.
+2. Download `TephraProb` from [GitHub.com](https://github.com/e5k/TephraProb) and save it somewhere on your hard-drive.
 3. ❗ Open `Matlab`.
-4. Left of the address bar at the top of the main Matlab window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file`tephraProb.m`).
+4. Left of the address bar at the top of the main Matlab window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
 5. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
-
-### Get the wind data 
-
-Now, retrieve the wind data:
-
-1. In the window explorer, navigate to the root of `TephraProb`. If a folder named `WIND` is not present, create it
-2. ❗ Download the wind data from the link provided in Teams
-3. Copy the file `\_Reanalysis2\_Rawdata.zip` to the newly created `WIND` folder and extract it there
 
 ### Get the eruption data 
 
+1. Each one of you was assigned a different vent. From the `Moodle` page of the course, download the according folder `ventX` located in the `Tephra hazard assessment` folder. 
+2. Place it in the `RUNS` folder located in your copy of `TephraProb`
 
+!!! note "RUNS folder"
+
+    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it.
 
 ## :fontawesome-solid-gears:{ .icn } Hazard assessment 
 
-In this exercise, you will use the user-friendly Matlab toolbox called `TephraProb` to:
+This exercise is structured in 4 parts:
 
-- Analyse the eruptive record and perform some basic frequency analyses.
-- Analyse the wind patterns in a region and put this in the perspective of the hazard assessment. 
+1. Analysing the eruptive record of La Palma using the [GVP](https://volcano.si.edu) database.
+2. Analysing wind patterns at la Palma using the [EMCWF ERA-5](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5) database.
+3. Defining an eruption scenario and associated ESP. 
+4. Analysing the hazard output.
 
-However, running the full workflow for probabilistic hazard assessment is complicated by technical issues (e.g., computation time, compilation of source libraries). Therefore, we have already ran the scenario for you. You will nevertheless:
-
-- Learn how to interpret the sampling of ESP.
-- Analyse the hazard outputs.
-
-!!! info "TepraProb"
-
-    For more information about `TephraProb`, you can refer to the:
-
-    - [Video tutorial](https://www.youtube.com/channel/UCP8gCjSeMoPVwgzMwKUnW3w).
-    - Updates on the code's [website](https://e5k.github.io).
 
 ### Eruption history
 
@@ -246,7 +252,7 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
 
 
-### Hazard data
+### Hazard output
 
 !!! question "Question 4: Probability calculation"
 
@@ -320,6 +326,29 @@ To plot probabilistic isomass maps:
 2. A new window opens, from which you can select pre-defined probability thresholds. Choose them all.
 3. Click `Ok` - `Google Earth should now open`. 
 
+#### Hazard curves
+
+
+## :material-thought-bubble:{ .icn } Food for thoughts 
+
+Well done - you have successfully completed a **scenario-based probabilistic hazard assessment for tephra accumulation**! Keep in mind that:
+
+- The **scenario-based** part implies that this hazard is **contitional** to the occurrence of the eruption scenario. This contrasts with a *fully* **probabilistic volcanic hazard assessment**, where the *spatio-temporal* probability of occurrence of given volcanic phenomena also need to be accounted for. 
+- Having pretty maps is great... but knowing how to communicate the hazard output and the associated assumptions and uncertainties is often *equally important*. Keep that in mind for the rest of the exercises, both in the lab and in the field. 
+
+### Getting the hazard data 
+
+As displayed in `Matlab`, you can save the maps displayed within `TephraProb` by simply typing `saveAllMaps('png')`, which will save all opened maps to `TephraProb/MAPS`. The raw output data for both *probability* and *isomass* maps are saved as `ascii` raster file with a UTM 28 N projection. Probability (`PROB`) and isomass (`IM`) data are located in:
+
+```
+TephraProb/RUNS/ventX/1/PROB/all/RASTER/*.txt
+TephraProb/RUNS/ventX/1/IM/all/RASTER/*.txt
+```
+
+These are useful for use in external softwares (e.g., `QGIS`). Similarly, `kml` files are stored in the `KML` folder of your run.
+
+Hazard curves must be saved from within `Matlab`.
+
 
 ## :material-check-bold:{ .icn } Summary
 
@@ -347,7 +376,7 @@ In the next module, you will produce a **scenario-based probabilistic hazard ass
 *[HIM]: Hazard impact metrics
 *[GAR]: Global assessment report
 *[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
-*[GVP]: Global volcanism program
+*[GVP]: Global volcanism program 
 *[GSD]: Grain size distribution
 
 

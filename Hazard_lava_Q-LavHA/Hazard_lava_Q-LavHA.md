@@ -216,6 +216,7 @@ Apply the same methodology to the surface area runs as you did for the point run
 
 ### Prepare your hazard maps
 
+The raw `geotiff` files produced by `Q-LavHA` are your main hazard files. If you choose to work in `QGIS` you can further export them to maps using the `Print Layout` tool (&rarr; [doc](https://docs.qgis.org/3.22/en/docs/user_manual/print_composer/overview_composer.html) & [tutorial](https://docs.qgis.org/3.22/en/docs/training_manual/map_composer/map_composer.html)).
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
 

@@ -202,10 +202,31 @@ Impacts can be broadly characterised into 3 zones as a function of the distance 
 Since the 70's/80's, a change of paradigm the concept of *vulnerability* as a cornerstone of volcanic risk[^7]. For the purpose of this exercise, let's consider that the risk $R$ can be defined as a function of at least 3 components that are:
 
 - $H$ - **hazard** - expressing the spatial (and temporal) distribution of the intensity of a hazardous phenomenon.
-- $E$ - **exposure** - expressing the presence of exposed populations, assets, goods, natural features, ecosystem services etc. to the hazardous phenomenon. 
+- $E$ - **elements at risk** - expressing the presence of exposed populations, assets, goods, natural features, ecosystem services etc. to the hazardous phenomenon. 
 - $V$ - **vulnerability** - expressing how the exposed element will be negatively impacted as a function of the hazard intensity. 
 
-The most fundamental definition of risk is defined as $R = f(H,E,V)$. Although this exercise focuses on **hazard**, a meaningful discussion of hazard outputs usually borrows some concept of **vulnerability** to illustrate results. In volcanology, several approaches are used to express vulnerability, varying in complexity as a function of the knowledge of the problem[^8]:
+The most fundamental definition of risk is defined as $R = f(H,E,V)$. Although this exercise focuses on **hazard**, a meaningful discussion of hazard outputs usually borrows some concept of **vulnerability** to illustrate results. 
+
+Ideally, all facets of vulnerability would be described by **continuous** and **quantitative** mathematical functions (also able to characterize the associated uncertainties). Amongst these, we distinguish between **fragility** and **vulnerability** functions (see below). These curves are typically primarily sourced in empirical **post-event impact assessments**, starting from *in situ* observations of impacts following disasters, and complemented with additional investigations (e.g., analytical, experimental, numerical).
+
+```mermaid 
+
+    flowchart LR
+
+        subgraph pre-EIA
+            B["Fragility/vulnerability curves"]    
+        end
+
+        subgraph post-EIA
+            A0["Thresholds"] --> A["Damage/Disruption states"]
+        end
+
+        pre-EIA --> post-EIA
+        post-EIA --> C["Experimental + numerical"] --> pre-EIA
+
+```
+
+Practically, the relatively low frequency of volcanic eruptions compared to other natural hazards limits the availability of opportunistic post-event impact assessments: this impedes the development of accurate, quantitative fragility/vulnerability functions. As a result, most current *vulnerability* models in volcanology rely on empirical **post-event impact assessments**, which are discrete, semi-quantitative scales based on hazard **thresholds** corresponding to the onset of specific observed impacts[^8]:
 
 | Type                               | Description                                                                                                                                                                                                                                                             |
 |:-----------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -227,6 +248,7 @@ The most fundamental definition of risk is defined as $R = f(H,E,V)$. Although t
     ![fragility](img/tephra/fragility.png)
     <figcaption>Figure 9: Example of fragility functions describing the probability of collapse for weak (WE), medium weak (MW), medium strong (MS) and strong (ST) roofs as a function of the tephra load.</figcaption>
     </figure>
+
 
 
 

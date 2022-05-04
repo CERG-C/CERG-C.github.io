@@ -9,7 +9,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 ## Installing Q-LavHA 
 
 1. Make sure `QGIS` is closed.
-1. Download `Q–LavHA` from this link.
+1. Download `Q–LavHA` from the `Moodle` page of the class.
 2. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
 === "Windows"
@@ -21,7 +21,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 === "Mac OS"
 
 !!! note
-    If the `plugins` folder doesn't exist, then create it.
+    If the `plugins` folder doesn't exist, please create it.
 
 3. Copy the `Qlavha_v3` to the `plugins` folder.
 
@@ -29,24 +29,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 
 - Search for `QGIS 3.2x` and start it. Depending on the computer, the version might vary between `3.20` and `3.23`. Please take the most advanced one. 
 
-### Change the language
-
-As `QGIS` will most likely be in French, let's change it to English:
-
-1. From the [Menu Bar](QGIS_Intro.md#the-qgis-interface), choose `Préférences` > `Options` > `Général`
-2. Change the *Langue de l'interface graphique* to English (Fig. 1)
-3. Close and restart `QGIS`
-
-<figure markdown>
-  ![QGIS_language](img/qgis/qgis_language.png)
-  <figcaption>Figure 1: Change the QGIS language</figcaption>
-</figure>
-
-### Activate the Coordinate Capture Tool
-
-The *Coordinate Capture* allows to capture the coordinates when clicking on the map canvas, which will bu useful throughout the exercices. To activate it, right-click anywhere on the in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`.
-
-## Activate Q-LavHA
+### Activate Q-LavHA
 
 To activate `Q–LavHA` in `QGIS`:
 
@@ -59,5 +42,34 @@ To activate `Q–LavHA` in `QGIS`:
   ![QGIS_plugin](img/qgis/qgis_plugin.png)
   <figcaption>Figure 2: Activate the Q–LavHA plugin</figcaption>
 </figure>
- 
+
 ## Loading data
+
+A `QGIS` template is available on `Moodle`. It consists of these files:
+
+- `LaPalma_exercise_2022.qgz`: Main `QGIS` file. 
+- `Data/`
+    - `exercise.gpkg`: Geopackage containing some vector files for the exercise. 
+    - `lapalma.gpkg`: Geopackage containing some vector files on previous eruptions at La Palma. 
+    - `osm.gpkg`: Geopackage containing [openstreetmap](http://openstreetmap.org) files. 
+    - `DEM/`: Folder containing some pre-processed DEM files. 
+    - `Hydro`: Folder containing hydrological analyses.
+
+Open the `LaPalma_exercise_2022.qgz` file. 
+
+!!! warning "Centering the map"
+
+    If you don't see any data on the map, click the `Background` layer group in the [Layer panel](QGIS_Intro.md#the-qgis-interface) and click `Zoom to group`. 
+
+    <figure markdown>
+    ![zoom](img/qgis/zoom.png){width="450px"}
+    <figcaption>Figure 3: Zoom on data</figcaption>
+    </figure>
+
+You should now see something similar to this:
+
+![data](img/qgis/qgis_data.png)
+
+!!! danger "Save regularly!"
+
+    `QGIS` is amazing, but it can be unstable at time. **Make sure you regularly save your project throughout the exercise!**

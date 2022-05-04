@@ -1,8 +1,8 @@
 # Modeling tephra dispersal
 
-Until now, we have used a *probabilistic* model to [simulate lava flow inundation](Hazard_lava_Q-LavHA.md), which considers limited to no physics. Similar models do not exist for **tephra dispersal and deposition**, and we require *physics-based* models to assess the related hazard. 
+Until now, we have used a *probabilistic* model to [simulate lava flow inundation](Hazard_lava_Q-LavHA.md), using models that consider limited to no physics. In contrast, most models for **tephra dispersal and deposition** require a *physics-based* approach to assess associated hazards. 
 
-This module introduces the modelling strategy that will be used in the following exercises using `Tephra2` and `TephraProb`.
+This module introduces the modelling strategy that will be adopted throughout the following exercises, which relies on `Tephra2` and `TephraProb`.
 
 ## :material-format-list-checks:{ .icn } Objectives
 

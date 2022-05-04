@@ -41,4 +41,3 @@ The *Coordinate Capture* allows to capture the coordinates when clicking on the 
 
 First install it: From the Menu bar, use the `Plugins > Manage and Install Plugins` tool and search for the `Coordinate Capture` tool and install it. To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`.
 
-## Loading data
