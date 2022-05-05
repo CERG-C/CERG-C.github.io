@@ -303,3 +303,5 @@ In the next sections, we will introduce how we can [model](Hazard_tephra_modelin
 *[HIM]: Hazard impact metrics
 *[GAR]: Global assessment report
 *[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution

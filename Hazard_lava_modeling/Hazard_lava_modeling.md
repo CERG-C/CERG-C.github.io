@@ -276,3 +276,14 @@ This limited ability to predict the evolution of lava flow crises result in high
 [^8]: de’ Michieli Vitturi, M., Tarquini, S., 2018. MrLavaLoba: A new probabilistic model for the simulation of lava flows as a settling process. Journal of Volcanology and Geothermal Research 349, 323–334. https://doi.org/10.1016/j.jvolgeores.2017.11.016
 [^9]: Biass, S., Orr, T.R., Houghton, B.F., Patrick, M.R., James, M.R., Turner, N., 2019. Insights into pāhoehoe lava emplacement using visible and thermal structure-from-motion photogrammetry. Journal of Geophysical Research: Solid Earth 124. https://doi.org/10.1029/2019JB017444
 
+
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
+*[DEM]: Digital Elevation Model

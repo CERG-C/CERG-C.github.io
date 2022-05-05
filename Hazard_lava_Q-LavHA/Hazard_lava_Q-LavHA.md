@@ -252,3 +252,14 @@ In this exercise, you have:
 [^1]: Mossoux, S., Saey, M., Bartolini, S., Poppe, S., Canters, F., Kervyn, M., 2016. Q-LAVHA: A flexible GIS plugin to simulate lava flows. Computers & Geosciences 97, 98–109. https://doi.org/10.1016/j.cageo.2016.09.003
 
 [^2]: Harris, A.J., Rowland, S. FLOWGO: a kinematic thermo-rheological model for lava flowing in a channel. Bull Volcanol 63, 20–44 (2001). https://doi.org/10.1007/s004450000120
+
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
+*[DEM]: Digital Elevation Model

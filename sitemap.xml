@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://CERG-C.github.io/Hazard_tephra_beyond/</loc>
+         <lastmod>2022-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://CERG-C.github.io/Hazard_tephra_exercise/</loc>
          <lastmod>2022-05-05</lastmod>
          <changefreq>daily</changefreq>
@@ -62,6 +67,11 @@
     </url>
     <url>
          <loc>https://CERG-C.github.io/Hazard_tephra_notes/</loc>
+         <lastmod>2022-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://CERG-C.github.io/Hazard_tephra_temporal/</loc>
          <lastmod>2022-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>

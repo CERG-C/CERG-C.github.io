@@ -33,14 +33,18 @@ Start by showing only the `Flow Accumulation (log)` layer in `QGIS`. Conceptuall
 
     1. Starting from this DEM, can you estimate the most likely flow direction and the flow accumulation values?
 
+    <figure markdown>
     ![hydro1](img/hydro/hydro1.png){ width="400" }
+    </figure>
 
 ??? check "Flow accumulation"
 
     - **Pink lines** show flow *direction*.
     - The **blue gradient** shows flow *accumulation* &rarr; darker shades of blue indicate the contribution from *more pixels*.
   
+    <figure markdown>
     ![hydro2](img/hydro/hydro2.png){ width="400" }
+    </figure>
 
 - Look at the `Flow Accumulation (log)` layer in `QGIS`. For a better visual rendering, this layer shows the `log10` of the number of contributing pixels. 
 - Analyse the dataset in perspective of the underlying DEM. Does it make sense? (Spoiler alert: it does!)
@@ -52,8 +56,10 @@ Now turn on the `Stream network` layer in `QGIS`.  `Stream network` algorithm si
 !!! check "Stream network"
 
     From the same DEM as before, this is how the **path of steepest descent** would look: 
-    
+
+    <figure markdown>
     ![hydro3](img/hydro/hydro3.png){ width="400" }
+    </figure>
 
 !!! warning "Threshold value"
 
@@ -68,8 +74,10 @@ Turn on the `Drainage basin` layer in `QGIS`: this raster now classifies **which
 
     It is now possible to estimate *where* water on each pixel will go.
     
+    <figure markdown>
     ![hydro4](img/hydro/hydro4.png){ width="400" }
-
+    </figure>
+    
 !!! question "Question 2: Drainage system"
 
     You can observe a large discrepancy in the **area** and the **shape** of the various drainage basins.
@@ -180,3 +188,14 @@ In this exercise, we:
 [^2]: Deligne, N.I., Fitzgerald, R.H., Blake, D.M., Davies, A.J., Hayes, J.L., Stewart, C., Wilson, G., Wilson, T.M., Castelino, R., Kennedy, B.M., Muspratt, S., Woods, R., 2017. Investigating the consequences of urban volcanism using a scenario approach I: Development and application of a hypothetical eruption in the Auckland Volcanic Field, New Zealand. Journal of Volcanology and Geothermal Research 336, 192–208. https://doi.org/10.1016/j.jvolgeores.2017.02.023
 [^3]: de Silva, S., Lindsay, J.M., 2015. Chapter 15 – Primary Volcanic Landforms, in: The Encyclopedia of Volcanoes. pp. 273–297. https://doi.org/10.1016/B978-0-12-385938-9.00015-8
 [^4]: Marrero, J.M., García, A., Berrocoso, M., Llinares, Á., Rodríguez-Losada, A., Ortiz, R., 2019. Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: the example of La Palma (Canary Islands). J Appl. Volcanol. 8, 6. https://doi.org/10.1186/s13617-019-0085-5
+
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
+*[DEM]: Digital Elevation Model

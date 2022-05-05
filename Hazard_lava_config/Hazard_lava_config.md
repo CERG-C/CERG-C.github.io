@@ -73,3 +73,14 @@ You should now see something similar to this:
 !!! danger "Save regularly!"
 
     `QGIS` is amazing, but it can be unstable at time. **Make sure you regularly save your project throughout the exercise!**
+
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
+*[DEM]: Digital Elevation Model

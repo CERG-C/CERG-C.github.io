@@ -1,6 +1,6 @@
 password: askja1875
 
-## Exercise
+## Tephra hazard assessment exercise
 
 ### Question 1: Eruptive history
 1. > On the cumulative GVP plot, what does the slope of the plot (i.e., the ratio of `y` to `x`) represent?
@@ -57,3 +57,35 @@ password: askja1875
 2. > With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts?
 
 ❗ to do
+
+## Eruptive record exercise
+
+### Question 1: Eruptive history
+
+1. > How does the eruptive record changes in time, both in term of **frequency** and **VEI**?
+
+    - At least 3 segments 
+    - Old dominated by VEI 5, medial by VEI 3/4, recent by VEI≤3
+
+### Question 2: Record completenes
+
+1. > What year marks the onset of record completeness for eruptions of VEI 3 and 4 at Cotopaxi volcano?
+
+    - 1698 AD and 1350 AD, respectively
+  
+2. > What are the eruption frequencies (in number of eruptions per year) for both VEI?
+
+    - $3.5\times 10^{-2}$, $9.0\times 10^{-3}$
+
+### Question 3: Eruption probability
+
+What is the probability of:
+
+1. > A VEI 3 eruption to occur in the next **10** years? **100** years?
+
+    - 0.286, 0.781
+
+2. > A VEI 4 eruption to occur in the next **10** years? **100** years?
+
+    - 0.074, 0.202
+

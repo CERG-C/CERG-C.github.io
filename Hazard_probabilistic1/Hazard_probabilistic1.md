@@ -100,5 +100,13 @@ In the next exercise, we will use `Q-LavHA`, a probabilistic model, to quantify 
 
 [^1]: Bonadonna, C., 2006. Probabilistic modelling of tephra dispersion, in: Mader, H.M., Coles, S.G., Connor, C.B., Connor, L.J. (Eds.), Statistics in Volcanology. Geological Society of London, London, pp. 243–259.
 
-*[ESP]: Eruption source parameter
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
 *[DEM]: Digital Elevation Model

@@ -39,3 +39,14 @@ With this exercise, using two types of approaches to estimate the hazard associa
 [^1]: Bonadonna, C., Frischknecht, C., Menoni, S., Romerio, F., Gregg, C.E., Rosi, M., Biass, S., Asgary, A., Pistolesi, M., Guobadia, D., Gattuso, A., Ricciardi, A., Cristiani, C., 2021. Integrating hazard, exposure, vulnerability and resilience for risk and emergency management in a volcanic context: the ADVISE model. J Appl. Volcanol. 10, 7. https://doi.org/10.1186/s13617-021-00108-5
 [^2]: Poland, M., Orr, T.R., Kauahikaua, J.P., Brantley, S.R., Babb, J.L., Patrick, M.R., Neal, C.A., Anderson, K.R., Antolik, L., Burgess, M., 2016. The 2014–2015 Pāhoa lava flow crisis at Kīlauea Volcano, Hawai ‘i: Disaster avoided and lessons learned. GSA Today 26, 4–10.
 [^3]: Neal, C.A., Brantley, S.R., Antolik, L., Babb, J., Burgess, M., Calles, K., Cappos, M., Chang, J.C., Conway, S., Desmither, L., Dotray, P., Elias, T., Fukunaga, P., Fuke, S., Johanson, I.A., Kamibayashi, K., Kauahikaua, J., Lee, R.L., Pekalib, S., Miklius, A., Million, W., Moniz, C.J., Nadeau, P.A., Okubo, P., Parcheta, C., Patrick, M.P., Shiro, B., Swanson, D.A., Tollett, W., Trusdell, F., Younger, E.F., Zoeller, M.H., Montgomery-Brown, E.K., Anderson, K.R., Poland, M.P., Ball, J., Bard, J., Coombs, M., Dietterich, H.R., Kern, C., Thelen, W.A., Cervelli, P.F., Orr, T., Houghton, B.F., Gansecki, C., Hazlett, R., Lundgren, P., Diefenbach, A.K., Lerner, A.H., Waite, G., Kelly, P., Clor, L., Werner, C., Mulliken, K., Fisher, G., 2018. The 2018 rift eruption and summit collapse of Kīlauea Volcano. Science 7046, eaav7046. https://doi.org/10.1126/science.aav7046
+
+*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
+*[TGSD]: Total grain-size distribution
+*[MER]: Mass eruption rate
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
+*[DEM]: Digital Elevation Model

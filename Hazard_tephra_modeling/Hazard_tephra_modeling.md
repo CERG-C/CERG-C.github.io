@@ -182,4 +182,9 @@ In the next section, we will look at the philosophy behind using `Tephra2` for p
 *[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution
 *[MER]: Mass eruption rate
-*[HIM]: Hazard intensity metrics
+*[VEI]: Volcanic explosivity index
+*[HIM]: Hazard impact metrics
+*[GAR]: Global assessment report
+*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution

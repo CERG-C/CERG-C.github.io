@@ -392,6 +392,6 @@ In the next module, you will produce a **scenario-based probabilistic hazard ass
 *[HIM]: Hazard impact metrics
 *[GAR]: Global assessment report
 *[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
-
-
+*[GVP]: Global volcanism program 
+*[GSD]: Grain size distribution
 
