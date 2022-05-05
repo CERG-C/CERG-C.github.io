@@ -326,6 +326,24 @@ To plot probabilistic isomass maps:
 2. A new window opens, from which you can select pre-defined probability thresholds. Choose them all.
 3. Click `Ok` - `Google Earth should now open`. 
 
+The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answer these questions.
+
+!!! question "Question 6: Probabilistic isomass maps"
+
+    Using [OpenStreetMap](https://www.openstreetmap.org/relation/1464825#map=11/28.6541/-17.7587) and [Google Maps](https://www.google.com/maps/place/La+Palma/@28.6551008,-18.0057897,11z/data=!3m1!4b1!4m5!3m4!1s0xc6bf20c6a87a13b:0x8e2037d22330882d!8m2!3d28.7133828!4d-17.9057813) select 
+
+=== "Infrastructures"
+
+    ![infra](img/DDS/infrastructures.png)
+
+=== "Roofs"
+
+    ![roofs](img/DDS/roofs.png)
+
+=== "Agriculture"
+
+    ![agri](img/DDS/agriculture.png)
+
 #### Hazard curves
 
 
@@ -367,7 +385,7 @@ In the next module, you will produce a **scenario-based probabilistic hazard ass
 [^1]: Bonadonna, C., Connor, C.B., Houghton, B.F., Connor, L., Byrne, M., Laing, A., Hincks, T.K., 2005. Probabilistic modeling of tephra dispersal: Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand. J. Geophys. Res 110, 2156–2202.
 [^2]: Biass, S., Bonadonna, C., Connor, L., Connor, C., 2016. TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout. Journal of Applied Volcanology 5, 1–16. 
 [^3]: Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.
-
+[^4]: Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.
 
 *[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution
