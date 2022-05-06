@@ -918,7 +918,7 @@
 </div>
 </div>
 <h3 id="geological-vs-historical-record">Geological vs historical record</h3>
-<p>Various methods have been used to estimate eruption frequencies reaching slightly different results<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, but one thing is clear:</p>
+<p>Various methods have been developed to quantify eruptions frequencies and probabilities<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. Although not all yielding the same results, one aspect remains clear:</p>
 <blockquote>
 <p><strong>Small</strong> eruptions are <strong>more frequent</strong> than <strong>large</strong> eruptions.</p>
 </blockquote>
@@ -928,10 +928,10 @@
 </figure>     -->
 
 <p>When interpreting eruption catalogues, it is necessary to interpret <em>trends</em> in the perspective of both <strong>geological</strong> and <strong>historical</strong> biases.</p>
-<p>A <strong>historical</strong> bias arises from the fact that small eruptions are frequent, but result in thin deposits that are more likely to suffer <strong>erosion</strong>. In unpopulated places (or at the time when specific places were unpopulated), they are also likely to go unnoticed. The historical bias can result in two main consequences:
+<p>A <strong>historical</strong> bias arises from the fact that small eruptions are frequent, but result in thin deposits that are likely to suffer <strong>erosion</strong>. In unpopulated places (or at the time when specific places were unpopulated), they are also likely to go unnoticed. The historical bias can result in two main consequences:
 1. The <strong>recent</strong> eruptive record is dominated by small, frequent eruptions that are missing from the <strong>older</strong> record.
 2. The <strong>perception</strong> of future the activity at a given volcano is dominated by the recent history. </p>
-<p>A <strong>geological</strong> bias is the consequence of the fact that larger eruptions are <strong>less frequent</strong> but are more likely to be <strong>preserved in the stratigraphy</strong>. As a result, the oldest part of an eruption catalogue might be (apparently) dominated by large eruptions and be depleted from the smaller spectrum of activity.</p>
+<p>A <strong>geological</strong> bias is the consequence of the fact that larger eruptions are <strong>less frequent</strong> but are more likely to be <strong>preserved in the stratigraphy</strong>. As a result, the oldest part of an eruption catalogue might be (apparently) dominated by large eruptions and be depleted from the smaller spectrum of activity. Conversely, the recent history might not contain any occurrence of large eruptions.</p>
 <p>The following exercise digs into the eruptive history of <a href="https://en.wikipedia.org/wiki/Cotopaxi">Cotopaxi</a> volcano (Ecuador)</p>
 <h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.2 3 6.2 6 6 9.7l-1.9 2.5c-.2.3 0 .8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.7c2.4-1.1 4-3.5 4-6.3 0-3.9-3.1-7-7-7m2 6-3.1 6 .6-4h-2l2-5H15l-1.5 3H15z"/></svg></span> Exercise</h2>
 <p>We have already looked at one <a href="../Hazard_probabilistic2/#probabilistic-hazard-modelling"><abbr title="Volcanic explosivity index">VEI</abbr> 4 Plinian eruption</a> of <a href="https://en.wikipedia.org/wiki/Cotopaxi">Cotopaxi</a> volcano (Ecuador). Let's look at its eruptive history as documented by the <abbr title="Global volcanism program">GVP</abbr> catalogue. Figure 4 plots the <em>cumulative number of eruptions</em> (y-axis) through time considering eruptions of all <abbr title="Volcanic explosivity index">VEI</abbr>. </p>
@@ -946,10 +946,10 @@
 <li>How does the eruptive record changes in time, both in term of <strong>frequency</strong> and <strong><abbr title="Volcanic explosivity index">VEI</abbr></strong>?</li>
 </ol>
 </div>
-<p>Let's put back the eruptive record of Cotopaxi volcano in the context of the first assumption that <strong>future activity will reflect the trends observed in the past</strong>. As a matter of fact, the behaviour at Cotopaxi volcano changed from dominantly <strong>rhyolitic</strong> to dominantly <strong>andesitic</strong> about 4000 years ago. The <abbr title="Global volcanism program">GVP</abbr> plot shows how most <abbr title="Volcanic explosivity index">VEI</abbr> 5 eruptions occurred <em>before</em> that shift. Therefore, we will only attempt predicting frequencies of future eruptions based on the <strong>recent andesitic activity</strong>, and we must discard the 6 <abbr title="Volcanic explosivity index">VEI</abbr> 5 eruptions older than 4000 years from our analysis.</p>
-<div class="admonition info">
-<p class="admonition-title">Predicting what has not yet happened</p>
-<p>Bear in mind that we don't argue here that predicting <em>what has not yet happened</em> is impossible - it is a very different approach framed around very low probabilities and high uncertainties.</p>
+<div class="admonition warning">
+<p class="admonition-title">Validating initial assumptions</p>
+<p>Let's put back the eruptive record of Cotopaxi volcano in the context of the first assumption that <strong>future activity will reflect the trends observed in the past</strong>. As a matter of fact, the behaviour at Cotopaxi volcano changed from dominantly <strong>rhyolitic</strong> to dominantly <strong>andesitic</strong> about 4000 years ago<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. The <abbr title="Global volcanism program">GVP</abbr> plot shows how most <abbr title="Volcanic explosivity index">VEI</abbr> 5 eruptions occurred <em>before</em> that shift. Therefore, we will only attempt predicting frequencies of future eruptions based on the <strong>recent andesitic activity</strong>, and we must discard the 6 <abbr title="Volcanic explosivity index">VEI</abbr> 5 eruptions older than 4000 years from our analysis.</p>
+<p>Bear in mind that we don't argue here that predicting <em>what has not yet happened</em> is impossible - it is a very different approach that has to account for very low probabilities and high uncertainties.</p>
 </div>
 <h3 id="record-completeness">Record completeness</h3>
 <p>Following the <a href="../Hazard_tephra_exercise/#eruption-history">same approach</a> as before, let's retrieve the eruptive history for Cotoaxi from <code>TephraProb</code>:</p>
@@ -979,7 +979,7 @@
 </ol>
 </div>
 <h3 id="eruption-probability">Eruption probability</h3>
-<p>In some cases, it is <em>sometime</em> possible to assume that volcanic eruptions are stochastic processes that can be described by a Poisson distribution. This assumptuion requires events to be independent and may occur only one at a time. In addition, the probability of an event occurring in the next small time increment does not depend on the time that has already elapsed since the last event occurred<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>. </p>
+<p>It is <em>sometime</em> possible to assume that volcanic eruptions are stochastic processes that can be described by a Poisson distribution. This assumption requires eruptions to be independent (i.e., no dependency between the repose interval and magnitude) and may occur only one at a time. In addition, the probability of an event occurring in the next small time increment does not depend on the time that has already elapsed since the last event occurred<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>. </p>
 <p>Here, we are interested in estimating the probability <span class="arithmatex">\(P\)</span> of a repose time <span class="arithmatex">\(T\)</span> to be smaller than or equal to an hypothetical time period <span class="arithmatex">\(t\)</span>. The simplest case of a Poisson process results in an exponential distribution, and we can estimate the probability of an eruption to occur in a given time interval as:</p>
 <div class="arithmatex">\[\begin{equation}
 P(Erupt. \leqslant \Delta t) = 1-e^{-\lambda\Delta t} 
@@ -995,7 +995,7 @@ P(Erupt. \leqslant \Delta t) = 1-e^{-\lambda\Delta t}
 </div>
 <div class="admonition info">
 <p class="admonition-title">Independence</p>
-<p>The assumption of independence between events must be tested and demonstrated before using this method. Independence can occur for large-scale eruptions, but generally fails for more frequent, smaller types of activity (e.g., Vulcanian or Strombolian activity)<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>.</p>
+<p>The assumption of independence between events must be tested and demonstrated before using this method. Independence may occur for large-scale eruptions, but generally fails for more frequent, pulsatory types of activity (e.g., Vulcanian or Strombolian activity)<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>.</p>
 </div>
 <h2 id="food-for-thoughts"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07z"/></svg></span> Food for thoughts</h2>
 <p>This module provides a first-order introduction to the temporal analysis of eruption frequencies. Note that this is an active topic of research, and that this lesson's objective is to raise awareness on the caveats associated with global eruption records. Note that eruption forecasts are usually split between <em>long-term</em> and <em>short-term</em> depending on the timescale. Here, this approach relates to the long-term forecast of eruption probability.</p>

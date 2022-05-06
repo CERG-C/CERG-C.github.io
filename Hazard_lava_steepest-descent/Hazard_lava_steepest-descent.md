@@ -26,10 +26,10 @@ Several softwares propose implementations of hydrological analyses including [QG
 
 Start by showing only the `Flow Accumulation (log)` layer in `QGIS`. Conceptually, the `Flow Accumulation` raster represents the **cumulative number of upstream pixels that contribute to surface water drainage to any given downstream pixel**. Starting from a DEM, the algorithm:
 
-1. Assumes that water at a given pixel will flow towards the adjacent pixel that shows the greatest $-\Delta z$ to estimate the flow directions.
+1. Assumes that water at a given pixel will flow towards the adjacent pixel that shows the greatest $-\Delta z$ to estimate the flow directions.   
 2. Once flow direction is estimated, the algorithm counts **how many upstream** pixels contribute to any given **downstream** pixel.
 
-!!! question "Question 1: Do it yourself!"
+!!! tip "Do it yourself!"
 
     1. Starting from this DEM, can you estimate the most likely flow direction and the flow accumulation values?
 
@@ -78,7 +78,7 @@ Turn on the `Drainage basin` layer in `QGIS`: this raster now classifies **which
     ![hydro4](img/hydro/hydro4.png){ width="400" }
     </figure>
     
-!!! question "Question 2: Drainage system"
+!!! question "Question 1: Drainage system"
 
     You can observe a large discrepancy in the **area** and the **shape** of the various drainage basins.
 
@@ -91,7 +91,7 @@ Turn on the `Drainage basin` layer in `QGIS`: this raster now classifies **which
 
 Let's now place this data in the context of a hazard assessment. Start by downloading the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a> by [Carracedo et al., (2001)](https://www.researchgate.net/publication/233747095_Geological_map_of_La_Palma_Canary_Islands) and spend some time looking at it.
 
-!!! question "Question 3: Historical lava flows"
+!!! question "Question 2: Historical lava flows"
 
     1. Can you spot where historical lava flows occurred?
     2. Are they originating from *a single* or *multiple* vents?
@@ -122,7 +122,7 @@ As we will discuss throughout the exercices, assessing *where* the next monogene
   <figcaption>Figure 1: Possible location of vent opening for the next eruption according to Marrero et al. (2019).</figcaption>
 </figure>
 
-!!! question "Question 4: Vent opening"
+!!! question "Question 3: Vent opening"
 
     1. If all vents in Figure 1 have an **equal probability of occurrence**, does that mean that the entire island is uniformly exposed to lava flow inundation? 
     2. What parts of the island are most exposed to lava flow inundation?
@@ -138,7 +138,7 @@ The 2021 eruption of Cumbre Vieja started on September 19 and lasted until Decem
 
 Using the lava flow outlines, we computed the evolution of **flow length** and **flow width** through time as shown in Figure 2.
 
-!!! question "Question 5: Evolution of the flow field"
+!!! question "Question 4: Evolution of the flow field"
 
     Using the flow outlines in `QGIS` and Figure 2, estimate:
 
@@ -159,7 +159,7 @@ Comparing the path of steepest descent approach computed on the pre-2021 eruptio
 - The path of steepest descent captures the general trend of flow direction **but**
 - The actual flow significantly diverted from this initial prediction.
 
-!!! question "Question 6: Limitations"
+!!! hint "Limitations"
 
     Spend some time thinking about the *reasons* behind this discrepancy, including:
 

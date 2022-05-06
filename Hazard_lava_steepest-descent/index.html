@@ -914,11 +914,11 @@ B --&gt; C[Drainage basins]</code></pre>
 <h3 id="flow-accumulation">Flow accumulation</h3>
 <p>Start by showing only the <code>Flow Accumulation (log)</code> layer in <code>QGIS</code>. Conceptually, the <code>Flow Accumulation</code> raster represents the <strong>cumulative number of upstream pixels that contribute to surface water drainage to any given downstream pixel</strong>. Starting from a <abbr title="Digital Elevation Model">DEM</abbr>, the algorithm:</p>
 <ol>
-<li>Assumes that water at a given pixel will flow towards the adjacent pixel that shows the greatest <span class="arithmatex">\(-\Delta z\)</span> to estimate the flow directions.</li>
+<li>Assumes that water at a given pixel will flow towards the adjacent pixel that shows the greatest <span class="arithmatex">\(-\Delta z\)</span> to estimate the flow directions.   </li>
 <li>Once flow direction is estimated, the algorithm counts <strong>how many upstream</strong> pixels contribute to any given <strong>downstream</strong> pixel.</li>
 </ol>
-<div class="admonition question">
-<p class="admonition-title">Question 1: Do it yourself!</p>
+<div class="admonition tip">
+<p class="admonition-title">Do it yourself!</p>
 <ol>
 <li>Starting from this <abbr title="Digital Elevation Model">DEM</abbr>, can you estimate the most likely flow direction and the flow accumulation values?</li>
 </ol>
@@ -961,7 +961,7 @@ B --&gt; C[Drainage basins]</code></pre>
 </figure></p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Question 2: Drainage system</p>
+<p class="admonition-title">Question 1: Drainage system</p>
 <p>You can observe a large discrepancy in the <strong>area</strong> and the <strong>shape</strong> of the various drainage basins.</p>
 <ol>
 <li>How do they spatially vary over the island?</li>
@@ -972,7 +972,7 @@ B --&gt; C[Drainage basins]</code></pre>
 <h3 id="historical-lava-flows">Historical lava flows</h3>
 <p>Let's now place this data in the context of a hazard assessment. Start by downloading the <a href="../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a> by <a href="https://www.researchgate.net/publication/233747095_Geological_map_of_La_Palma_Canary_Islands">Carracedo et al., (2001)</a> and spend some time looking at it.</p>
 <div class="admonition question">
-<p class="admonition-title">Question 3: Historical lava flows</p>
+<p class="admonition-title">Question 2: Historical lava flows</p>
 <ol>
 <li>Can you spot where historical lava flows occurred?</li>
 <li>Are they originating from <em>a single</em> or <em>multiple</em> vents?</li>
@@ -1003,7 +1003,7 @@ B --&gt; C[Drainage basins]</code></pre>
 <figcaption>Figure 1: Possible location of vent opening for the next eruption according to Marrero et al. (2019).</figcaption>
 </figure>
 <div class="admonition question">
-<p class="admonition-title">Question 4: Vent opening</p>
+<p class="admonition-title">Question 3: Vent opening</p>
 <ol>
 <li>If all vents in Figure 1 have an <strong>equal probability of occurrence</strong>, does that mean that the entire island is uniformly exposed to lava flow inundation? </li>
 <li>What parts of the island are most exposed to lava flow inundation?</li>
@@ -1019,7 +1019,7 @@ B --&gt; C[Drainage basins]</code></pre>
 </div>
 <p>Using the lava flow outlines, we computed the evolution of <strong>flow length</strong> and <strong>flow width</strong> through time as shown in Figure 2.</p>
 <div class="admonition question">
-<p class="admonition-title">Question 5: Evolution of the flow field</p>
+<p class="admonition-title">Question 4: Evolution of the flow field</p>
 <p>Using the flow outlines in <code>QGIS</code> and Figure 2, estimate:</p>
 <ol>
 <li>How accurate would have been the <strong>steepest descent</strong> approach to <em>forecast</em> flow inundation of the 2021 eruption? How different is the actual flow compared to the drainage network?</li>
@@ -1039,8 +1039,8 @@ B --&gt; C[Drainage basins]</code></pre>
 <li>The path of steepest descent captures the general trend of flow direction <strong>but</strong></li>
 <li>The actual flow significantly diverted from this initial prediction.</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">Question 6: Limitations</p>
+<div class="admonition hint">
+<p class="admonition-title">Limitations</p>
 <p>Spend some time thinking about the <em>reasons</em> behind this discrepancy, including:</p>
 <ol>
 <li>The rheological properties of the lava flows.</li>

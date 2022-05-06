@@ -8,9 +8,10 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 
 ## Installing Q-LavHA 
 
-1. Make sure `QGIS` is closed.
-1. Download `Q–LavHA` from the `Moodle` page of the class.
-2. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
+
+1. From the `Moodle` page of the class, download the `Lava_Flow_Exercise_2022.zip` file and extract it somewhere.
+2. Make sure `QGIS` is closed.
+3. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
 === "Windows"
 
@@ -45,7 +46,7 @@ To activate `Q–LavHA` in `QGIS`:
 
 ## Loading data
 
-A `QGIS` template is available on `Moodle`. It consists of these files:
+The `Lava_Flow_Exercise_2022.zip` file downloaded from `Moodle` contains a `Lava flow exercise` folder that contains these files:
 
 - `LaPalma_exercise_2022.qgz`: Main `QGIS` file. 
 - `Data/`

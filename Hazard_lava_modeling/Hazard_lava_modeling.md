@@ -92,9 +92,6 @@ Amongst non-newtonian fluids:
 
     Lava flows are typically **non-newtonian**, **pseudoplastic** fluids with a **yield strength**.
 
-
-!!! question "Question: flow rheology"
-
     Think of a slope. If you drop a newtonian fluid (i.e., no yield strength) on it, it will immediately start flowing, whereas non-newtonian fluids with a yield strength will require some help.
 
     Can you think of any fluids that would behave like these?

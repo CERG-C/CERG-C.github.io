@@ -60,7 +60,7 @@ Look at the figures below.
 
 ### Geological vs historical record
 
-Various methods have been used to estimate eruption frequencies reaching slightly different results[^2][^3], but one thing is clear:
+Various methods have been developed to quantify eruptions frequencies and probabilities[^2][^3]. Although not all yielding the same results, one aspect remains clear:
 
 > **Small** eruptions are **more frequent** than **large** eruptions.
 
@@ -71,11 +71,11 @@ Various methods have been used to estimate eruption frequencies reaching slightl
 
 When interpreting eruption catalogues, it is necessary to interpret *trends* in the perspective of both **geological** and **historical** biases.
 
-A **historical** bias arises from the fact that small eruptions are frequent, but result in thin deposits that are more likely to suffer **erosion**. In unpopulated places (or at the time when specific places were unpopulated), they are also likely to go unnoticed. The historical bias can result in two main consequences:
+A **historical** bias arises from the fact that small eruptions are frequent, but result in thin deposits that are likely to suffer **erosion**. In unpopulated places (or at the time when specific places were unpopulated), they are also likely to go unnoticed. The historical bias can result in two main consequences:
 1. The **recent** eruptive record is dominated by small, frequent eruptions that are missing from the **older** record.
 2. The **perception** of future the activity at a given volcano is dominated by the recent history. 
 
-A **geological** bias is the consequence of the fact that larger eruptions are **less frequent** but are more likely to be **preserved in the stratigraphy**. As a result, the oldest part of an eruption catalogue might be (apparently) dominated by large eruptions and be depleted from the smaller spectrum of activity.
+A **geological** bias is the consequence of the fact that larger eruptions are **less frequent** but are more likely to be **preserved in the stratigraphy**. As a result, the oldest part of an eruption catalogue might be (apparently) dominated by large eruptions and be depleted from the smaller spectrum of activity. Conversely, the recent history might not contain any occurrence of large eruptions.
 
 The following exercise digs into the eruptive history of [Cotopaxi](https://en.wikipedia.org/wiki/Cotopaxi) volcano (Ecuador)
 
@@ -94,11 +94,11 @@ We have already looked at one [VEI 4 Plinian eruption](Hazard_probabilistic2.md#
 
     1. How does the eruptive record changes in time, both in term of **frequency** and **VEI**?
 
-Let's put back the eruptive record of Cotopaxi volcano in the context of the first assumption that **future activity will reflect the trends observed in the past**. As a matter of fact, the behaviour at Cotopaxi volcano changed from dominantly **rhyolitic** to dominantly **andesitic** about 4000 years ago. The GVP plot shows how most VEI 5 eruptions occurred *before* that shift. Therefore, we will only attempt predicting frequencies of future eruptions based on the **recent andesitic activity**, and we must discard the 6 VEI 5 eruptions older than 4000 years from our analysis.
+!!! warning "Validating initial assumptions"
 
-!!! info "Predicting what has not yet happened"
+    Let's put back the eruptive record of Cotopaxi volcano in the context of the first assumption that **future activity will reflect the trends observed in the past**. As a matter of fact, the behaviour at Cotopaxi volcano changed from dominantly **rhyolitic** to dominantly **andesitic** about 4000 years ago[^4]. The GVP plot shows how most VEI 5 eruptions occurred *before* that shift. Therefore, we will only attempt predicting frequencies of future eruptions based on the **recent andesitic activity**, and we must discard the 6 VEI 5 eruptions older than 4000 years from our analysis.
 
-    Bear in mind that we don't argue here that predicting *what has not yet happened* is impossible - it is a very different approach framed around very low probabilities and high uncertainties.
+    Bear in mind that we don't argue here that predicting *what has not yet happened* is impossible - it is a very different approach that has to account for very low probabilities and high uncertainties.
 
 ### Record completeness
 
@@ -130,7 +130,7 @@ We have [previously seen](Hazard_tephra_exercise.md#eruption-history) that the s
 
 ### Eruption probability
 
-In some cases, it is *sometime* possible to assume that volcanic eruptions are stochastic processes that can be described by a Poisson distribution. This assumptuion requires events to be independent and may occur only one at a time. In addition, the probability of an event occurring in the next small time increment does not depend on the time that has already elapsed since the last event occurred[^5][^6]. 
+It is *sometime* possible to assume that volcanic eruptions are stochastic processes that can be described by a Poisson distribution. This assumption requires eruptions to be independent (i.e., no dependency between the repose interval and magnitude) and may occur only one at a time. In addition, the probability of an event occurring in the next small time increment does not depend on the time that has already elapsed since the last event occurred[^5][^6]. 
 
 Here, we are interested in estimating the probability $P$ of a repose time $T$ to be smaller than or equal to an hypothetical time period $t$. The simplest case of a Poisson process results in an exponential distribution, and we can estimate the probability of an eruption to occur in a given time interval as:
 
@@ -149,7 +149,7 @@ Where $\lambda$ is the mean eruption rate (nb of eruption per year) and $\Delta 
 
 !!! info "Independence"
 
-    The assumption of independence between events must be tested and demonstrated before using this method. Independence can occur for large-scale eruptions, but generally fails for more frequent, smaller types of activity (e.g., Vulcanian or Strombolian activity)[^7].
+    The assumption of independence between events must be tested and demonstrated before using this method. Independence may occur for large-scale eruptions, but generally fails for more frequent, pulsatory types of activity (e.g., Vulcanian or Strombolian activity)[^7].
 
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
