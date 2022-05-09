@@ -200,7 +200,7 @@ We will define a potential vent opening surface as a 500 x 500 m square centered
 - From `QGIS` open `Q-LavHA`. Most of the parameters should already be filled. Otherwise, you can use the `Load parameters` option.
 - Set a `Distance between vents` of 100 m. Since we definerd a 500 x 500 m area, `Q-LavHA` will therefore model lava flow inundation from 25 vents. 
 - Enter the 4 coordinates previously defined.
-- In the `Lava Flow Parameter` tab, change the `Number of Simulations` to 500. This will help save some computation time.
+- In the `Lava Flow Parameter` tab, change the `Number of Simulations` to **100**. This will help save some computation time.
 - Make sure you change the output name.
 
 **Run the model!**
