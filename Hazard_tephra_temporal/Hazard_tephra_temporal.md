@@ -25,7 +25,7 @@ Look at the figures below.
 
 === "Figure 1"
 
-    Figure 1 shows global rates of eruptions recorded by the GVP for the past 6 centuries[^1]. Before moving to Figure 2, think of what you observe.
+    Figure 1 shows global rates of eruptions recorded by the GVP for the past 6 centuries[^1]. Before moving to Figure 2, spend some time thinking about this plot and what you can observe.
 
     <figure markdown>
     ![gvp1](img/GVP/gvp_1-1.png)

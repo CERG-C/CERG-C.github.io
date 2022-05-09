@@ -38,13 +38,15 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-Download `TephraProb` and open `Matlab`:
+The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
 
-1. Start a MacOS session.
-2. Download `TephraProb` from [GitHub.com](https://github.com/e5k/TephraProb) and save it somewhere on your hard-drive.
-3. ❗ Open `Matlab`.
-4. Left of the address bar at the top of the main Matlab window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
-5. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
+1. Start `Matlab`. If your computer has several versions, use the latest one.
+2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
+3. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
+
+!!! danger "Use your user disk!"
+
+    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
 
 ### Get the eruption data 
 

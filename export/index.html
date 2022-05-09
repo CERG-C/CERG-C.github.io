@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Reveal JS presentation</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="libs/reveal.js/4.1.3/reset.css">
+	<link rel="stylesheet" href="libs/reveal.js/4.1.3/reveal.css">
+
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	  <!-- highlight Theme -->
+  	
+	  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+	
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.1.3/plugin/chalkboard/style.css">
+	
+	
+	
+		<link rel="stylesheet" href="libs/reveal.js/4.1.3/plugin/customcontrols/style.css">
+	
+	<link rel="stylesheet" href="libs/styles/tasklist.css">
+
+
+
+  <!-- Revealjs Theme -->
+  
+  	<link rel="stylesheet" href="libs/reveal.js/4.1.3/theme/black.css" id="theme">
+  
+  
+
+
+  <!-- Revealjs Theme -->
+  
+
+ 
+</head>
+
+<body>
+  
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section >
+            
+            <h1>Probabilistic hazard assessment for lava flow inundation</h1>
+<p>Lava flows - beside being mesmerising to watch - are highly destructive volcanic phenomena. Over the past years, volcanic crises in <a href="https://www.usgs.gov/volcanoes/kilauea/2018-lower-east-rift-zone-eruption-and-summit-collapse">Hawaii</a> in 2018, in <a href="https://en.wikipedia.org/wiki/2021_Mount_Nyiragongo_eruption">DRC</a> and <a href="https://en.wikipedia.org/wiki/2021_Cumbre_Vieja_volcanic_eruption">La Palma</a> in 2021 have demonstrated the difficulty in managing these long–lasting crises. This is due to the fact that lava flows are governed by complex rheological processes, making their paths hard to predict. As a result, forecasts are often associated with large uncertainties that makes them unusable <em>during</em> crisis management.</p>
+<p>!!! help “Does this mean that we are helpless in reducing the risk associated with lava flows?”</p>
+<p>Well, no, not entirely. In this exercise, we will differentiate between various purposes of hazard (and risk!) assessments for different parts of the <em>risk cycle</em>, contrasting between actions taken <em>long before</em> the event during the <strong>prevention</strong> phase - where the idea here is to <em>plan ahead</em> to reduce the risk - and actions taken <em>short before</em> or <em>during</em> the event in the <strong>preparedness</strong> and <strong>response</strong> phases - where the aim is to minimise immediate impacts. We will discuss these concepts throughout the exercise and in the field, but refer to the <a href="https://appliedvolc.biomedcentral.com/articles/10.1186/s13617-021-00108-5">ADVISE</a>[^1] approach for an overview of the risk framework we are applying here.</p>
+<!--## Case-study: La Palma -->
+<h2>Exercise outline</h2>
+<p>In this exercise, we will look at two complementary approaches to assess the hazard associated with lava flow inundation that are the <strong>path of steepest descent</strong> and the <strong>Q-LavHA</strong> model.</p>
+<h3>Path of steepest descent</h3>
+<p>Firstly, we will have a look at how simple hydrological tools can help us estimate the direction of lava flows. The <strong>path of steepest descent</strong> approach, which estimates flow direction based only on the hydrological properties of the terrain. Despite its simplicity, this is the <a href="https://www.usgs.gov/media/images/map-steepest-descent-paths-area-eruptive-fissures-k-lauea">preferred method</a> used by <a href="https://www.usgs.gov">USGS</a> and <a href="https://www.usgs.gov/observatories/hvo">Hawaii Volcano Observatory</a> (HVO) to communicate with stakeholders during lava flow crises.</p>
+<h3>Q-LavHA</h3>
+<p>Secondly, we will test the <strong>Q-LavHA</strong> model, which goes one step forward in attempting to <em>predict</em> lava flow inundation using some stochastic strategies to estimate the uncertainty associated with lava flow emplacement processes.</p>
+<h2>Objectives</h2>
+<p>With this exercise, using two types of approaches to estimate the hazard associated with lava flow inundation, you will:</p>
+<ul>
+<li>Compare <em>deterministic</em> and <em>probabilistic</em> approaches.</li>
+<li>Understand the value of <em>uncertainty quantification</em> and its role in risk communication.</li>
+<li>Appreciate the difference between short-term hazard communication during crises and long-term hazard assessment for risk mitigation.</li>
+</ul>
+<p>!!! info “Communicating uncertainties during lava flow crises”
+Since the beginning of the Pu‘u‘ō‘ō eruption in 1983 to <a href="https://www.usgs.gov/volcanoes/kilauea/puuoo-eruption-lasted-35-years">its end in 2018</a>, the Big Island of Hawaii has been periodically affected by lava flow crises. These repeated crises have provided important lessons on how to communicate hazard uncertainties during crises. During the 2014 crisis, the flow field was dangerously heading towards the town of Pāhoa. Under pressure from decision makers, HVO attempted to provide a <em>forecast</em> and estimated that the flow <em>might</em> reach the town of Pāhoa within <em>a few</em> to <em>tens</em> of days… only that the media only reported the “a few” days, creating panic amongst the community.</p>
+<pre><code>HVO realised the difficulty in communicating such a large uncertainty in operational activities and decided to cease providing forecasts. Instead, they reverted back to the **steepest descent method** which, although over-simplifying complex flow-emplacement processes, has the benefit of being transparent. In addition, HVO conducted meetings with stakeholders, agencies and the public, where they explained the limitations encountered when modeling lava flows. This combination of the use of a simplistic model with outreach events proved out to be the most efficient communication procedure and contributed to both increasing the trust in HVO and efficiently reducing the risk[^2][^3].
+</code></pre>
+<h2>References</h2>
+<p>[^1]: Bonadonna, C., Frischknecht, C., Menoni, S., Romerio, F., Gregg, C.E., Rosi, M., Biass, S., Asgary, A., Pistolesi, M., Guobadia, D., Gattuso, A., Ricciardi, A., Cristiani, C., 2021. Integrating hazard, exposure, vulnerability and resilience for risk and emergency management in a volcanic context: the ADVISE model. J Appl. Volcanol. 10, 7. <a href="https://doi.org/10.1186/s13617-021-00108-5">https://doi.org/10.1186/s13617-021-00108-5</a>
+[^2]: Poland, M., Orr, T.R., Kauahikaua, J.P., Brantley, S.R., Babb, J.L., Patrick, M.R., Neal, C.A., Anderson, K.R., Antolik, L., Burgess, M., 2016. The 2014–2015 Pāhoa lava flow crisis at Kīlauea Volcano, Hawai ‘i: Disaster avoided and lessons learned. GSA Today 26, 4–10.
+[^3]: Neal, C.A., Brantley, S.R., Antolik, L., Babb, J., Burgess, M., Calles, K., Cappos, M., Chang, J.C., Conway, S., Desmither, L., Dotray, P., Elias, T., Fukunaga, P., Fuke, S., Johanson, I.A., Kamibayashi, K., Kauahikaua, J., Lee, R.L., Pekalib, S., Miklius, A., Million, W., Moniz, C.J., Nadeau, P.A., Okubo, P., Parcheta, C., Patrick, M.P., Shiro, B., Swanson, D.A., Tollett, W., Trusdell, F., Younger, E.F., Zoeller, M.H., Montgomery-Brown, E.K., Anderson, K.R., Poland, M.P., Ball, J., Bard, J., Coombs, M., Dietterich, H.R., Kern, C., Thelen, W.A., Cervelli, P.F., Orr, T., Houghton, B.F., Gansecki, C., Hazlett, R., Lundgren, P., Diefenbach, A.K., Lerner, A.H., Waite, G., Kelly, P., Clor, L., Werner, C., Mulliken, K., Fisher, G., 2018. The 2018 rift eruption and summit collapse of Kīlauea Volcano. Science 7046, eaav7046. <a href="https://doi.org/10.1126/science.aav7046">https://doi.org/10.1126/science.aav7046</a></p>
+
+            </section>
+    
+
+
+    </div>
+
+
+  </div>
+
+  	
+	<script src="libs/reveal.js/4.1.3/reveal.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/zoom/zoom.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/notes/notes.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/search/search.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/markdown/markdown.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/highlight/highlight.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/menu/menu.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/math/math.js"></script>
+
+	<script src="libs/reveal.js/4.1.3/plugin/fullscreen/plugin.js"></script>
+  
+  	<script src="libs/reveal.js/4.1.3/plugin/animate/plugin.js"></script>
+  	<script src="libs/reveal.js/4.1.3/plugin/animate/svg.min.js"></script>
+  
+  	<script src="libs/reveal.js/4.1.3/plugin/anything/plugin.js"></script>
+	  <script src="libs/reveal.js/4.1.3/plugin/anything/Chart.min.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/anything/d3/d3.v3.min.js"></script>				
+	<script src="libs/reveal.js/4.1.3/plugin/anything/d3.patch.js"></script>			
+	<script src="libs/reveal.js/4.1.3/plugin/anything/d3/queue.v1.min.js"></script>		
+	<script src="libs/reveal.js/4.1.3/plugin/anything/d3/topojson.v1.min.js"></script>		
+	<script src="libs/reveal.js/4.1.3/plugin/anything/function-plot.js"></script>
+
+ <!--	<script src="libs/reveal.js/4.1.3/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.1.3/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.1.3/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+<script src="libs/reveal.js/4.1.3/plugin/chalkboard/plugin.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/customcontrols/plugin.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/embed-tweet/plugin.js"></script>
+
+	<script src="libs/reveal.js/4.1.3/plugin/chart/chart.min.js"></script>
+	<script src="libs/reveal.js/4.1.3/plugin/chart/plugin.js"></script>
+
+  <script>
+
+		const printPlugins = [
+			RevealNotes, 
+			RevealHighlight,
+			RevealMath,
+			RevealAnimate,
+			RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			controlsTutorial: true,
+			controlsLayout: 'bottom-right',
+			controlsBackArrows: 'faded',
+			progress: true,
+			slideNumber: false,
+			//#showSlideNumber "all" "print" "speaker"
+			hash: true,//#  hash: false,
+			//# respondToHashChanges: true,
+			//# history: false,
+			keyboard: true,
+			//#keyboardCondition: null,
+			overview: true,
+			center: true,
+			touch: true,
+			loop: false,
+			rtl: false,
+			//#navigationMode: 'default', linear grid
+			shuffle: false,
+			fragments: true,
+			fragmentInURL: false,
+			embedded: false,
+			help: true,
+			//#pause: true
+			showNotes: false,
+			autoPlayMedia: false, // TODO fix this to a nullable value
+			//#preloadIframes: null. true false
+			//#autoAnimate: true
+			//#autoAnimateMatcher: null,
+			//#autoAnimateEasing: 'ease',
+			//autoAnimateDuration: 1.0,
+			//#autoAnimateUnmatched: true
+			//#autoAnimateStyles: []
+			autoSlide: 0, // TODO fix this to a falseable value
+			autoSlideStoppable: true,
+			autoSlideMethod: '0',
+			defaultTiming: 120,
+			mouseWheel: false,
+			//#previewLinks: false
+			//#postMessage: true,  // TODO : this can cause issues with the vscode api ???
+			//#postMessageEvents: false,
+			//#focusBodyOnPageVisibilityChange: true,
+			transition: 'slide',
+			transitionSpeed: 'default',
+			backgroundTransition: 'fade',
+			//#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+			//#pdfSeparateFragments: true,
+			//#pdfPageHeightOffset: -1,
+			viewDistance: 3,
+			//#mobileViewDistance: 2,
+			display: 'block',
+			//#hideInactiveCursor: true,
+			//#hideCursorTime: 5000
+
+			// Parallax Background
+			parallaxBackgroundImage: '',
+			parallaxBackgroundSize: '',
+			parallaxBackgroundHorizontal: 0,
+			parallaxBackgroundVertical: 0,
+			
+			//Presentation Size
+			width: 960,
+			height: 700,
+			margin: 0.04,
+			minScale: 0.2,
+			maxScale: 2,
+			disableLayout: false,
+
+			audio: {
+				prefix: 'audio/', 	// audio files are stored in the "audio" folder
+				suffix: '.ogg',		// audio files have the ".ogg" ending
+				textToSpeechURL: null,  // the URL to the text to speech converter
+				defaultNotes: false, 	// use slide notes as default for the text to speech converter
+				defaultText: false, 	// use slide text as default for the text to speech converter
+				advance: 0, 		// advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+				autoplay: false,	// automatically start slideshow
+				defaultDuration: 5,	// default duration in seconds if no audio is available
+				defaultAudios: true,	// try to play audios with names such as audio/1.2.ogg
+				playerOpacity: 0.05,	// opacity value of audio player if unfocused
+				playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+				startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+			},
+			
+			chalkboard: { // font-awesome.min.css must be available
+					//src: "chalkboard/chalkboard.json",
+					storage: "chalkboard-demo",
+				},
+			
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+						{ icon: '<i class="fa fa-pen-square"></i>',
+						  title: 'Toggle chalkboard (B)',
+						  action: 'RevealChalkboard.toggleChalkboard();'
+						},
+						{ icon: '<i class="fa fa-pen"></i>',
+						  title: 'Toggle notes canvas (C)',
+						  action: 'RevealChalkboard.toggleNotesCanvas();'
+						}
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
+
+
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
+
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
+
+        //     const message = event.data; // The JSON data our extension sent
+
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
+
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+		
+
+	</script>
+
+</body>
+
+</html>

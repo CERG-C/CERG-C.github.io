@@ -9,7 +9,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 ## Installing Q-LavHA 
 
 
-1. From the `Moodle` page of the class, download the `Lava_Flow_Exercise_2022.zip` file and extract it somewhere.
+1. From the `Moodle` page of the class, download the `VolcanicRisk2022.zip` file and extract it somewhere **on your personal user drive.**
 2. Make sure `QGIS` is closed.
 3. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
@@ -21,10 +21,20 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 
 === "Mac OS"
 
-!!! note
-    If the `plugins` folder doesn't exist, please create it.
+    ```
+    /Users/$USER/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/
+    ```
 
-3. Copy the `Qlavha_v3` to the `plugins` folder.
+!!! note
+    - If the `plugins` folder doesn't exist, please create it.
+    - The `Users\` folder might be named `Utilisateurs` in French
+
+1. Copy the `Qlavha_v3` folder to the `plugins` folder.
+
+!!! danger "Use your user disk!"
+
+    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
+
 
 ## Starting QGIS
 
