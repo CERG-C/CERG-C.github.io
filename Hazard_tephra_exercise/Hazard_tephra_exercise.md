@@ -354,8 +354,6 @@ The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answ
 
 #### Hazard curves
 
-Using [OpenStreetMap](https://www.openstreetmap.org/relation/1464825#map=11/28.6541/-17.7587) and [Google Maps](https://www.google.com/maps/place/La+Palma/@28.6551008,-18.0057897,11z/data=!3m1!4b1!4m5!3m4!1s0xc6bf20c6a87a13b:0x8e2037d22330882d!8m2!3d28.7133828!4d-17.9057813), select three points covering agricultural area and note their coordinates (in `lat`, `lon`). 
-
 Let's now look at hazard curves. For each vent, hazard curves for three points have been processed. To visualise them:
 
 1. From the main `TephraProb` window, choose `Input > Points`. 
