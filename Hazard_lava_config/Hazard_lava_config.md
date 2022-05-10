@@ -13,6 +13,9 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 2. Make sure `QGIS` is closed.
 3. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
+!!! tip "Alternative link"
+    [Alternative dowload link](https://drive.infomaniak.com/app/share/250506/2dd991b9-16b4-439c-bce2-a0a29ae3b439) 
+
 === "Windows"
 
     ```
