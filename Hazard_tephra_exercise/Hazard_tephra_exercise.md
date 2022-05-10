@@ -48,14 +48,14 @@ The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb
 
     If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
 
-### Get the eruption data 
+<!-- ### Get the eruption data 
 
 1. Each one of you was assigned a different vent. From the `Moodle` page of the course, download the according folder `ventX` located in the `Tephra hazard assessment` folder. 
 2. Place it in the `RUNS` folder located in your copy of `TephraProb`
 
 !!! note "RUNS folder"
 
-    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it.
+    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it. -->
 
 
 ## :fontawesome-solid-gears:{ .icn } Hazard assessment 
@@ -79,7 +79,7 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
 
 !!! info "Reading between the lines..."
 
-    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](Hazard_tephra_intro.md) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
+    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](Hazard_tephra_intro.md#why-are-tephra-deposits-important) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
 
     1. The 2021 eruption is reported as `Undefined` VEI because no article reporting it has yet been published. However, we know it was a **VEI 3** eruption. 
     2. In the GVP, eruptions that have been identified as **having an explosive component** but for which **no tephra volume** are reported are assigned a default VEI of 2[^2]. This is probably why most eruptions for la Palma are reported as VEI 2.
@@ -133,7 +133,6 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
     1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction? How will that affect tephra dispersal?
     2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above).
     3. Do you notice any seasonality? If yes, identify during what months it happens.
-
 
 
 
