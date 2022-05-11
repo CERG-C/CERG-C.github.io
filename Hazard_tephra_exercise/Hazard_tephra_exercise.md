@@ -366,7 +366,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 1"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Main highway | -17.84055 | 28.65027 |
     | El Paso, vineyard| -17.86370 | 28.64256 |
@@ -375,7 +375,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 2"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | San Nicola, houses | -17.88052 | 28.60222 |
     | San Nicola, main road| -17.88763 | 28.60108 |
@@ -384,7 +384,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 3"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Jedey, vineyard | -17.87881 | 28.58865 |
     | Jedey, houses | -17.87995 | 28.58373 |
@@ -393,7 +393,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 4"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | El Pueblo, houses  | -17.77892 | 28.60605 |
     | El Pilar, forest | -17.83002 | 28.61377 |
@@ -402,7 +402,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 5"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Los Canarios, houses | -17.84446 | 28.49251 |
     | Los Canarios, vineyard| -17.83749 | 28.47775 |
