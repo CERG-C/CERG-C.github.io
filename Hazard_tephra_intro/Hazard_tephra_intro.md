@@ -173,10 +173,10 @@ The impact of tephra can be classified in two broad categories:
 
     Measuring the mass load in the field is time consuming, and we are therefore often limited to measuring the outcrop's thickness. For simplicity throughout this exercise, we will consider that *mass load* and *thickness* can be interchanged using a bulk density of 1000 $kg/m^3$. So, for instance:
 
-    - 1 $mm$ = 1 $kg/m^3$.
-    - 1 $cm$ = 10 $kg/m^3$.
-    - 10 $cm$ = 100 $kg/m^3$.
-    - 1 $m$ = 1000 $kg/m^3$.
+    - 1 $mm$ = 1 $kg/m^2$.
+    - 1 $cm$ = 10 $kg/m^2$.
+    - 10 $cm$ = 100 $kg/m^2$.
+    - 1 $m$ = 1000 $kg/m^2$.
 
 #### A spatially-dependent hazard intensity
 
